@@ -14,4 +14,7 @@ class Index extends BaseController
     {
         return view('profile');
     }
+    public function kelompok(){
+        return view('kelompok');
+    }
 }
