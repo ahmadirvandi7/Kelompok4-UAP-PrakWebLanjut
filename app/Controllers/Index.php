@@ -10,4 +10,8 @@ class Index extends BaseController
     {
         return view('Tampilan');
     }
+    public function profile()
+    {
+        return view('profile');
+    }
 }
