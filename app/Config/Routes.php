@@ -9,3 +9,5 @@ $routes->get('/', 'Home::login');
 
 $routes->get('/register','Home::register');
 $routes->get('/Tampilan', [Index::class, 'index']);
+$routes->get('/profile', [Index::class, 'profile']);
+
