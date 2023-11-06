@@ -10,11 +10,19 @@ class Index extends BaseController
     {
         return view('Tampilan');
     }
+  
     public function profile()
     {
         return view('profile');
     }
-    public function kelompok(){
+  
+    public function kelompok()
+    {
         return view('kelompok');
+    }
+  
+    public function admin()
+    {
+        return view('admin');
     }
 }

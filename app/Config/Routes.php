@@ -11,4 +11,6 @@ $routes->get('/register','Home::register');
 $routes->get('/Tampilan', [Index::class, 'index']);
 $routes->get('/profile', [Index::class, 'profile']);
 $routes->get('/kelompok', [Index::class,'kelompok']);
+$routes->get('/admin', [Index::class, 'admin']);
+
 
