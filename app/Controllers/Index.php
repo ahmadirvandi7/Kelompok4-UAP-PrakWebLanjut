@@ -18,4 +18,29 @@ class Index extends BaseController
     {
         return view('admin');
     }
+    public function datamhs_admin()
+    {
+        return view('datamhs_admin');
+    }
+    
+    public function laporankegiatan_admin()
+    {
+        return view('laporankegiatan_admin');
+    }
+    public function laporanpelaksanaan_admin()
+    {
+        return view('laporanpelaksanaan_admin');
+    }
+    public function datadosenpembimbing_admin()
+    {
+        return view('datadosenpembimbing_admin');
+    }
+    public function home_admin()
+    {
+        return view('home_admin');
+    }
+    public function formlaporankegiatan()
+    {
+        return view('formlaporankegiatan');
+    }
 }
