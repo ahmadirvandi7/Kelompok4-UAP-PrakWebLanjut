@@ -63,27 +63,27 @@
 <body>
     <div class="container">
         <img src="/assets/img/LogoUnila.png" class="logo" alt="Logo UNILA">
+        
+        <?= view('Myth\Auth\Views\_message_block') ?>
+
         <div class="input-box">
-            <form method="post" action="">
-                <input type="text" name="register_username" placeholder="Username">
+            <form action="<?= url_to('register') ?>" method="post">
+                  <?= csrf_field() ?>
+                  <input type="text" class="form-control <?php if (session('errors.username')) : ?>is-invalid<?php endif ?>" name="username" placeholder="<?=lang('Auth.username')?>" value="<?= old('username') ?>">
             </div>
             <div class="input-box">
-                <input type="password" name="register_password" placeholder="Password">
+            <input type="email" class="form-control <?php if (session('errors.email')) : ?>is-invalid<?php endif ?>"
+                   name="email" aria-describedby="emailHelp" placeholder="<?=lang('Auth.email')?>" value="<?= old('email') ?>">
             </div>
-            <button class="btn-login" type="submit">Register</button>
+            <div class="input-box">
+            <input type="password" name="password" class="form-control <?php if (session('errors.password')) : ?>is-invalid<?php endif ?>" placeholder="<?=lang('Auth.password')?>" autocomplete="off">
+            </div>
+            <div class="input-box">
+            <input type="password" name="pass_confirm" class="form-control <?php if (session('errors.pass_confirm')) : ?>is-invalid<?php endif ?>" placeholder="<?=lang('Auth.repeatPassword')?>" autocomplete="off">
+            </div>
+            <button type="submit" class="btn-login"><?=lang('Auth.register')?></button>
         </form>
-        <?php
-        if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            $register_username = $_POST["register_username"];
-            $register_password = $_POST["register_password"];
-
-            if (empty($register_username) || empty($register_password)) {
-                echo "Username dan password untuk pendaftaran harus diisi.";
-            } else {
-                //save ke db
-            }
-        }
-        ?>
+        <p><?=lang('Auth.alreadyRegistered')?> <a href="<?= url_to('login') ?>"><?=lang('Auth.signIn')?></a></p>
     </div>
 </body>
 </html>
