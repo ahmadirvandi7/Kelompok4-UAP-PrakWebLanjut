@@ -14,4 +14,8 @@ class Index extends BaseController
     {
         return view('profile');
     }
+    public function admin()
+    {
+        return view('admin');
+    }
 }
