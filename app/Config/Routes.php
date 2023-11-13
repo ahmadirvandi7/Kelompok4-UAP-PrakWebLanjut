@@ -10,6 +10,7 @@ $routes->get('/', 'Home::login');
 $routes->get('/register','Home::register');
 $routes->get('/Tampilan', [Index::class, 'index']);
 $routes->get('/profile', [Index::class, 'profile']);
+$routes->get('/kelompok', [Index::class,'kelompok']);
 $routes->get('/admin', [Index::class, 'admin']);
 $routes->get('/datamhs_admin', [Index::class, 'datamhs_admin']);
 $routes->get('/laporankegiatan_admin', [Index::class, 'laporankegiatan_admin']);
