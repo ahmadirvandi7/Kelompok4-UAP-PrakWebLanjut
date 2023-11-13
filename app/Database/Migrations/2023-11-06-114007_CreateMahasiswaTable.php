@@ -40,6 +40,11 @@ class CreateMahasiswaTable extends Migration
                 'type'              => 'DATETIME',
                 'null'              => true,
             ],
+            'upload_berkas'=> [
+                'type' => 'VARCHAR',
+                'constraint' => 255,
+                'null' => true,
+            ],
         ]);
 
         $this->forge->addkey('id', true, true);
@@ -50,4 +55,5 @@ class CreateMahasiswaTable extends Migration
     {
         $this->forge->dropTable('mahasiswa', true);
     }
+
 }
