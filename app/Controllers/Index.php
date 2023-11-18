@@ -25,6 +25,12 @@ class Index extends BaseController
     {
         return view('admin');
     }
+
+    public function pengumuman()
+    {
+        return view('pengumuman');
+    }
+  
     public function datamhs_admin()
     {
         return view('datamhs_admin');
