@@ -33,4 +33,5 @@ $routes->get('/datadosenpembimbing_admin', [Index::class, 'datadosenpembimbing_a
 $routes->get('/home_admin', [Index::class, 'home_admin']);
 $routes->get('/formlaporankegiatan', [Index::class, 'formlaporankegiatan']);
 
+$routes->get('/berandamahasiswa', [Index::class, 'berandamahasiswa']);
 
