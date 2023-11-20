@@ -11,7 +11,11 @@ class Home extends BaseController
     public function login()
     {
         if (logged_in()) {
-            return view('Tampilan');
+            if (in_groups('admin')) {
+                return redirect()->to(base_url('/datamhs_admin'));
+            }else if(in_groups('dosen')){
+                return redirect()->to(base_url('/tampilan'));
+            };
         }else{
             return view('login');
         }
