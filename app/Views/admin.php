@@ -57,12 +57,12 @@
 
       <nav id="navbar" class="nav-menu navbar">
         <ul>
-          <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
-          <li><a href="#Tentang" class="nav-link scrollto"><i class="bx bx-user"></i> <span>Data Mahasiswa</span></a></li>
-          <li><a href="#Resume" class="nav-link scrollto"><i class="bx bx-user"></i> <span>Laporan Kegiatan</span></a></li>
-          <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Laporan Pelaksanaan</span></a></li>
+          <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <a href="<?=base_url('home_admin')?>"> <span>Home</span></a></li>
+          <li><a href="#Tentang" class="nav-link scrollto"><i class="bx bx-user"></i> <a href="<?=base_url('datamhs_admin')?>"> <span>Data Mahasiswa</span></a></li>
+          <li><a href="#Resume" class="nav-link scrollto"><i class="bx bx-user"></i> <a href="<?=base_url('laporankegiatan_admin')?>"> <span>Laporan Kegiatan</span></a></li>
+          <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <a href="<?=base_url('laporanpelaksanaan_admin')?>"> <span>Laporan Pelaksanaan</span></a></li>
           <!-- <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Services</span></a></li> -->
-          <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Data Dosen Pembimbing</span></a></li>
+          <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <a href="<?=base_url('datadosenpembimbing_admin')?>"> <span>Data Dosen Pembimbing</span></a></li>
         </ul>
       </nav><!-- .nav-menu -->
     </div>
@@ -72,7 +72,7 @@
   <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
     <div class="hero-container" data-aos="fade-in">
       <h1>ADMIN</h1>
-      <p><span class="typed" data-typed-items="Dosen, Pembimbing, Kuliah Kerja Nyata, Universitas Lampung"></span></p>
+
     </div>
   </section><!-- End Hero -->
 
