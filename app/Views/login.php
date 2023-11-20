@@ -79,6 +79,7 @@
 				</div>
             </div>
             <button type="submit" class="btn-login"><?=lang('Auth.loginAction')?></button>
+            <p><?=lang('Belum Mempunyai Akun?')?> <a href="<?= url_to('register') ?>"><?=lang('Auth.register')?></a></p>
             <br>
         </form>
         <br>
