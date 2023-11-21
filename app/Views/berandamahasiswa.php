@@ -3,12 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Beranda Dosen</title>
+    <title>Beranda Mahasiswa</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="<?=base_url('assets/css/tailwind.output.css')?>" />
+    <link rel="stylesheet" href="<?=base_url('assets/css/style.css')?>" />
     <script
       src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
       defer
@@ -41,6 +42,12 @@
           >
            AYO KKN
           </a>
+          <div class="profile">
+        <center><img src="assets/img/profile-img.jpg" alt="" class="round-image"></center>
+        <center>
+        <h1><a href="index.html">sinta nurhalifah</a></h1>
+        </center>
+      </div>
           <ul class="mt-6">
             <li class="relative px-6 py-3">
               <span
@@ -51,6 +58,7 @@
                 class="inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100"
                 href="index.html"
               >
+
                 <svg
                   class="w-5 h-5"
                   aria-hidden="true"
@@ -63,9 +71,9 @@
                 >
                   <path
                     d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
-                  ></path>
+                  ></path><a href="<?=base_url('berandamahasiswa')?>"> <span class="ml-4">Beranda</span></a>
                 </svg>
-                <span class="ml-4">Beranda</span>
+                
               </a>
             </li>
           </ul>
@@ -110,11 +118,9 @@
                   <path
                     d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"
                   ></path>
-                  <path d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"></path>
+                  <path d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"></path><a href="<?=base_url('kelompok')?>"> <span class="ml-4">Kelompok</span>
                 </svg>
-                <span class="ml-4">Kelompok</span>
-              </a>
-            </li>
+            </a>
 
             <li class="relative px-6 py-3">
               <a
@@ -132,12 +138,10 @@
                   stroke="currentColor"
                 >
                   <path
-                    d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"
-                  ></path>
+                    d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path> <a href="<?=base_url('formlaporankegiatan')?>"> <span class="ml-4">Laporan Kegiatan</span></a>
                 </svg>
-                <span class="ml-4">Modals</span>
               </a>
-            </li>
+
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
@@ -155,7 +159,7 @@
                 >
                   <path d="M4 6h16M4 10h16M4 14h16M4 18h16"></path>
                 </svg>
-                <span class="ml-4">Lokasi</span>
+                <span class="ml-4">Laporan Pelaksanaan</span>
               </a>
             </li>
             <li class="relative px-6 py-3">
@@ -179,6 +183,57 @@
                       d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"
                     ></path>
                   </svg>
+
+                  <span class="ml-4">Lokasi</span>
+              </a>
+            </li>
+            <li class="relative px-6 py-3">
+              <button
+                class="inline-flex items-center justify-between w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
+                @click="togglePagesMenu"
+                aria-haspopup="true"
+              >
+                <span class="inline-flex items-center">
+                  <svg
+                    class="w-5 h-5"
+                    aria-hidden="true"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"
+                    ></path>
+                  </svg>
+
+                  <span class="ml-4">Nilai Mahasiswa</span>
+              </a>
+            </li>
+            <li class="relative px-6 py-3">
+              <button
+                class="inline-flex items-center justify-between w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
+                @click="togglePagesMenu"
+                aria-haspopup="true"
+              >
+                <span class="inline-flex items-center">
+                  <svg
+                    class="w-5 h-5"
+                    aria-hidden="true"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"
+                    ></path>
+                  </svg>
+
                   <span class="ml-4">Admin</span>
                 </span>
                 <svg
@@ -565,18 +620,17 @@
                     fill="currentColor"
                     viewBox="0 0 20 20"
                   >
-                    <path
+                    <!-- <path
                       fill-rule="evenodd"
                       d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
                       clip-rule="evenodd"
-                    ></path>
+                    ></path> -->
                   </svg>
                 </div>
+                
                 <input
                   class="w-full pl-8 pr-2 text-sm text-gray-700 placeholder-gray-600 bg-gray-100 border-0 rounded-md dark:placeholder-gray-500 dark:focus:shadow-outline-gray dark:focus:placeholder-gray-600 dark:bg-gray-700 dark:text-gray-200 focus:placeholder-gray-500 focus:bg-white focus:border-purple-300 focus:outline-none focus:shadow-outline-purple form-input"
                   type="text"
-                  placeholder="Cari Nama Mahasiswa"
-                  aria-label="Search"
                 />
               </div>
             </div>
@@ -786,628 +840,113 @@
             </ul>
           </div>
         </header>
+
+        <div id="content" role="main">
+
+
+        
+
+        
+
+
+
+
+<article class="post-15 page type-page status-publish hentry">
+
+
+    
+
+
+
+
+    <span class="entry-title" style="display: none;">Download</span><span class="vcard" style="display: none;"><span class="fn"><a href="https://kkn.unila.ac.id/author/admin/" title="Posts by Administrator" rel="author">Administrator</a></span></span><span class="updated" style="display:none">2022-01-21T09:35:52+00:00</span>
+
+
+
+
+    <div class="page-content">
+
+
+        <h1><strong>BERKAS KKN (Update 21 Januari 2023)</strong></h1>
+
+<div id="tablepress-27_wrapper" class="dataTables_wrapper no-footer"><div class="dataTables_length" id="tablepress-27_length"><label>Show <select name="tablepress-27_length" aria-controls="tablepress-27" class=""><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entries</label></div><div id="tablepress-27_filter" class="dataTables_filter"></div><table id="tablepress-27" class="tablepress tablepress-id-27 dataTable no-footer" role="grid" aria-describedby="tablepress-27_info">
+<thead>
+<tr class="row-1 odd" role="row"><th class="column-1 sorting" tabindex="0" aria-controls="tablepress-27" rowspan="1" colspan="1" aria-label="No: activate to sort column ascending" style="width: 90px;">No</th><th class="column-2 sorting" tabindex="0" aria-controls="tablepress-27" rowspan="1" colspan="1" aria-label="Nama Berkas: activate to sort column ascending" style="width: 721px;">Nama Berkas</th><th class="column-3 sorting" tabindex="0" aria-controls="tablepress-27" rowspan="1" colspan="1" aria-label="Download: activate to sort column ascending" style="width: 215px;">Download</th></tr>
+</thead>
+<tbody class="row-hover">
+
+
+
+
+
+
+
+
+
+<tr class="row-2 even" role="row">
+<td class="column-1">1</td><td class="column-2">Daftar Mahasiswa KKN Per-Kelompok</td><td class="column-3"><a href="http://kkn.unila.ac.id/wp-content/uploads/2018/02/1.-Daftar-mahasiswa-KKN-per_kelompok.docx" target="_blank">unduh</a></td>
+</tr><tr class="row-3 odd" role="row">
+<td class="column-1">2</td><td class="column-2">Jurnal Kegiatan Harian</td><td class="column-3"><a href="http://kkn.unila.ac.id/wp-content/uploads/2018/02/2.-Jurnal-Kegiatan-harian.docx" target="_blank">unduh</a></td>
+</tr><tr class="row-4 even" role="row">
+<td class="column-1">3</td><td class="column-2">Jadwal Kegiatan</td><td class="column-3"><a href="http://kkn.unila.ac.id/wp-content/uploads/2018/02/3.-Jadwal-kegiatan.xlsx" target="_blank">unduh</a></td>
+</tr><tr class="row-5 odd" role="row">
+<td class="column-1">4</td><td class="column-2">Buku Tamu</td><td class="column-3"><a href="http://kkn.unila.ac.id/wp-content/uploads/2018/02/4.-Buku-Tamu.docx" target="_blank">unduh</a></td>
+</tr><tr class="row-6 even" role="row">
+<td class="column-1">5</td><td class="column-2">Matrik Program Kerja dan Rencana Kegiatan</td><td class="column-3"><a href="http://kkn.unila.ac.id/wp-content/uploads/2018/02/5.-Matrik-program-kerja-dan-rencana-kegiatan.docx" target="_blank">unduh</a></td>
+</tr><tr class="row-7 odd" role="row">
+<td class="column-1">6</td><td class="column-2">Materi Pembekalan KKN (2023)</td><td class="column-3"><a href="https://drive.google.com/drive/folders/1sGAhzuAHawrkwKWnc4zHxMrFNJa0tVuT?usp=sharing" target="_blank">unduh</a></td>
+</tr><tr class="row-8 even" role="row">
+<td class="column-1">7</td><td class="column-2">Profile Desa</td><td class="column-3"><a href="http://kkn.unila.ac.id/wp-content/uploads/2018/02/Profile-Desa.xlsx" target="_blank">unduh</a></td>
+</tr><tr class="row-9 odd" role="row">
+<td class="column-1">8</td><td class="column-2">indeks desa membangun (NEW)</td><td class="column-3"><a href="http://kkn.unila.ac.id/wp-content/uploads/2018/02/indeks-desa-membangun.xlsx" target="_blank">unduh</a></td>
+</tr><tr class="row-10 even" role="row">
+<td class="column-1">9</td><td class="column-2">Buku Panduan KKN</td><td class="column-3"><a href="https://kkn.unila.ac.id/wp-content/uploads/2022/01/Buku-Panduan-KKN.pdf" rel="noopener" target="_blank">unduh</a></td>
+</tr></tbody>
+</table><div class="dataTables_info" id="tablepress-27_info" role="status" aria-live="polite">Showing 1 to 9 of 9 entries</div><div class="dataTables_paginate paging_simple" id="tablepress-27_paginate"><a class="paginate_button previous disabled" aria-controls="tablepress-27" data-dt-idx="0" tabindex="0" id="tablepress-27_previous">Previous</a><a class="paginate_button next disabled" aria-controls="tablepress-27" data-dt-idx="1" tabindex="0" id="tablepress-27_next">Next</a></div></div>
+<!-- #tablepress-27 from cache -->
+<p>&nbsp;</p>
+<div class="post-views post-15 entry-meta">
+<span class="post-views-icon dashicons dashicons-chart-bar"></span>
+<span class="post-views-label">Post Views: </span>
+<span class="post-views-count">17,555</span>
+</div>
+
+    </div>
+
+
+</article>
+
+
+
+
+
+<div class="">
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
         <main class="h-full overflow-y-auto">
           <div class="container px-6 mx-auto grid">
-            <h2
-              class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200"
-            >
-              Desain Beranda, Mahasiswa, Dosen, Admin
-            </h2>
-            <!-- Cards -->
-            <div class="grid gap-6 mb-8 md:grid-cols-2 xl:grid-cols-4">
-              <!-- Card -->
-              <div
-                class="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800"
-              >
-                <div
-                  class="p-3 mr-4 text-orange-500 bg-orange-100 rounded-full dark:text-orange-100 dark:bg-orange-500"
-                >
-                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                    <path
-                      d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"
-                    ></path>
-                  </svg>
-                </div>
-                <div>
-                  <p
-                    class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400"
-                  >
-                    Mahasiswa Pendaftar KKN
-                  </p>
-                  <p
-                    class="text-lg font-semibold text-gray-700 dark:text-gray-200"
-                  >
-                    6389
-                  </p>
-                </div>
-              </div>
-              <!-- Card -->
-              <div
-                class="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800"
-              >
-                <div
-                  class="p-3 mr-4 text-green-500 bg-green-100 rounded-full dark:text-green-100 dark:bg-green-500"
-                >
-                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                    <path
-                      fill-rule="evenodd"
-                      d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z"
-                      clip-rule="evenodd"
-                    ></path>
-                  </svg>
-                </div>
-                <div>
-                  <p
-                    class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400"
-                  >
-                    DANA KKN
-                  </p>
-                  <p
-                    class="text-lg font-semibold text-gray-700 dark:text-gray-200"
-                  >
-                    RP. 200.000.000
-                  </p>
-                </div>
-              </div>
-              <!-- Card -->
-              <div
-                class="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800"
-              >
-                <div
-                  class="p-3 mr-4 text-teal-500 bg-teal-100 rounded-full dark:text-teal-100 dark:bg-teal-500"
-                >
-                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                    <path
-                      fill-rule="evenodd"
-                      d="M18 5v8a2 2 0 01-2 2h-5l-5 4v-4H4a2 2 0 01-2-2V5a2 2 0 012-2h12a2 2 0 012 2zM7 8H5v2h2V8zm2 0h2v2H9V8zm6 0h-2v2h2V8z"
-                      clip-rule="evenodd"
-                    ></path>
-                  </svg>
-                </div>
-                <div>
-                  <p
-                    class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400"
-                  >
-                    Chating
-                  </p>
-                  <p
-                    class="text-lg font-semibold text-gray-700 dark:text-gray-200"
-                  >
-                    1
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <!-- New Table -->
-            <div class="w-full overflow-hidden rounded-lg shadow-xs">
-              <div class="w-full overflow-x-auto">
-                <table class="w-full whitespace-no-wrap">
-                  <thead>
-                    <tr
-                      class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800"
-                    >
-                      <th class="px-4 py-3">Mahasiswa</th>
-                      <th class="px-4 py-3">Jurusan</th>
-                      <th class="px-4 py-3">Status</th>
-                      <th class="px-4 py-3">Tanggal</th>
-                    </tr>
-                  </thead>
-                  <tbody
-                    class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800"
-                  >
-                    <tr class="text-gray-700 dark:text-gray-400">
-                      <td class="px-4 py-3">
-                        <div class="flex items-center text-sm">
-                          <!-- Avatar with inset shadow -->
-                          <div
-                            class="relative hidden w-8 h-8 mr-3 rounded-full md:block"
-                          >
-                            <img
-                              class="object-cover w-full h-full rounded-full"
-                              src="https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE3Nzg0fQ"
-                              alt=""
-                              loading="lazy"
-                            />
-                            <div
-                              class="absolute inset-0 rounded-full shadow-inner"
-                              aria-hidden="true"
-                            ></div>
-                          </div>
-                          <div>
-                            <p class="font-semibold">Hans Burger</p>
-                            <p class="text-xs text-gray-600 dark:text-gray-400">
-                              METRO
-                            </p>
-                          </div>
-                        </div>
-                      </td>
-                      <td class="px-4 py-3 text-sm">
-                        BIOLOGI
-                      </td>
-                      <td class="px-4 py-3 text-xs">
-                        <span
-                          class="px-2 py-1 font-semibold leading-tight text-green-700 bg-green-100 rounded-full dark:bg-green-700 dark:text-green-100"
-                        >
-                          DITERIMA
-                        </span>
-                      </td>
-                      <td class="px-4 py-3 text-sm">
-                        6/10/2020
-                      </td>
-                    </tr>
-
-                    <tr class="text-gray-700 dark:text-gray-400">
-                      <td class="px-4 py-3">
-                        <div class="flex items-center text-sm">
-                          <!-- Avatar with inset shadow -->
-                          <div
-                            class="relative hidden w-8 h-8 mr-3 rounded-full md:block"
-                          >
-                            <img
-                              class="object-cover w-full h-full rounded-full"
-                              src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&facepad=3&fit=facearea&s=707b9c33066bf8808c934c8ab394dff6"
-                              alt=""
-                              loading="lazy"
-                            />
-                            <div
-                              class="absolute inset-0 rounded-full shadow-inner"
-                              aria-hidden="true"
-                            ></div>
-                          </div>
-                          <div>
-                            <p class="font-semibold">Jolina Angelie</p>
-                            <p class="text-xs text-gray-600 dark:text-gray-400">
-                              METRO
-                            </p>
-                          </div>
-                        </div>
-                      </td>
-                      <td class="px-4 py-3 text-sm">
-                        ILMU KOMPUTER
-                      </td>
-                      <td class="px-4 py-3 text-xs">
-                        <span
-                          class="px-2 py-1 font-semibold leading-tight text-orange-700 bg-orange-100 rounded-full dark:text-white dark:bg-orange-600"
-                        >
-                          MENUNGGU
-                        </span>
-                      </td>
-                      <td class="px-4 py-3 text-sm">
-                        6/10/2020
-                      </td>
-                    </tr>
-
-                    <tr class="text-gray-700 dark:text-gray-400">
-                      <td class="px-4 py-3">
-                        <div class="flex items-center text-sm">
-                          <!-- Avatar with inset shadow -->
-                          <div
-                            class="relative hidden w-8 h-8 mr-3 rounded-full md:block"
-                          >
-                            <img
-                              class="object-cover w-full h-full rounded-full"
-                              src="https://images.unsplash.com/photo-1551069613-1904dbdcda11?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE3Nzg0fQ"
-                              alt=""
-                              loading="lazy"
-                            />
-                            <div
-                              class="absolute inset-0 rounded-full shadow-inner"
-                              aria-hidden="true"
-                            ></div>
-                          </div>
-                          <div>
-                            <p class="font-semibold">Sarah Curry</p>
-                            <p class="text-xs text-gray-600 dark:text-gray-400">
-                              Sukadana
-                            </p>
-                          </div>
-                        </div>
-                      </td>
-                      <td class="px-4 py-3 text-sm">
-                        ILMU KOMPUTER
-                      </td>
-                      <td class="px-4 py-3 text-xs">
-                        <span
-                          class="px-2 py-1 font-semibold leading-tight text-red-700 bg-red-100 rounded-full dark:text-red-100 dark:bg-red-700"
-                        >
-                          DITOLAK
-                        </span>
-                      </td>
-                      <td class="px-4 py-3 text-sm">
-                        6/10/2020
-                      </td>
-                    </tr>
-
-                    <tr class="text-gray-700 dark:text-gray-400">
-                      <td class="px-4 py-3">
-                        <div class="flex items-center text-sm">
-                          <!-- Avatar with inset shadow -->
-                          <div
-                            class="relative hidden w-8 h-8 mr-3 rounded-full md:block"
-                          >
-                            <img
-                              class="object-cover w-full h-full rounded-full"
-                              src="https://images.unsplash.com/photo-1551006917-3b4c078c47c9?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE3Nzg0fQ"
-                              alt=""
-                              loading="lazy"
-                            />
-                            <div
-                              class="absolute inset-0 rounded-full shadow-inner"
-                              aria-hidden="true"
-                            ></div>
-                          </div>
-                          <div>
-                            <p class="font-semibold">Rulia Joberts</p>
-                            <p class="text-xs text-gray-600 dark:text-gray-400">
-                              Sukadana
-                            </p>
-                          </div>
-                        </div>
-                      </td>
-                      <td class="px-4 py-3 text-sm">
-                        FISIKA
-                      </td>
-                      <td class="px-4 py-3 text-xs">
-                        <span
-                          class="px-2 py-1 font-semibold leading-tight text-green-700 bg-green-100 rounded-full dark:bg-green-700 dark:text-green-100"
-                        >
-                          DITERIMA
-                        </span>
-                      </td>
-                      <td class="px-4 py-3 text-sm">
-                        6/10/2020
-                      </td>
-                    </tr>
-
-                    <tr class="text-gray-700 dark:text-gray-400">
-                      <td class="px-4 py-3">
-                        <div class="flex items-center text-sm">
-                          <!-- Avatar with inset shadow -->
-                          <div
-                            class="relative hidden w-8 h-8 mr-3 rounded-full md:block"
-                          >
-                            <img
-                              class="object-cover w-full h-full rounded-full"
-                              src="https://images.unsplash.com/photo-1546456073-6712f79251bb?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE3Nzg0fQ"
-                              alt=""
-                              loading="lazy"
-                            />
-                            <div
-                              class="absolute inset-0 rounded-full shadow-inner"
-                              aria-hidden="true"
-                            ></div>
-                          </div>
-                          <div>
-                            <p class="font-semibold">Wenzel Dashington</p>
-                            <p class="text-xs text-gray-600 dark:text-gray-400">
-                              Kota Bumi
-                            </p>
-                          </div>
-                        </div>
-                      </td>
-                      <td class="px-4 py-3 text-sm">
-                        FISIKA
-                      </td>
-                      <td class="px-4 py-3 text-xs">
-                        <span
-                          class="px-2 py-1 font-semibold leading-tight text-gray-700 bg-gray-100 rounded-full dark:text-gray-100 dark:bg-gray-700"
-                        >
-                          KADALUARSA
-                        </span>
-                      </td>
-                      <td class="px-4 py-3 text-sm">
-                        6/10/2020
-                      </td>
-                    </tr>
-
-                    <tr class="text-gray-700 dark:text-gray-400">
-                      <td class="px-4 py-3">
-                        <div class="flex items-center text-sm">
-                          <!-- Avatar with inset shadow -->
-                          <div
-                            class="relative hidden w-8 h-8 mr-3 rounded-full md:block"
-                          >
-                            <img
-                              class="object-cover w-full h-full rounded-full"
-                              src="https://images.unsplash.com/photo-1502720705749-871143f0e671?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&s=b8377ca9f985d80264279f277f3a67f5"
-                              alt=""
-                              loading="lazy"
-                            />
-                            <div
-                              class="absolute inset-0 rounded-full shadow-inner"
-                              aria-hidden="true"
-                            ></div>
-                          </div>
-                          <div>
-                            <p class="font-semibold">Dave Li</p>
-                            <p class="text-xs text-gray-600 dark:text-gray-400">
-                            METRO
-                            </p>
-                          </div>
-                        </div>
-                      </td>
-                      <td class="px-4 py-3 text-sm">
-                        ILMU KOMPUTER
-                      </td>
-                      <td class="px-4 py-3 text-xs">
-                        <span
-                          class="px-2 py-1 font-semibold leading-tight text-green-700 bg-green-100 rounded-full dark:bg-green-700 dark:text-green-100"
-                        >
-                          DITERIMA
-                        </span>
-                      </td>
-                      <td class="px-4 py-3 text-sm">
-                        6/10/2020
-                      </td>
-                    </tr>
-
-                    <tr class="text-gray-700 dark:text-gray-400">
-                      <td class="px-4 py-3">
-                        <div class="flex items-center text-sm">
-                          <!-- Avatar with inset shadow -->
-                          <div
-                            class="relative hidden w-8 h-8 mr-3 rounded-full md:block"
-                          >
-                            <img
-                              class="object-cover w-full h-full rounded-full"
-                              src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE3Nzg0fQ"
-                              alt=""
-                              loading="lazy"
-                            />
-                            <div
-                              class="absolute inset-0 rounded-full shadow-inner"
-                              aria-hidden="true"
-                            ></div>
-                          </div>
-                          <div>
-                            <p class="font-semibold">Maria Ramovic</p>
-                            <p class="text-xs text-gray-600 dark:text-gray-400">
-                              Sukadana
-                            </p>
-                          </div>
-                        </div>
-                      </td>
-                      <td class="px-4 py-3 text-sm">
-                        BIOLOGI
-                      </td>
-                      <td class="px-4 py-3 text-xs">
-                        <span
-                          class="px-2 py-1 font-semibold leading-tight text-green-700 bg-green-100 rounded-full dark:bg-green-700 dark:text-green-100"
-                        >
-                          DITERIMA
-                        </span>
-                      </td>
-                      <td class="px-4 py-3 text-sm">
-                        6/10/2020
-                      </td>
-                    </tr>
-
-                    <tr class="text-gray-700 dark:text-gray-400">
-                      <td class="px-4 py-3">
-                        <div class="flex items-center text-sm">
-                          <!-- Avatar with inset shadow -->
-                          <div
-                            class="relative hidden w-8 h-8 mr-3 rounded-full md:block"
-                          >
-                            <img
-                              class="object-cover w-full h-full rounded-full"
-                              src="https://images.unsplash.com/photo-1566411520896-01e7ca4726af?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE3Nzg0fQ"
-                              alt=""
-                              loading="lazy"
-                            />
-                            <div
-                              class="absolute inset-0 rounded-full shadow-inner"
-                              aria-hidden="true"
-                            ></div>
-                          </div>
-                          <div>
-                            <p class="font-semibold">Hitney Wouston</p>
-                            <p class="text-xs text-gray-600 dark:text-gray-400">
-                              Kota Bumi
-                            </p>
-                          </div>
-                        </div>
-                      </td>
-                      <td class="px-4 py-3 text-sm">
-                        ILMU KOMPUTER
-                      </td>
-                      <td class="px-4 py-3 text-xs">
-                        <span
-                          class="px-2 py-1 font-semibold leading-tight text-green-700 bg-green-100 rounded-full dark:bg-green-700 dark:text-green-100"
-                        >
-                          DITERIMA
-                        </span>
-                      </td>
-                      <td class="px-4 py-3 text-sm">
-                        6/10/2020
-                      </td>
-                    </tr>
-
-                    <tr class="text-gray-700 dark:text-gray-400">
-                      <td class="px-4 py-3">
-                        <div class="flex items-center text-sm">
-                          <!-- Avatar with inset shadow -->
-                          <div
-                            class="relative hidden w-8 h-8 mr-3 rounded-full md:block"
-                          >
-                            <img
-                              class="object-cover w-full h-full rounded-full"
-                              src="https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE3Nzg0fQ"
-                              alt=""
-                              loading="lazy"
-                            />
-                            <div
-                              class="absolute inset-0 rounded-full shadow-inner"
-                              aria-hidden="true"
-                            ></div>
-                          </div>
-                          <div>
-                            <p class="font-semibold">Hans Burger</p>
-                            <p class="text-xs text-gray-600 dark:text-gray-400">
-                              METRO
-                            </p>
-                          </div>
-                        </div>
-                      </td>
-                      <td class="px-4 py-3 text-sm">
-                        ILMU KOMPUTER
-                      </td>
-                      <td class="px-4 py-3 text-xs">
-                        <span
-                          class="px-2 py-1 font-semibold leading-tight text-green-700 bg-green-100 rounded-full dark:bg-green-700 dark:text-green-100"
-                        >
-                          DITERIMA
-                        </span>
-                      </td>
-                      <td class="px-4 py-3 text-sm">
-                        6/10/2020
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <div
-                class="grid px-4 py-3 text-xs font-semibold tracking-wide text-gray-500 uppercase border-t dark:border-gray-700 bg-gray-50 sm:grid-cols-9 dark:text-gray-400 dark:bg-gray-800"
-              >
-                <span class="flex items-center col-span-3">
-                  Showing 21-30 of 100
-                </span>
-                <span class="col-span-2"></span>
-                <!-- Pagination -->
-                <span class="flex col-span-4 mt-2 sm:mt-auto sm:justify-end">
-                  <nav aria-label="Table navigation">
-                    <ul class="inline-flex items-center">
-                      <li>
-                        <button
-                          class="px-3 py-1 rounded-md rounded-l-lg focus:outline-none focus:shadow-outline-purple"
-                          aria-label="Previous"
-                        >
-                          <svg
-                            aria-hidden="true"
-                            class="w-4 h-4 fill-current"
-                            viewBox="0 0 20 20"
-                          >
-                            <path
-                              d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
-                              clip-rule="evenodd"
-                              fill-rule="evenodd"
-                            ></path>
-                          </svg>
-                        </button>
-                      </li>
-                      <li>
-                        <button
-                          class="px-3 py-1 rounded-md focus:outline-none focus:shadow-outline-purple"
-                        >
-                          1
-                        </button>
-                      </li>
-                      <li>
-                        <button
-                          class="px-3 py-1 rounded-md focus:outline-none focus:shadow-outline-purple"
-                        >
-                          2
-                        </button>
-                      </li>
-                      <li>
-                        <button
-                          class="px-3 py-1 text-white transition-colors duration-150 bg-purple-600 border border-r-0 border-purple-600 rounded-md focus:outline-none focus:shadow-outline-purple"
-                        >
-                          3
-                        </button>
-                      </li>
-                      <li>
-                        <button
-                          class="px-3 py-1 rounded-md focus:outline-none focus:shadow-outline-purple"
-                        >
-                          4
-                        </button>
-                      </li>
-                      <li>
-                        <span class="px-3 py-1">...</span>
-                      </li>
-                      <li>
-                        <button
-                          class="px-3 py-1 rounded-md focus:outline-none focus:shadow-outline-purple"
-                        >
-                          8
-                        </button>
-                      </li>
-                      <li>
-                        <button
-                          class="px-3 py-1 rounded-md focus:outline-none focus:shadow-outline-purple"
-                        >
-                          9
-                        </button>
-                      </li>
-                      <li>
-                        <button
-                          class="px-3 py-1 rounded-md rounded-r-lg focus:outline-none focus:shadow-outline-purple"
-                          aria-label="Next"
-                        >
-                          <svg
-                            class="w-4 h-4 fill-current"
-                            aria-hidden="true"
-                            viewBox="0 0 20 20"
-                          >
-                            <path
-                              d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                              clip-rule="evenodd"
-                              fill-rule="evenodd"
-                            ></path>
-                          </svg>
-                        </button>
-                      </li>
-                    </ul>
-                  </nav>
-                </span>
-              </div>
-            </div>
-
-            <!-- Charts -->
-            <h2
-              class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200"
-            >
-              Charts
-            </h2>
-            <div class="grid gap-6 mb-8 md:grid-cols-2">
-              <div
-                class="min-w-0 p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800"
-              >
-                <h4 class="mb-4 font-semibold text-gray-800 dark:text-gray-300">
-                  Pendaftar
-                </h4>
-                <canvas id="pie"></canvas>
-                <div
-                  class="flex justify-center mt-4 space-x-3 text-sm text-gray-600 dark:text-gray-400"
-                >
-                  <!-- Chart legend -->
-                  <div class="flex items-center">
-                    <span
-                      class="inline-block w-3 h-3 mr-1 bg-blue-500 rounded-full"
-                    ></span>
-                    <span>ILKOM</span>
-                  </div>
-                  <div class="flex items-center">
-                    <span
-                      class="inline-block w-3 h-3 mr-1 bg-teal-600 rounded-full"
-                    ></span>
-                    <span>BIOLOGI</span>
-                  </div>
-                  <div class="flex items-center">
-                    <span
-                      class="inline-block w-3 h-3 mr-1 bg-purple-600 rounded-full"
-                    ></span>
-                    <span>FISIKA</span>
-                  </div>
-                </div>
-              </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </main>
       </div>
     </div>

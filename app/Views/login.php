@@ -63,32 +63,27 @@
 <body>
     <div class="container">
         <img src="/assets/img/LogoUnila.png" class="logo" alt="Logo UNILA">
+
+        <?= view('Myth\Auth\Views\_message_block') ?>
+
         <div class="input-box">
-            <form method="post" action="">
-                <input type="text" name="username" placeholder="Username">
+            <form action="<?= url_to('login') ?>" method="post">
+            <?= csrf_field() ?>
+            <input type="text" class="form-control <?php if (session('errors.login')) : ?>is-invalid<?php endif ?>"
+				    name="login" placeholder="<?=lang('Auth.emailOrUsername')?>">
             </div>
             <div class="input-box">
-                <input type="password" name="password" placeholder="Password">
+            <input type="password" name="password" class="form-control  <?php if (session('errors.password')) : ?>is-invalid<?php endif ?>" placeholder="<?=lang('Auth.password')?>">
+                <div class="invalid-feedback">
+							<?= session('errors.password') ?>
+				</div>
             </div>
-            <button class="btn-login" type="submit">Login</button>
+            <button type="submit" class="btn-login"><?=lang('Auth.loginAction')?></button>
+            <p><?=lang('Belum Mempunyai Akun?')?> <a href="<?= url_to('register') ?>"><?=lang('Auth.register')?></a></p>
             <br>
-            <br>
-             <a href="/register" class="btn-register">Register</a>
         </form>
         <br>
         <br>
-        <?php
-        if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            $username = $_POST["username"];
-            $password = $_POST["password"];
-
-            if (empty($username) || empty($password)) {
-                echo "Username dan password harus diisi.";
-            } else {
-                //ke home
-            }
-        }
-        ?>
     </div>
 </body>
 </html>
