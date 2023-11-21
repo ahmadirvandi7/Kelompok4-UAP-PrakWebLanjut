@@ -71,9 +71,8 @@
                 >
                   <path
                     d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
-                  ></path>
+                  ></path><a href="<?=base_url('berandamahasiswa')?>"> <span class="ml-4">Beranda</span></a>
                 </svg>
-                <span class="ml-4">Beranda</span>
                 
               </a>
             </li>
@@ -119,10 +118,8 @@
                   <path
                     d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"
                   ></path>
-                  <path d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"></path><a href="<?=base_url('kelompok')?>"> <span class="ml-4">Kelompok</span></a></li>
+                  <path d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"></path><a href="<?=base_url('kelompok')?>"> <span class="ml-4">Kelompok</span>
                 </svg>
-              <!-- <li><a href="<?=base_url('kelompok')?>"> <span class="ml-4">Kelompok</span></a></li>
-            </li> -->
             </a>
 
             <li class="relative px-6 py-3">
@@ -141,8 +138,7 @@
                   stroke="currentColor"
                 >
                   <path
-                    d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"
-                  ></path><a href="<?=base_url('formlaporankegiatan')?>"> <span class="ml-4">Laporan Kegiatan</span></a></li>
+                    d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path> <a href="<?=base_url('formlaporankegiatan')?>"> <span class="ml-4">Laporan Kegiatan</span></a>
                 </svg>
               </a>
 
