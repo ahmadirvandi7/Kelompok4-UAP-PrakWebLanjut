@@ -30,9 +30,4 @@ class Index extends BaseController
     {
         return view('pengumuman');
     }
-
-    public function form_pengumuman()
-    {
-        return view('form_pengumuman');
-    }
 }
