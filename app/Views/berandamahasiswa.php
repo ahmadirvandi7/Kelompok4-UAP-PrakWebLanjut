@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html :class="{ 'theme-dark': dark }" x-data="data()" lang="en">
-    <head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kelompok</title>
+    <title>Beranda Mahasiswa</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./assets/css/tailwind.output.css" />
+    <link rel="stylesheet" href="<?=base_url('assets/css/tailwind.output.css')?>" />
+    <link rel="stylesheet" href="<?=base_url('assets/css/style.css')?>" />
     <script
       src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
       defer
     ></script>
-    <script src="./assets/js/init-alpine.js"></script>
+    <script src="<?=base_url('assets/js/init-alpine.js')?>"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css"
@@ -22,8 +23,8 @@
       src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"
       defer
     ></script>
-    <script src="./assets/js/charts-lines.js" defer></script>
-    <script src="./assets/js/charts-pie.js" defer></script>
+    <script src="<?=base_url('assets/js/charts-lines.js')?>" defer></script>
+    <script src="<?=base_url('assets/js/charts-pie.js')?>" defer></script>
   </head>
   <body>
     <div
@@ -41,13 +42,23 @@
           >
            AYO KKN
           </a>
+          <div class="profile">
+        <center><img src="assets/img/profile-img.jpg" alt="" class="round-image"></center>
+        <center>
+        <h1><a href="index.html">sinta nurhalifah</a></h1>
+        </center>
+      </div>
           <ul class="mt-6">
             <li class="relative px-6 py-3">
-              
+              <span
+                class="absolute inset-y-0 left-0 w-1 bg-purple-600 rounded-tr-lg rounded-br-lg"
+                aria-hidden="true"
+              ></span>
               <a
                 class="inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100"
-                href="/Tampilan"
+                href="index.html"
               >
+
                 <svg
                   class="w-5 h-5"
                   aria-hidden="true"
@@ -63,18 +74,15 @@
                   ></path>
                 </svg>
                 <span class="ml-4">Beranda</span>
+                
               </a>
             </li>
           </ul>
           <ul>
             <li class="relative px-6 py-3">
-            <span
-                class="absolute inset-y-0 left-0 w-1 bg-purple-600 rounded-tr-lg rounded-br-lg"
-                aria-hidden="true"
-              ></span>
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                href="#"
+                href="/pengumuman"
               >
                 <svg
                   class="w-5 h-5"
@@ -94,7 +102,6 @@
               </a>
             </li>
             <li class="relative px-6 py-3">
-            
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
                 href="/kelompok"
@@ -112,11 +119,11 @@
                   <path
                     d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"
                   ></path>
-                  <path d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"></path>
+                  <path d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"></path><a href="<?=base_url('kelompok')?>"> <span class="ml-4">Kelompok</span></a></li>
                 </svg>
-                <span class="ml-4">Kelompok</span>
-              </a>
-            </li>
+              <!-- <li><a href="<?=base_url('kelompok')?>"> <span class="ml-4">Kelompok</span></a></li>
+            </li> -->
+            </a>
 
             <li class="relative px-6 py-3">
               <a
@@ -135,11 +142,10 @@
                 >
                   <path
                     d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"
-                  ></path>
+                  ></path><a href="<?=base_url('formlaporankegiatan')?>"> <span class="ml-4">Laporan Kegiatan</span></a></li>
                 </svg>
-                <span class="ml-4">Modals</span>
               </a>
-            </li>
+
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
@@ -157,7 +163,7 @@
                 >
                   <path d="M4 6h16M4 10h16M4 14h16M4 18h16"></path>
                 </svg>
-                <span class="ml-4">Lokasi</span>
+                <span class="ml-4">Laporan Pelaksanaan</span>
               </a>
             </li>
             <li class="relative px-6 py-3">
@@ -181,6 +187,57 @@
                       d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"
                     ></path>
                   </svg>
+
+                  <span class="ml-4">Lokasi</span>
+              </a>
+            </li>
+            <li class="relative px-6 py-3">
+              <button
+                class="inline-flex items-center justify-between w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
+                @click="togglePagesMenu"
+                aria-haspopup="true"
+              >
+                <span class="inline-flex items-center">
+                  <svg
+                    class="w-5 h-5"
+                    aria-hidden="true"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"
+                    ></path>
+                  </svg>
+
+                  <span class="ml-4">Nilai Mahasiswa</span>
+              </a>
+            </li>
+            <li class="relative px-6 py-3">
+              <button
+                class="inline-flex items-center justify-between w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
+                @click="togglePagesMenu"
+                aria-haspopup="true"
+              >
+                <span class="inline-flex items-center">
+                  <svg
+                    class="w-5 h-5"
+                    aria-hidden="true"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"
+                    ></path>
+                  </svg>
+
                   <span class="ml-4">Admin</span>
                 </span>
                 <svg
@@ -284,7 +341,8 @@
           <ul class="mt-6">
             <li class="relative px-6 py-3">
               <span
-                
+                class="absolute inset-y-0 left-0 w-1 bg-purple-600 rounded-tr-lg rounded-br-lg"
+                aria-hidden="true"
               ></span>
               <a
                 class="inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100"
@@ -566,18 +624,17 @@
                     fill="currentColor"
                     viewBox="0 0 20 20"
                   >
-                    <path
+                    <!-- <path
                       fill-rule="evenodd"
                       d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
                       clip-rule="evenodd"
-                    ></path>
+                    ></path> -->
                   </svg>
                 </div>
+                
                 <input
                   class="w-full pl-8 pr-2 text-sm text-gray-700 placeholder-gray-600 bg-gray-100 border-0 rounded-md dark:placeholder-gray-500 dark:focus:shadow-outline-gray dark:focus:placeholder-gray-600 dark:bg-gray-700 dark:text-gray-200 focus:placeholder-gray-500 focus:bg-white focus:border-purple-300 focus:outline-none focus:shadow-outline-purple form-input"
                   type="text"
-                  placeholder="Cari data pengumuman"
-                  aria-label="Search"
                 />
               </div>
             </div>
@@ -787,74 +844,103 @@
             </ul>
           </div>
         </header>
+
+        <div class="card">
+        <div class="image"></div>
+        <div class="content">
+            <a href="#">
+            <span class="title">
+                BUKU PANDUAN KKN UNIVERSITAS LAMPUNG
+            </span>
+            </a>
+
+            <p class="desc">
+            Buku Panduan KKN Universitas Lampung Dapat Dilihat Disini
+            </p>
+
+            <a class="action" href="#">
+            BUKU PANDUAN KKN
+            <span aria-hidden="true">
+                →
+            </span>
+            </a>
+        </div>
+        </div>
+
+        <br>
+
+        <div class="card">
+        <div class="image"></div>
+        <div class="content">
+            <a href="#">
+            <span class="title">
+                JADWAL KEGIATAN
+            </span>
+            </a>
+
+            <p class="desc">
+            Jadwal Kegiatan Dapat Dilihat Disini
+            </p>
+
+            <a class="action" href="#">
+            JADWAL KEGIATAN
+            <span aria-hidden="true">
+                →
+            </span>
+            </a>
+        </div>
+        </div>
+
+        <br>
+
+        <div class="card">
+        <div class="image"></div>
+        <div class="content">
+            <a href="#">
+            <span class="title">
+                RENCANA KEGIATAN
+            </span>
+            </a>
+
+            <p class="desc">
+            Rencana Kegiatan Dapat Dilihat Disini
+            </p>
+
+            <a class="action" href="#">
+            RENCANA KEGIATAN
+            <span aria-hidden="true">
+                →
+            </span>
+            </a>
+        </div>
+        </div>
+
+        <br>
+        
+        <div class="card">
+        <div class="image"></div>
+        <div class="content">
+            <a href="#">
+            <span class="title">
+                BUKU MATERI PEMBEKALAN KKN
+            </span>
+            </a>
+
+            <p class="desc">
+            Buku Materi Pembekalan KKN Dapat Dilihat Disini.
+            </p>
+
+            <a class="action" href="#">
+            Buku Materi Pembekalan KKN
+            <span aria-hidden="true">
+                →
+            </span>
+            </a>
+        </div>
+        </div>
+
         <main class="h-full overflow-y-auto">
           <div class="container px-6 mx-auto grid">
-            <br>
-         
-<!-- Tombol Tambah Data -->
-<div>
-<a href="<?= base_url("/pengumuman/create") ?>" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-    Tambah Data
-</a>
-</div>
-<br>
-
-<?php foreach ($pengumuman as $item): ?>
-    <!-- Card -->
-    <div class="flex flex-col p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800 mb-4">
-        <!-- Content Section -->
-        <div class="flex items-start">
-            <!-- Circle Icon -->
-            <div class="p-3 mr-4 text-orange-500 bg-orange-100 rounded-full dark:text-orange-100 dark:bg-orange-500">
-                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d=""></path></svg>
-            </div>
-            <!-- Title and Circle Divider -->
-            <div class="flex items-center">
-                <h2 class="text-lg font-medium text-gray-600 dark:text-gray-400">
-                    <?= $item['title'] ?? '' ?>
-                </h2>
-                <div class="mx-4 h-5 border-l border-gray-300 dark:border-gray-600"></div> <!-- Garis Vertikal -->
-            </div>
-        </div>
-        <!-- File Information -->
-        <?php if ($item['attachment_path']): ?>
-            <a href="<?= base_url($item['attachment_path']) ?>" target="_blank" class="text-blue-500">Download File</a>
-        <?php endif; ?>
-        <!-- Content Section -->
-        <div class="mt-3">
-            <p class="text-sm text-gray-600 dark:text-gray-400">
-                <?= $item['content'] ?? '' ?>
-            </p>
-        </div><br>
-        <!-- Divider -->
-        <hr class="my-4 border-t border-gray-300 dark:border-gray-600">
-        <!-- Buttons Section -->
-        <div class="flex items-center justify-between">
-            <!-- Tombol Edit dan Hapus -->
-            <div class="flex items-center">
-                <div class="mr-2"> <!-- Tambahkan margin di sini -->
-                    <a href="<?= base_url("/pengumuman/edit/{$item['id']}") ?>" class="text-indigo-500 mb-1 text-sm">
-                        <button type="button" class="text-sm">
-                            Edit
-                        </button>
-                    </a>
-                </div>
-                <div class="mx-2 h-5 border-l border-gray-300 dark:border-gray-600"></div> <!-- Garis Vertikal -->
-                <div>
-                    <form action="<?= base_url("/pengumuman/delete/{$item['id']}") ?>" method="post" onsubmit="return confirm('Anda yakin ingin menghapus?')">
-                        <input type="hidden" name="_method" value="DELETE">
-                        <button type="submit" class="text-sm">
-                            Hapus
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-<?php endforeach; ?>
-
-
-          </div>
         </main>
       </div>
     </div>
