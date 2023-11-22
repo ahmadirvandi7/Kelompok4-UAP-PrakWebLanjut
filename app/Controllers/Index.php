@@ -46,27 +46,6 @@ class Index extends BaseController
     {
         return view('frommahasiswa');
     }
-
-    public function store ()
-    {
-
-        $this->mahasiswaModel ->saveMahasiswa([
-            'nama_mahasiswa' =>$this->request->getVar('nama_mahasiswa'),
-            'npm' =>$this->request->getVar('npm'),
-            'jenis_kelamin' =>$this->request->getVar('jenis_kelamin'),
-            'upload_berkas' =>$this->request->getVar('upload_berkas'),
-        ]);
-
-        $data = [
-            'nama_mahasiswa' =>$this->request->getVar('nama_mahasiswa'),
-            'npm' =>$this->request->getVar('npm'),
-            'jenis_kelamin' =>$this->request->getVar('jenis_kelamin'),
-            'upload_berkas' =>$this->request->getVar('upload_berkas'),
-        
-        ];
-        return view('list_user', $data);
-
-
     public function pengumuman()
     {
         return view('pengumuman');
@@ -98,4 +77,34 @@ class Index extends BaseController
         return view('formlaporankegiatan');
 
     }
+    public function berandamahasiswa()
+    {
+        return view('berandamahasiswa');
+
+    }
+    public function beranda_admin()
+    {
+        return view('beranda_admin');
+
+    }
+    public function store ()
+    {
+
+        $this->mahasiswaModel ->saveMahasiswa([
+            'nama_mahasiswa' =>$this->request->getVar('nama_mahasiswa'),
+            'npm' =>$this->request->getVar('npm'),
+            'jenis_kelamin' =>$this->request->getVar('jenis_kelamin'),
+            'upload_berkas' =>$this->request->getVar('upload_berkas'),
+        ]);
+
+        $data = [
+            'nama_mahasiswa' =>$this->request->getVar('nama_mahasiswa'),
+            'npm' =>$this->request->getVar('npm'),
+            'jenis_kelamin' =>$this->request->getVar('jenis_kelamin'),
+            'upload_berkas' =>$this->request->getVar('upload_berkas'),
+        
+        ];
+        return view('list_user', $data);
+
+}
 }
