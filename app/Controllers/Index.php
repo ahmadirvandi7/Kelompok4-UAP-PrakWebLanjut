@@ -82,6 +82,13 @@ class Index extends BaseController
         return view('berandamahasiswa');
 
     }
+
+    public function beranda_admin()
+    {
+        return view('beranda_admin');
+
+    }
+
     public function store ()
     {
 
@@ -101,6 +108,8 @@ class Index extends BaseController
         ];
         return view('list_user', $data);
 
+
+}
 
 }
 }
