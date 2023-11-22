@@ -33,6 +33,13 @@ class Validation extends BaseConfig
      *
      * @var array<string, string>
      */
+
+
+     public $pengumuman = [
+        'title' => 'required',
+        'content' => 'required',
+        'attachment_path' => 'uploaded[attachment_path]|mime_in[attachment_path,image/jpg,image/jpeg,image/png,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document]',
+    ];
     public array $templates = [
         'list'   => 'CodeIgniter\Validation\Views\list',
         'single' => 'CodeIgniter\Validation\Views\single',
