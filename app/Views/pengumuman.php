@@ -789,89 +789,71 @@
         </header>
         <main class="h-full overflow-y-auto">
           <div class="container px-6 mx-auto grid">
-            <!-- <h2
-              class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200"
-            >
-              Pengumuman
-            </h2>
-            
-            <div class="grid gap-3 mb-8 md:grid-cols-2 xl:grid-cols-5">
-              Card
-              <div
-                class="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800"
-              >
-                <div
-                  class="p-3 mr-4 text-orange-500 bg-orange-100 rounded-full dark:text-orange-100 dark:bg-orange-500"
-                >
-                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                    <path
-                      d=""
-                    ></path>
-                  </svg>
-                </div>
-                <div>
-                  <h2
-                    class="mb-3 text-sm font-medium text-gray-600 dark:text-gray-400"
-                  >
-                    judul pengumuman
-                  </p>
-                  user
+            <br>
+         
+<!-- Tombol Tambah Data -->
+<div>
+<a href="<?= base_url("/pengumuman/create") ?>" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+    Tambah Data
+</a>
+</div>
+<br>
+
+<?php foreach ($pengumuman as $item): ?>
+    <!-- Card -->
+    <div class="flex flex-col p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800 mb-4">
+        <!-- Content Section -->
+        <div class="flex items-start">
+            <!-- Circle Icon -->
+            <div class="p-3 mr-4 text-orange-500 bg-orange-100 rounded-full dark:text-orange-100 dark:bg-orange-500">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d=""></path></svg>
+            </div>
+            <!-- Title and Circle Divider -->
+            <div class="flex items-center">
+                <h2 class="text-lg font-medium text-gray-600 dark:text-gray-400">
+                    <?= $item['title'] ?? '' ?>
                 </h2>
+                <div class="mx-4 h-5 border-l border-gray-300 dark:border-gray-600"></div> <!-- Garis Vertikal -->
+            </div>
+        </div>
+        <!-- File Information -->
+        <?php if ($item['attachment_path']): ?>
+            <a href="<?= base_url($item['attachment_path']) ?>" target="_blank" class="text-blue-500">Download File</a>
+        <?php endif; ?>
+        <!-- Content Section -->
+        <div class="mt-3">
+            <p class="text-sm text-gray-600 dark:text-gray-400">
+                <?= $item['content'] ?? '' ?>
+            </p>
+        </div><br>
+        <!-- Divider -->
+        <hr class="my-4 border-t border-gray-300 dark:border-gray-600">
+        <!-- Buttons Section -->
+        <div class="flex items-center justify-between">
+            <!-- Tombol Edit dan Hapus -->
+            <div class="flex items-center">
+                <div class="mr-2"> <!-- Tambahkan margin di sini -->
+                    <a href="<?= base_url("/pengumuman/edit/{$item['id']}") ?>" class="text-indigo-500 mb-1 text-sm">
+                        <button type="button" class="text-sm">
+                            Edit
+                        </button>
+                    </a>
                 </div>
-              </div><br>
-              <br>
-
-
-              <div
-                class="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800"
-              >
+                <div class="mx-2 h-5 border-l border-gray-300 dark:border-gray-600"></div> <!-- Garis Vertikal -->
                 <div>
-                  <h2
-                    class="mb-3 text-sm font-medium text-gray-600 dark:text-gray-400"
-                  >
-                    content
-                  </p>
-                </h2>
-                </div>
-              </div>
-
-              </div>
-              </div>
-            </div> -->
-
-            <?php foreach ($pengumuman as $item): ?>
-            <!-- Card -->
-            <div class="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800 mb-4">
-                <div class="p-3 mr-4 text-orange-500 bg-orange-100 rounded-full dark:text-orange-100 dark:bg-orange-500">
-                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d=""></path></svg>
-                </div>
-                <div>
-                    <h2 class="mb-3 text-sm font-medium text-gray-600 dark:text-gray-400">
-                        <?= $item['title'] ?? '' ?>
-                    </h2>
-                    <p>
-                        creator id: <?= $item['creator_id'] ?? '' ?>
-                    </p>
-
-                    <!-- File Information -->
-                    <?php if ($item['attachment_path']): ?>
-                        <a href="<?= base_url($item['attachment_path']) ?>" target="_blank" class="text-blue-500">Download File</a>
-                    <?php endif; ?>
+                    <form action="<?= base_url("/pengumuman/delete/{$item['id']}") ?>" method="post" onsubmit="return confirm('Anda yakin ingin menghapus?')">
+                        <input type="hidden" name="_method" value="DELETE">
+                        <button type="submit" class="text-sm">
+                            Hapus
+                        </button>
+                    </form>
                 </div>
             </div>
+        </div>
+    </div>
+<?php endforeach; ?>
 
-            <!-- Content Card -->
-            <div class="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800 mb-4">
-                <div>
-                    <h2 class="mb-3 text-sm font-medium text-gray-600 dark:text-gray-400">
-                        
-                    </h2>
-                    <p>
-                        <?= $item['content'] ?? '' ?>
-                    </p>
-                </div>
-            </div>
-          <?php endforeach; ?>
+
           </div>
         </main>
       </div>
