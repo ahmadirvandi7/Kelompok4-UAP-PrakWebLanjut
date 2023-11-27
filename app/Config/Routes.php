@@ -37,12 +37,23 @@ $routes->post('/pengumuman/update/(:num)', 'PengumumanController::update/$1');
 $routes->delete('pengumuman/delete/(:num)', 'PengumumanController::deletePengumuman/$1');
 
 $routes->get('/datamhs_admin', [Index::class, 'datamhs_admin']);
-$routes->get('/laporankegiatan_admin', [Index::class, 'laporankegiatan_admin']);
-$routes->get('/laporanpelaksanaan_admin', [Index::class, 'laporanpelaksanaan_admin']);
 $routes->get('/datadosenpembimbing_admin', [Index::class, 'datadosenpembimbing_admin']);
 $routes->get('/home_admin', [Index::class, 'home_admin']);
-$routes->get('/formlaporankegiatan', [Index::class, 'formlaporankegiatan']);
-$routes->get('/formlaporanpelaksanaan', [Index::class, 'formlaporanpelaksanaan']);
+
+$routes->get('/laporankegiatan_admin', 'LaporanKegiatanController::index');
+$routes->get('/laporan_kegiatan/create', 'LaporanKegiatanController::create');
+$routes->post('/laporan_kegiatan/store', 'LaporanKegiatanController::store');
+$routes->get('/laporan_kegiatan/edit/(:num)', 'LaporanKegiatanController::edit/$1');
+$routes->post('/laporan_kegiatan/update/(:num)', 'LaporanKegiatanController::update/$1');
+$routes->delete('/laporan_kegiatan/delete/(:num)', 'LaporanKegiatanController::delete/$1');
+
+$routes->get('/laporanpelaksanaan_admin', 'LaporanPelaksanaanController::index');
+$routes->get('/laporan_pelaksanaan/create', 'LaporanPelaksanaanController::create');
+$routes->post('/laporan_pelaksanaan/store', 'LaporanPelaksanaanController::store');
+$routes->get('/laporan_pelaksanaan/edit/(:num)', 'LaporanPelaksanaanController::edit/$1');
+$routes->post('/laporan_pelaksanaan/update/(:num)', 'LaporanPelaksanaanController::update/$1');
+$routes->delete('/laporan_pelaksanaan/delete/(:num)', 'LaporanPelaksanaanController::delete/$1');
+
 
 $routes->get('/berandamahasiswa', [Index::class, 'berandamahasiswa']);
 
