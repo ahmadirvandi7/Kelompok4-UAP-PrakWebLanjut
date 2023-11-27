@@ -77,6 +77,11 @@ class Index extends BaseController
         return view('formlaporankegiatan');
 
     }
+    public function formlaporanpelaksanaan()
+    {
+        return view('formlaporanpelaksanaan');
+
+    }
     public function berandamahasiswa()
     {
         return view('berandamahasiswa');
@@ -111,5 +116,4 @@ class Index extends BaseController
 
 }
 
-}
 }

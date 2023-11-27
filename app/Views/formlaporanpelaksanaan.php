@@ -15,7 +15,7 @@
 			<div class="section-content">
             <img src="assets/img/logo unila.png" alt="" width="70" height="70">
 				<h1 class="section-header">AYO <span class="content-header wow fadeIn " data-wow-delay="0.2s" data-wow-duration="2s"> KKN</span></h1>
-				<h5>Silahkan isi laporan hasil kegiatan kkn</h5>
+				<h5>Silahkan isi laporan pelaksanaan kkn</h5>
 			</div>
 			<div class="contact-section">
 			<div class="container">
@@ -25,14 +25,19 @@
 			  				<label for="exampleInputUsername">Nama Mahasiswa</label>
 					    	<input type="text" class="form-control" id="" placeholder="Masukan Nama Anda">
 				  		</div>
-                        <div class="form-group">
-							<label for="exampleInputUsername">Program Kerja dan Kegiatan</label>
-					    	<input type="text" class="form-control" id="" placeholder="Masukan Program Kerja dan Kegiatan">
-
+                          <div class="form-group">
+                        <label for="exampleFormControlSelect1">Tingkat Keberhasilan</label>
+                        <select class="form-control" id="exampleFormControlSelect1">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        </select>
                     </div>
 					  	<div class="form-group">
-					    	<label for="telephone">Target</label>
-					    	<input type="tel" class="form-control" id="telephone" placeholder="Masukan Target">
+					    	<label for="telephone">Catatan</label>
+					    	<input type="tel" class="form-control" id="telephone" placeholder="Masukan Catatan">
 			  			</div>
 			  		</div>
 			  		<div class="col-md-6">
