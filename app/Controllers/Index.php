@@ -50,7 +50,7 @@ class Index extends BaseController
     {
         return view('pengumuman');
     }
-  
+
     public function datamhs_admin()
     {
         return view('datamhs_admin');
@@ -82,6 +82,13 @@ class Index extends BaseController
         return view('berandamahasiswa');
 
     }
+
+    public function beranda_admin()
+    {
+        return view('beranda_admin');
+
+    }
+
     public function store ()
     {
 
@@ -101,6 +108,8 @@ class Index extends BaseController
         ];
         return view('list_user', $data);
 
+
+}
 
 }
 }
