@@ -42,6 +42,7 @@ $routes->get('/laporanpelaksanaan_admin', [Index::class, 'laporanpelaksanaan_adm
 $routes->get('/datadosenpembimbing_admin', [Index::class, 'datadosenpembimbing_admin']);
 $routes->get('/home_admin', [Index::class, 'home_admin']);
 $routes->get('/formlaporankegiatan', [Index::class, 'formlaporankegiatan']);
+$routes->get('/formlaporanpelaksanaan', [Index::class, 'formlaporanpelaksanaan']);
 
 $routes->get('/berandamahasiswa', [Index::class, 'berandamahasiswa']);
 
