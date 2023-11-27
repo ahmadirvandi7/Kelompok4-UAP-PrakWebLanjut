@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>mahasiswa</title>
+    <title>beranda mahasiswa</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
@@ -73,7 +73,6 @@
                     d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
                   ></path><a href="<?=base_url('berandamhs')?>"><span class="ml-4">Beranda</span>
                 </svg>
-                
               </a>
             </li>
           </ul>
@@ -125,7 +124,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                href="/formlaporankegiatan"
+                href="formlaporankegiatan"
               >
                 <svg
                   class="w-5 h-5"
@@ -147,7 +146,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                href="/formlaporanpelaksanaan"
+                href="formlaporanpelaksanaan"
               >
                 <svg
                   class="w-5 h-5"
@@ -162,8 +161,6 @@
                   <path d="M4 6h16M4 10h16M4 14h16M4 18h16"></path><a href="<?=base_url('formlaporanpelaksanaan')?>"> <span class="ml-4">Laporan Pelaksanaan</span></svg>
               </a>
             </li>
-
-            
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
@@ -180,10 +177,6 @@
                   stroke="currentColor"
                 >
                   <path d="M4 6h16M4 10h16M4 14h16M4 18h16"></path><a href="<?=base_url('lokasi')?>"> <span class="ml-4">Lokasi</span></svg>
-              </a>
-            </li>
-
-                  <!-- <span class="ml-4">Lokasi</span> -->
               </a>
             </li>
             <li class="relative px-6 py-3">
@@ -205,7 +198,7 @@
               </a>
             </li>
     
-       
+             
             <li class="relative px-6 py-3">
               <button
                 class="inline-flex items-center justify-between w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
@@ -896,6 +889,37 @@
 </div>
 
 </div>
+
+
+</article>
+
+
+
+
+
+<div class="">
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+</div>
+
 </center>
 
 

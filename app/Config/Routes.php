@@ -43,6 +43,10 @@ $routes->get('/datadosenpembimbing_admin', [Index::class, 'datadosenpembimbing_a
 $routes->get('/home_admin', [Index::class, 'home_admin']);
 $routes->get('/formlaporankegiatan', [Index::class, 'formlaporankegiatan']);
 $routes->get('/formlaporanpelaksanaan', [Index::class, 'formlaporanpelaksanaan']);
+$routes->get('/lokasi_kkn', [Index::class, 'lokasi_kkn']);
+$routes->get('/berandamhs', [Index::class, 'berandamhs']);
+$routes->get('/lokasi', [Index::class, 'lokasi']);
+$routes->get('/nilai_mhs', [Index::class, 'nilai_mhs']);
 
 $routes->get('/berandamahasiswa', [Index::class, 'berandamahasiswa']);
 

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>mahasiswa</title>
+    <title>lokasi kkn</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
@@ -35,7 +35,7 @@
       <aside
         class="z-20 hidden w-64 overflow-y-auto bg-white dark:bg-gray-800 md:block flex-shrink-0"
       >
-        <div class="py-4 text-gray-500 dark:text-gray-400">
+      <div class="py-4 text-gray-500 dark:text-gray-400">
           <a
             class="ml-6 text-lg font-bold text-gray-800 dark:text-gray-200"
             href="#"
@@ -73,7 +73,6 @@
                     d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
                   ></path><a href="<?=base_url('berandamhs')?>"><span class="ml-4">Beranda</span>
                 </svg>
-                
               </a>
             </li>
           </ul>
@@ -125,7 +124,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                href="/formlaporankegiatan"
+                href="formlaporankegiatan"
               >
                 <svg
                   class="w-5 h-5"
@@ -147,7 +146,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                href="/formlaporanpelaksanaan"
+                href="formlaporanpelaksanaan"
               >
                 <svg
                   class="w-5 h-5"
@@ -162,8 +161,6 @@
                   <path d="M4 6h16M4 10h16M4 14h16M4 18h16"></path><a href="<?=base_url('formlaporanpelaksanaan')?>"> <span class="ml-4">Laporan Pelaksanaan</span></svg>
               </a>
             </li>
-
-            
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
@@ -180,10 +177,6 @@
                   stroke="currentColor"
                 >
                   <path d="M4 6h16M4 10h16M4 14h16M4 18h16"></path><a href="<?=base_url('lokasi')?>"> <span class="ml-4">Lokasi</span></svg>
-              </a>
-            </li>
-
-                  <!-- <span class="ml-4">Lokasi</span> -->
               </a>
             </li>
             <li class="relative px-6 py-3">
@@ -205,7 +198,8 @@
               </a>
             </li>
     
-       
+         
+            
             <li class="relative px-6 py-3">
               <button
                 class="inline-flex items-center justify-between w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
@@ -847,54 +841,21 @@
 
 <article class="post-15 page type-page status-publish hentry">
 
-<div class="page-content">
+<br>
+<br>
+<center><strong>Lokasi KKN</strong>
+<br>
 
-<center>
-<h1><strong>BERKAS KKN (Update 21 Januari 2023)</strong></h1>
-
-<div id="tablepress-27_wrapper" class="dataTables_wrapper no-footer"><div class="dataTables_length" id="tablepress-27_length"><label>Show <select name="tablepress-27_length" aria-controls="tablepress-27" class=""><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entries</label></div><div id="tablepress-27_filter" class="dataTables_filter"></div><table id="tablepress-27" class="tablepress tablepress-id-27 dataTable no-footer" role="grid" aria-describedby="tablepress-27_info">
-<thead>
-<tr class="row-1 odd" role="row"><th class="column-1 sorting" tabindex="0" aria-controls="tablepress-27" rowspan="1" colspan="1" aria-label="No: activate to sort column ascending" style="width: 90px;">No</th><th class="column-2 sorting" tabindex="0" aria-controls="tablepress-27" rowspan="1" colspan="1" aria-label="Nama Berkas: activate to sort column ascending" style="width: 721px;">Nama Berkas</th><th class="column-3 sorting" tabindex="0" aria-controls="tablepress-27" rowspan="1" colspan="1" aria-label="Download: activate to sort column ascending" style="width: 215px;">Download</th></tr>
-</thead>
-<tbody class="row-hover">
-</center>
-
-
-
-
-
-
-
-
-
-<tr class="row-2 even" role="row">
-<td class="column-1">1</td><td class="column-2">Daftar Mahasiswa KKN Per-Kelompok</td><td class="column-3"><a href="http://kkn.unila.ac.id/wp-content/uploads/2018/02/1.-Daftar-mahasiswa-KKN-per_kelompok.docx" target="_blank">unduh</a></td>
-</tr><tr class="row-3 odd" role="row">
-<td class="column-1">2</td><td class="column-2">Jurnal Kegiatan Harian</td><td class="column-3"><a href="http://kkn.unila.ac.id/wp-content/uploads/2018/02/2.-Jurnal-Kegiatan-harian.docx" target="_blank">unduh</a></td>
-</tr><tr class="row-4 even" role="row">
-<td class="column-1">3</td><td class="column-2">Jadwal Kegiatan</td><td class="column-3"><a href="http://kkn.unila.ac.id/wp-content/uploads/2018/02/3.-Jadwal-kegiatan.xlsx" target="_blank">unduh</a></td>
-</tr><tr class="row-5 odd" role="row">
-<td class="column-1">4</td><td class="column-2">Buku Tamu</td><td class="column-3"><a href="http://kkn.unila.ac.id/wp-content/uploads/2018/02/4.-Buku-Tamu.docx" target="_blank">unduh</a></td>
-</tr><tr class="row-6 even" role="row">
-<td class="column-1">5</td><td class="column-2">Matrik Program Kerja dan Rencana Kegiatan</td><td class="column-3"><a href="http://kkn.unila.ac.id/wp-content/uploads/2018/02/5.-Matrik-program-kerja-dan-rencana-kegiatan.docx" target="_blank">unduh</a></td>
-</tr><tr class="row-7 odd" role="row">
-<td class="column-1">6</td><td class="column-2">Materi Pembekalan KKN (2023)</td><td class="column-3"><a href="https://drive.google.com/drive/folders/1sGAhzuAHawrkwKWnc4zHxMrFNJa0tVuT?usp=sharing" target="_blank">unduh</a></td>
-</tr><tr class="row-8 even" role="row">
-<td class="column-1">7</td><td class="column-2">Profile Desa</td><td class="column-3"><a href="http://kkn.unila.ac.id/wp-content/uploads/2018/02/Profile-Desa.xlsx" target="_blank">unduh</a></td>
-</tr><tr class="row-9 odd" role="row">
-<td class="column-1">8</td><td class="column-2">indeks desa membangun (NEW)</td><td class="column-3"><a href="http://kkn.unila.ac.id/wp-content/uploads/2018/02/indeks-desa-membangun.xlsx" target="_blank">unduh</a></td>
-</tr><tr class="row-10 even" role="row">
-<td class="column-1">9</td><td class="column-2">Buku Panduan KKN</td><td class="column-3"><a href="https://kkn.unila.ac.id/wp-content/uploads/2022/01/Buku-Panduan-KKN.pdf" rel="noopener" target="_blank">unduh</a></td>
-</tr></tbody>
-</table><div class="dataTables_info" id="tablepress-27_info" role="status" aria-live="polite">Showing 1 to 9 of 9 entries</div><div class="dataTables_paginate paging_simple" id="tablepress-27_paginate"><a class="paginate_button previous disabled" aria-controls="tablepress-27" data-dt-idx="0" tabindex="0" id="tablepress-27_previous">Previous</a><a class="paginate_button next disabled" aria-controls="tablepress-27" data-dt-idx="1" tabindex="0" id="tablepress-27_next">Next</a></div></div>
-<!-- #tablepress-27 from cache -->
-<p>&nbsp;</p>
-<div class="post-views post-15 entry-meta">
-<span class="post-views-icon dashicons dashicons-chart-bar"></span>
-<span class="post-views-label">Post Views: </span>
-<span class="post-views-count">17,555</span>
-</div>
-
+<div class="card mb-3" style="width: 50rem;">
+   <div class="row" style="height:300px;">
+      <div class="col-md-6 maps" >
+         <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11880.492291371422!2d12.4922309!3d41.8902102!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x28f1c82e908503c4!2sColosseo!5e0!3m2!1sit!2sit!4v1524815927977" frameborder="0" style="border:0" allowfullscreen></iframe>
+      </div> <div class="card-img-top" 
+  <div class="card-body">
+    <h5 class="card-title">Lokasi Penempatan Desa</h5>
+    <p class="card-text">Desa/Kelurahan Karang Anyar, Kecamatan Jati Agung, Kabupaten Lampung Selatan, Provinsi Lampung.</p>
+    <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+  </div>
 </div>
 </center>
 

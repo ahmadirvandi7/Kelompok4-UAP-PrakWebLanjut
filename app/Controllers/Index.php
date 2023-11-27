@@ -68,6 +68,22 @@ class Index extends BaseController
     {
         return view('datadosenpembimbing_admin');
     }
+    public function lokasi_kkn()
+    {
+        return view('lokasi_kkn');
+    }
+    public function nilai_mhs()
+    {
+        return view('nilai_mhs');
+    }
+    public function berandamhs()
+    {
+        return view('berandamhs');
+    }
+    public function lokasi()
+    {
+        return view('lokasi');
+    }
     public function home_admin()
     {
         return view('home_admin');
