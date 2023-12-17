@@ -919,7 +919,7 @@
                         <span class="title">Kelola Jadwal Kegiatan</span>
                     </a>
                     <p class="desc">Mengelola dan memperbarui jadwal kegiatan.</p>
-                    <a class="action" href="#">Kelola</a>
+                    <a class="action" href="/list_kegiatan   ">Kelola</a>
                 </div>
             </div>
         </div>

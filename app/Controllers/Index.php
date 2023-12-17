@@ -87,13 +87,24 @@ class Index extends BaseController
         return view('beranda_admin');
 
     }
+    public function kelolah_jadwal()
+    {
+        return view('kelolah_jadwal');
+
+    }
+    public function kelolah()
+    {
+        return view('kelolah');
+
+    }
+    
     public function store ()
     {
 
         $this->mahasiswaModel ->saveMahasiswa([
             'nama_mahasiswa' =>$this->request->getVar('nama_mahasiswa'),
             'npm' =>$this->request->getVar('npm'),
-            'jenis_kelamin' =>$this->request->getVar('jenis_kelamin'),
+            'jenis_kelamin' =>$this->requegitst->getVar('jenis_kelamin'),
             'upload_berkas' =>$this->request->getVar('upload_berkas'),
         ]);
 
@@ -107,4 +118,23 @@ class Index extends BaseController
         return view('list_user', $data);
 
 }
+
+public function kelola_jadwal ()
+{
+
+    $this->kelolaModel ->savekelola([
+        'tanggal' =>$this->request->getVar('tanggal'),
+        'hari' =>$this->request->getVar('hari'),
+        'kegiatan' =>$this->requegitst->getVar('kegiatan'),
+    ]);
+
+    $data = [
+        'tanggal' =>$this->request->getVar('tangal'),
+        'hari' =>$this->request->getVar('hari'),
+        'kegiatan' =>$this->requegitst->getVar('kegiatan'),
+    ];
+    return view('list_kegiatan', $data);
+
+}
+
 }
