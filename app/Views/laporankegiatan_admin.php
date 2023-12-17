@@ -1,3 +1,9 @@
+<?php
+$laporanModel = new \App\Models\LaporanKegiatanModel();
+$laporanMahasiswa = $laporanModel->findAll();
+$isAdmin = true;
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,22 +16,22 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="<?= base_url('assets/img/favicon.png') ?>" rel="icon">
+  <link href="<?= base_url('assets/img/apple-touch-icon.png') ?>" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="<?= base_url('assets/vendor/aos/aos.css') ?>" rel="stylesheet">
+  <link href="<?= base_url('assets/vendor/bootstrap/css/bootstrap.min.css') ?>" rel="stylesheet">
+  <link href="<?= base_url('assets/vendor/bootstrap-icons/bootstrap-icons.css') ?>" rel="stylesheet">
+  <link href="<?= base_url('assets/vendor/boxicons/css/boxicons.min.css') ?>" rel="stylesheet">
+  <link href="<?= base_url('assets/vendor/glightbox/css/glightbox.min.css') ?>" rel="stylesheet">
+  <link href="<?= base_url('assets/vendor/swiper/swiper-bundle.min.css') ?>" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="<?= base_url('assets/css/style.css') ?>" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: iPortfolio
@@ -46,129 +52,94 @@
     <div class="d-flex flex-column">
 
       <div class="profile">
-        <img src="assets/img/profile-img.jpg" alt="" class="img-fluid rounded-circle">
-        <h1 class="text-light"><a href="index.html">ADMIN</a></h1>
-        <!-- <div class="social-links mt-3 text-center">
-          <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-          <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-          <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-        </div> -->
+        <img src="<?= base_url('assets/img/profile-img.jpg') ?>" alt="" class="img-fluid rounded-circle">
+        <h1 class="text-light"><a href="#">ADMIN</a></h1>
       </div>
 
       <nav id="navbar" class="nav-menu navbar">
         <ul>
-        <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <a href="<?=base_url('home_admin')?>"> <span>Home</span></a></li>
-          <li><a href="#Tentang" class="nav-link scrollto"><i class="bx bx-user"></i> <a href="<?=base_url('datamhs_admin')?>"> <span>Data Mahasiswa</span></a></li>
-          <li><a href="#Resume" class="nav-link scrollto"><i class="bx bx-user"></i> <a href="<?=base_url('laporankegiatan_admin')?>"> <span>Laporan Kegiatan</span></a></li>
-          <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <a href="<?=base_url('laporanpelaksanaan_admin')?>"> <span>Laporan Pelaksanaan</span></a></li>
-          <!-- <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Services</span></a></li> -->
-          <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <a href="<?=base_url('datadosenpembimbing_admin')?>"> <span>Data Dosen Pembimbing</span></a></li>
+          <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <a href="<?= base_url('home_admin') ?>"> <span>Home</span></a></li>
+          <li><a href="#Tentang" class="nav-link scrollto"><i class="bx bx-user"></i> <a href="<?= base_url('datamhs_admin') ?>"> <span>Data Mahasiswa</span></a></li>
+          <li><a href="#Resume" class="nav-link scrollto"><i class="bx bx-user"></i> <a href="<?= base_url('laporankegiatan_admin') ?>"> <span>Laporan Kegiatan</span></a></li>
+          <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <a href="<?= base_url('laporanpelaksanaan_admin') ?>"> <span>Laporan Pelaksanaan</span></a></li>
+          <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <a href="<?= base_url('datadosenpembimbing_admin') ?>"> <span>Data Dosen Pembimbing</span></a></li>
         </ul>
       </nav><!-- .nav-menu -->
     </div>
   </header><!-- End Header -->
 
-  <!-- ======= Hero Section ======= -->
-  <!-- <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
-    <div class="hero-container" data-aos="fade-in">
-      <h1>ADMIN</h1>
-      <p><span class="typed" data-typed-items="Dosen, Pembimbing, Kuliah Kerja Nyata, Universitas Lampung"></span></p>
-    </div>
-  </section>End Hero -->
-
+  <!-- ======= Main Section ======= -->
   <main id="main">
-
-
-<!-- ======= Tentang Section ======= -->
-<section id="Resume" class="Resume">
+    <section id="Resume" class="Resume">
       <div class="container">
-
         <div class="section-title">
           <h2>Laporan Kegiatan</h2>
-          <?php
-
-
-$isAdmin = true;
-
-
-$laporanMahasiswa = [
-    ['id' => 1, 'nama' => 'Sinta Nurhalifah', 'kegiatan' => 'Penyuluhan kesehatan ', 'target' => 'masyarakat', 'keterangan' => 'isi keterangan'],
-    ['id' => 2, 'nama' => 'Sinta Nurhalifah', 'kegiatan' => 'Pemberdayaan masyarakat didesa', 'target' => 'masyarakat', 'keterangan' => 'isi keterangan'],
-    ['id' => 3, 'nama' => 'Sinta Nurhalifah', 'kegiatan' => 'Program pendidikan', 'target' => 'pelajar', 'keterangan' => 'isi keterangan'],
-    ['id' => 4, 'nama' => 'Sinta Nurhalifah', 'kegiatan' => 'Survei masalah yang dihadapi masyarakat', 'target' => 'masyarakat', 'keterangan' => 'isi keterangan'],
-    ['id' => 5, 'nama' => 'Sinta Nurhalifah', 'kegiatan' => 'Pelayanan masyarakat', 'target' => 'masyarakat', 'keterangan' => 'isi keterangan'],
-    ['id' => 6, 'nama' => 'Sinta Nurhalifah', 'kegiatan' => 'Penelitian masalah yang dihadapi masyarakat', 'target' => 'masyarakat', 'keterangan' => 'isi keterangan'],
-    ['id' => 7, 'nama' => 'Sinta Nurhalifah', 'kegiatan' => 'Pebangunan infrastruktur', 'target' => 'masyarakat', 'keterangan' => 'isi keterangan'],
-    ['id' => 8, 'nama' => 'Sinta Nurhalifah', 'kegiatan' => 'Pembangunan jalan didesa', 'target' => 'masyarakat', 'keterangan' => 'isi keterangan'],
-    ['id' => 9, 'nama' => 'Sinta Nurhalifah', 'kegiatan' => 'Program edukasi lingkungan', 'target' => 'masyarakat', 'keterangan' => 'isi keterangan'],
-    ['id' => 10, 'nama' => 'Sinta Nurhalifah', 'kegiatan' => 'Pembangunan proyek saluran air', 'target' => 'masyarakat', 'keterangan' => 'isi keterangan'],
-    ['id' => 11, 'nama' => 'Sinta Nurhalifah', 'kegiatan' => 'Program edukasi reboisasi', 'target' => 'masyarakat', 'keterangan' => 'isi keterangan'],
-    ['id' => 12, 'nama' => 'Sinta Nurhalifah', 'kegiatan' => 'Pengembangan potensi desa', 'target' => 'masyarakat', 'keterangan' => 'isi keterangan'],
-    ['id' => 13, 'nama' => 'Sinta Nurhalifah', 'kegiatan' => 'Kegiatan pengelolaan sampah', 'target' => 'masyarakat', 'keterangan' => 'isi keterangan'],
-    ['id' => 14, 'nama' => 'Sinta Nurhalifah', 'kegiatan' => 'Konservasi sumber daya alam', 'target' => 'masyarakat', 'keterangan' => 'isi keterangan'],
-
-];
-
-?>
-
-<table>
-    <thead>
-        <tr>
-            <th>ID</th>
-            <th>Nama Mahasiswa</th>
-            <th>Program Kerja dan Kegiatan</th>
-            <th>Target</th>
-            <th>Keterangan</th>
-            <?php if ($isAdmin) : ?>
-                <th>Aksi</th>
-            <?php endif; ?>
-        </tr>
-    </thead>
-    <tbody>
-        <?php foreach ($laporanMahasiswa as $laporan) : ?>
-            <tr>
-                <td><?php echo $laporan['id']; ?></td>
-                <td><?php echo $laporan['nama']; ?></td>
-                <td><?php echo $laporan['kegiatan']; ?></td>
-                <td><?php echo $laporan['target']; ?></td>
-                <td><?php echo $laporan['keterangan']; ?></td>
+          <br>
+          <table>
+            <a href="<?= base_url('laporan_kegiatan/create') ?>" class="btn btn-primary">Tambah Data</a>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Nama Mahasiswa</th>
+                <th>Program Kerja dan Kegiatan</th>
+                <th>Target</th>
+                <th>Keterangan</th>
                 <?php if ($isAdmin) : ?>
-                    <td>
-                        <a href="edit.php?id=<?php echo $laporan['id']; ?>">Edit</a>
-                        <a href="hapus.php?id=<?php echo $laporan['id']; ?>" onclick="return confirm('Apakah Anda yakin ingin menghapus laporan ini?')">Hapus</a>
-                    </td>
+                  <th>Aksi</th>
                 <?php endif; ?>
-            </tr>
-        <?php endforeach; ?>
-    </tbody>
-</table>
-
-
-    </section><!-- End Resume Section -->
-
-        
+              </tr>
+            </thead>
+            <tbody>
+              <?php foreach ($laporanMahasiswa as $laporan) : ?>
+                <tr>
+                  <td><?php echo $laporan['id']; ?></td>
+                  <td><?php echo $laporan['nama_mahasiswa']; ?></td>
+                  <td><?php echo $laporan['program_kegiatan']; ?></td>
+                  <td><?php echo $laporan['target']; ?></td>
+                  <td><?php echo $laporan['keterangan']; ?></td>
+                  <?php if ($isAdmin) : ?>
+                    <td>
+                      <a href="<?= base_url('laporan_kegiatan/edit/' . $laporan['id']) ?>" class="text-sm" style="background: none; border: none; color: #007BFF; cursor: pointer; font-size: 14px;">
+                        Edit
+                      </a>
+                      <form action="<?= base_url("/laporan_kegiatan/delete/{$laporan['id']}") ?>" method="post" onsubmit="return confirm('Anda yakin ingin menghapus?')" style="display: inline; background: none; border: none; font-size: 14px;">
+                        <input type="hidden" name="_method" value="DELETE">
+                        <button type="submit" class="text-sm" style="background: none; border: none; color: #007BFF; cursor: pointer;">
+                          Hapus
+                        </button>
+                      </form>
+                    </td>
+                  <?php endif; ?>
+                </tr>
+              <?php endforeach; ?>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <!-- ======= Footer ======= -->
   <footer id="footer">
     <div class="container">
     </div>
-  </footer><!-- End  Footer -->
+  </footer><!-- End Footer -->
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/typed.js/typed.umd.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="<?= base_url('assets/vendor/purecounter/purecounter_vanilla.js') ?>"></script>
+  <script src="<?= base_url('assets/vendor/aos/aos.js') ?>"></script>
+  <script src="<?= base_url('assets/vendor/bootstrap/js/bootstrap.bundle.min.js') ?>"></script>
+  <script src="<?= base_url('assets/vendor/glightbox/js/glightbox.min.js') ?>"></script>
+  <script src="<?= base_url('assets/vendor/isotope-layout/isotope.pkgd.min.js') ?>"></script>
+  <script src="<?= base_url('assets/vendor/swiper/swiper-bundle.min.js') ?>"></script>
+  <script src="<?= base_url('assets/vendor/typed.js/typed.umd.js') ?>"></script>
+  <script src="<?= base_url('assets/vendor/waypoints/noframework.waypoints.js') ?>"></script>
+  <script src="<?= base_url('assets/vendor/php-email-form/validate.js') ?>"></script>
 
   <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <script src="<?= base_url('assets/js/main.js') ?>"></script>
 
 </body>
 

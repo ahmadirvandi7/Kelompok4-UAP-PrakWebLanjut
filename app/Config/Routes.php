@@ -37,16 +37,10 @@ $routes->post('/pengumuman/update/(:num)', 'PengumumanController::update/$1');
 $routes->delete('pengumuman/delete/(:num)', 'PengumumanController::deletePengumuman/$1');
 
 $routes->get('/datamhs_admin', [Index::class, 'datamhs_admin']);
-$routes->get('/laporankegiatan_admin', [Index::class, 'laporankegiatan_admin']);
-$routes->get('/laporanpelaksanaan_admin', [Index::class, 'laporanpelaksanaan_admin']);
 $routes->get('/datadosenpembimbing_admin', [Index::class, 'datadosenpembimbing_admin']);
 $routes->get('/home_admin', [Index::class, 'home_admin']);
 $routes->get('/formlaporankegiatan', [Index::class, 'formlaporankegiatan']);
 $routes->get('/formlaporanpelaksanaan', [Index::class, 'formlaporanpelaksanaan']);
-$routes->get('/lokasi_kkn', [Index::class, 'lokasi_kkn']);
-$routes->get('/berandamhs', [Index::class, 'berandamhs']);
-$routes->get('/lokasi', [Index::class, 'lokasi']);
-$routes->get('/nilai_mhs', [Index::class, 'nilai_mhs']);
 
 $routes->get('/berandamahasiswa', [Index::class, 'berandamahasiswa']);
 
