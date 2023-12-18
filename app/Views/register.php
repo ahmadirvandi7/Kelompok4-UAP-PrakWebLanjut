@@ -39,7 +39,15 @@
             margin-right: 30px; 
             margin-left: 10px; 
         }
-
+        input[type="email"],
+        input[type="password"] {
+            width: calc(100% - 20px); 
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-right: 30px; 
+            margin-left: 10px; 
+        }
         .btn-login {
             background-color: #007BFF;
             color: #fff;

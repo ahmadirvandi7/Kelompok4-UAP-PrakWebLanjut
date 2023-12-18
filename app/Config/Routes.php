@@ -29,7 +29,7 @@ $routes->get('/pengumuman', [PengumumanController::class, 'index']);
 $routes->get('/datamhs_admin', [Index::class, 'datamhs_admin'], ['filter' => 'role:admin']);
 $routes->get('/laporankegiatan_admin', [Index::class, 'laporankegiatan_admin']);
 $routes->get('/laporanpelaksanaan_admin', [Index::class, 'laporanpelaksanaan_admin']);
-$routes->get('/datadosenpembimbing_admin', [Index::class, 'datadosenpembimbing_admin']);
+$routes->get('/datadosenpembimbing_admin', [Indexgit::class, 'datadosenpembimbing_admin']);
 $routes->get('/home_admin', [Index::class, 'home_admin'], ['filter' => 'role:admin']);
 $routes->get('/formlaporankegiatan', [Index::class, 'formlaporankegiatan'], ['filter' => 'role:admin']);
 
