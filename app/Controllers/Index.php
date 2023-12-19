@@ -68,23 +68,43 @@ class Index extends BaseController
     {
         return view('datadosenpembimbing_admin');
     }
+    public function lokasi_kkn()
+    {
+        return view('lokasi_kkn');
+    }
+    public function nilai_mhs()
+    {
+        return view('nilai_mhs');
+    }
+    // public function lokasi()
+    // {
+    //     return view('lokasi');
+    // }
     public function home_admin()
     {
         return view('home_admin');
     }
-    // public function formlaporankegiatan()
-    // {
-    //     return view('formlaporankegiatan');
+    public function formlaporankegiatan()
+    {
+        return view('formlaporankegiatan');
 
-    // }
-    // public function formlaporanpelaksanaan()
-    // {
-    //     return view('formlaporanpelaksanaan');
-    // }
+    }
+    public function formlaporanpelaksanaan()
+    {
+        return view('formlaporanpelaksanaan');
+    }
+    public function lokasi()
+    {
+        return view('lokasi');
+    }
     public function berandamahasiswa()
     {
         return view('berandamahasiswa');
 
+    }
+    public function berandamhs()
+    {
+        return view('berandamhs');
     }
 
     public function beranda_admin()

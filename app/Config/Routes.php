@@ -47,6 +47,15 @@ $routes->get('/datamhs_admin', [Index::class, 'datamhs_admin']);
 $routes->get('/datadosenpembimbing_admin', [Index::class, 'datadosenpembimbing_admin']);
 $routes->get('/home_admin', [Index::class, 'home_admin']);
 
+$routes->get('/formlaporankegiatan', [Index::class, 'formlaporankegiatan']);
+$routes->get('/formlaporanpelaksanaan', [Index::class, 'formlaporanpelaksanaan']);
+
+$routes->get('/berandamahasiswa', [Index::class, 'berandamahasiswa']);
+$routes->get('/berandamhs', [Index::class, 'berandamhs']);
+$routes->get('/formlaporankegiatan', [Index::class, 'formlaporankegiatan']);
+$routes->get('/formlaporanpelaksanaan', [Index::class, 'formlaporanpelaksanaan']);
+$routes->get('/lokasi', [Index::class, 'lokasi']);
+
 
 $routes->get('/list_kegiatan', 'KelolaJadwalController::list_kegiatan');
 $routes->get('/kelola_jadwal/edit/(:num)', 'KelolaJadwalController::edit/$1');
@@ -67,4 +76,4 @@ $routes->get('/laporan_pelaksanaan/edit/(:num)', 'LaporanPelaksanaanController::
 $routes->post('/laporan_pelaksanaan/update/(:num)', 'LaporanPelaksanaanController::update/$1');
 $routes->delete('/laporan_pelaksanaan/delete/(:num)', 'LaporanPelaksanaanController::delete/$1');
 
-$routes->get('/berandamahasiswa', [Index::class, 'berandamahasiswa']);
+
