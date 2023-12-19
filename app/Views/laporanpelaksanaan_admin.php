@@ -94,7 +94,6 @@ $laporanMahasiswa = $laporanPelaksanaanModel->findAll(); // Mengambil semua data
           <h2>Laporan Pelaksanaan</h2>
           
           <table>
-    <a href="<?= base_url('laporan_pelaksanaan/create') ?>" class="btn btn-primary">Tambah Data</a>
     <thead>
         <tr>
             <th>ID</th>

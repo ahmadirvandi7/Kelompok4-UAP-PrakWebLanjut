@@ -76,7 +76,7 @@ $isAdmin = true;
           <h2>Laporan Kegiatan</h2>
           <br>
           <table>
-            <a href="<?= base_url('laporan_kegiatan/create') ?>" class="btn btn-primary">Tambah Data</a>
+            
             <thead>
               <tr>
                 <th>ID</th>
