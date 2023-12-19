@@ -1,11 +1,3 @@
-<?php
-
-$isAdmin = true;
-$laporanPelaksanaanModel = new \App\Models\LaporanPelaksanaanModel();
-$laporanMahasiswa = $laporanPelaksanaanModel->findAll(); // Mengambil semua data, sesuaikan dengan kebutuhan
-
-?>
-
 <!DOCTYPE html>
 <html :class="{ 'theme-dark': dark }" x-data="data()" lang="en">
   <head>
@@ -60,77 +52,6 @@ $laporanMahasiswa = $laporanPelaksanaanModel->findAll(); // Mengambil semua data
     display: block; /* Mengubah gambar menjadi elemen blok */
     margin: 0 auto; /* Memberikan margin otomatis (auto) untuk centering */
   }
-
-  body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-
-        .card {
-            margin: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border: none; /* Menghilangkan garis batas */
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .card:hover {
-            transform: scale(1.05);
-        }
-
-        .content {
-            padding: 15px;
-        }
-
-        .title {
-            font-size: 18px;
-            font-weight: bold;
-            color: #333;
-        }
-
-        .desc {
-            color: #666;
-        }
-
-        .action {
-            padding: 8px 12px;
-            background-color: #007BFF;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 10px;
-        }
-
-        .action:hover {
-            background-color: #0056b3;
-        }
-
-        tbody tr:nth-child(odd) {
-            background-color: #007BFF;
-        }
-
-        tbody tr:nth-child(even) {
-            background-color: #007BFF;
-        }
-
-  table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-
-        th, td {
-            border: 1px solid #007BFF;
-            text-align: left;
-            padding: 12px;
-            background-color: #f8f9fa;
-            color: #333;
-        }
-        th {
-            background-color: #0056b3;
-            color: #fff;
-        }
-
 
   </style>
 </head>
@@ -220,7 +141,7 @@ $laporanMahasiswa = $laporanPelaksanaanModel->findAll(); // Mengambil semua data
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                href="laporankegiatan_admin"
+                href="modals.html"
               >
                 <svg
                   class="w-5 h-5"
@@ -242,7 +163,7 @@ $laporanMahasiswa = $laporanPelaksanaanModel->findAll(); // Mengambil semua data
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                href="laporanpelaksanaan_admin"
+                href="tables.html"
               >
                 <svg
                   class="w-5 h-5"
@@ -604,7 +525,7 @@ $laporanMahasiswa = $laporanPelaksanaanModel->findAll(); // Mengambil semua data
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                href="modals.html"
+                href="/laporankegiatan_admin"
               >
                 <svg
                   class="w-5 h-5"
@@ -626,7 +547,7 @@ $laporanMahasiswa = $laporanPelaksanaanModel->findAll(); // Mengambil semua data
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                href="laporanpelaksanaan_admin"
+                href="tables.html"
               >
                 <svg
                   class="w-5 h-5"
@@ -1039,82 +960,49 @@ $laporanMahasiswa = $laporanPelaksanaanModel->findAll(); // Mengambil semua data
         .action:hover {
             background-color: #0056b3;
         }
-
-        tbody tr:nth-child(odd) {
-            background-color: #007BFF;
-        }
-
-        tbody tr:nth-child(even) {
-            background-color: #007BFF;
-        }
-
-  table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-
-        th, td {
-            border: 1px solid #007BFF;
-            text-align: left;
-            padding: 12px;
-            background-color: #f8f9fa;
-            color: #333;
-        }
-        th {
-            background-color: #0056b3;
-            color: #fff;
-        }
     </style>
-</head> 
-<br>
+</head>
 <body>
-      
 
-<div class="container">
-  <div class="section-title">
-    <h2>Laporan Pelaksanaan</h2>
-          
-    <table>
-    <thead>
-        <tr>
-            <th>ID</th>
-            <th>Nama Mahasiswa</th>
-            <th>Tingkat Keberhasilan</th>
-            <th>Catatan</th>
-            <th>Keterangan</th>
-            <?php if ($isAdmin) : ?>
-                <th>Aksi</th>
-            <?php endif; ?>
-        </tr>
-    </thead>
-    <tbody>
-        <?php foreach ($laporanMahasiswa as $laporan) : ?>
-            <tr>
-                <td><?php echo $laporan['id']; ?></td>
-                <td><?php echo $laporan['nama_mahasiswa']; ?></td>
-                <td><?php echo $laporan['tingkat_keberhasilan']; ?></td>
-                <td><?php echo $laporan['catatan']; ?></td>
-                <td><?php echo $laporan['keterangan']; ?></td>
-                <?php if ($isAdmin) : ?>
-                    <td>
-                    <a href="<?= base_url('laporan_pelaksanaan/edit/' . $laporan['id']) ?>" class="text-sm" style="background: none; border: none; color: #007BFF; cursor: pointer; font-size: 14px;">
-                        Edit
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="content">
+                    <a href="#">
+                        <span class="title">Kelola Jadwal Kegiatan</span>
                     </a>
-                    <form action="<?= base_url("/laporan_pelaksanaan/delete/{$laporan['id']}") ?>" method="post" onsubmit="return confirm('Anda yakin ingin menghapus?')" style="display: inline; background: none; border: none; font-size: 14px;">
-                        <input type="hidden" name="_method" value="DELETE">
-                        <button type="submit" class="text-sm" style="background: none; border: none; color: #007BFF; cursor: pointer;">
-                            Hapus
-                        </button>
-                    </form>
-                    </td>
-                <?php endif; ?>
-            </tr>
-        <?php endforeach; ?>
-    </tbody>
-</table>
+                    <p class="desc">Mengelola dan memperbarui jadwal kegiatan.</p>
+                    <a class="action" href="/list_kegiatan   ">Kelola</a>
+                </div>
+            </div>
+        </div>
 
-    </section>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="content">
+                    <a href="#">
+                        <span class="title">Kelola Rencana Kegiatan</span>
+                    </a>
+                    <p class="desc">Mengelola dan memperbarui rencana kegiatan.</p>
+                    <a class="action" href="#">Kelola</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card">
+                <div class="content">
+                    <a href="#">
+                        <span class="title">Kelola Buku Materi Pembekalan KKN</span>
+                    </a>
+                    <p class="desc">Mengelola dan memperbarui informasi buku materi pembekalan KKN.</p>
+                    <a class="action" href="#">Kelola</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"></script>
 </body>

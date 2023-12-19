@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html :class="{ 'theme-dark': dark }" x-data="data()" lang="en">
-    <head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kelompok</title>
+    <title>lokasi kkn</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./assets/css/tailwind.output.css" />
+    <link rel="stylesheet" href="<?=base_url('assets/css/tailwind.output.css')?>" />
+    <link rel="stylesheet" href="<?=base_url('assets/css/style.css')?>" />
     <script
       src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
       defer
     ></script>
-    <script src="./assets/js/init-alpine.js"></script>
+    <script src="<?=base_url('assets/js/init-alpine.js')?>"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css"
@@ -22,8 +23,8 @@
       src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"
       defer
     ></script>
-    <script src="./assets/js/charts-lines.js" defer></script>
-    <script src="./assets/js/charts-pie.js" defer></script>
+    <script src="<?=base_url('assets/js/charts-lines.js')?>" defer></script>
+    <script src="<?=base_url('assets/js/charts-pie.js')?>" defer></script>
   </head>
   <body>
     <div
@@ -34,13 +35,19 @@
       <aside
         class="z-20 hidden w-64 overflow-y-auto bg-white dark:bg-gray-800 md:block flex-shrink-0"
       >
-        <div class="py-4 text-gray-500 dark:text-gray-400">
+      <div class="py-4 text-gray-500 dark:text-gray-400">
           <a
             class="ml-6 text-lg font-bold text-gray-800 dark:text-gray-200"
             href="#"
           >
            AYO KKN
           </a>
+          <div class="profile">
+        <center><img src="assets/img/profile-img.jpg" alt="" class="round-image"></center>
+        <center>
+        <h1><a href="index.html">sinta nurhalifah</a></h1>
+        </center>
+      </div>
           <ul class="mt-6">
             <li class="relative px-6 py-3">
               
@@ -789,89 +796,71 @@
         </header>
         <main class="h-full overflow-y-auto">
           <div class="container px-6 mx-auto grid">
-            <!-- <h2
-              class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200"
-            >
-              Pengumuman
-            </h2>
-            
-            <div class="grid gap-3 mb-8 md:grid-cols-2 xl:grid-cols-5">
-              Card
-              <div
-                class="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800"
-              >
-                <div
-                  class="p-3 mr-4 text-orange-500 bg-orange-100 rounded-full dark:text-orange-100 dark:bg-orange-500"
-                >
-                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                    <path
-                      d=""
-                    ></path>
-                  </svg>
-                </div>
-                <div>
-                  <h2
-                    class="mb-3 text-sm font-medium text-gray-600 dark:text-gray-400"
-                  >
-                    judul pengumuman
-                  </p>
-                  user
+            <br>
+         
+<!-- Tombol Tambah Data -->
+<div>
+<a href="<?= base_url("/pengumuman/create") ?>" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+    Tambah Data
+</a>
+</div>
+<br>
+
+<?php foreach ($pengumuman as $item): ?>
+    <!-- Card -->
+    <div class="flex flex-col p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800 mb-4">
+        <!-- Content Section -->
+        <div class="flex items-start">
+            <!-- Circle Icon -->
+            <div class="p-3 mr-4 text-orange-500 bg-orange-100 rounded-full dark:text-orange-100 dark:bg-orange-500">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d=""></path></svg>
+            </div>
+            <!-- Title and Circle Divider -->
+            <div class="flex items-center">
+                <h2 class="text-lg font-medium text-gray-600 dark:text-gray-400">
+                    <?= $item['title'] ?? '' ?>
                 </h2>
+                <div class="mx-4 h-5 border-l border-gray-300 dark:border-gray-600"></div> <!-- Garis Vertikal -->
+            </div>
+        </div>
+        <!-- File Information -->
+        <?php if ($item['attachment_path']): ?>
+            <a href="<?= base_url($item['attachment_path']) ?>" target="_blank" class="text-blue-500">Download File</a>
+        <?php endif; ?>
+        <!-- Content Section -->
+        <div class="mt-3">
+            <p class="text-sm text-gray-600 dark:text-gray-400">
+                <?= $item['content'] ?? '' ?>
+            </p>
+        </div><br>
+        <!-- Divider -->
+        <hr class="my-4 border-t border-gray-300 dark:border-gray-600">
+        <!-- Buttons Section -->
+        <div class="flex items-center justify-between">
+            <!-- Tombol Edit dan Hapus -->
+            <div class="flex items-center">
+                <div class="mr-2"> <!-- Tambahkan margin di sini -->
+                    <a href="<?= base_url("/pengumuman/edit/{$item['id']}") ?>" class="text-indigo-500 mb-1 text-sm">
+                        <button type="button" class="text-sm">
+                            Edit
+                        </button>
+                    </a>
                 </div>
-              </div><br>
-              <br>
-
-
-              <div
-                class="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800"
-              >
+                <div class="mx-2 h-5 border-l border-gray-300 dark:border-gray-600"></div> <!-- Garis Vertikal -->
                 <div>
-                  <h2
-                    class="mb-3 text-sm font-medium text-gray-600 dark:text-gray-400"
-                  >
-                    content
-                  </p>
-                </h2>
-                </div>
-              </div>
-
-              </div>
-              </div>
-            </div> -->
-
-            <?php foreach ($pengumuman as $item): ?>
-            <!-- Card -->
-            <div class="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800 mb-4">
-                <div class="p-3 mr-4 text-orange-500 bg-orange-100 rounded-full dark:text-orange-100 dark:bg-orange-500">
-                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d=""></path></svg>
-                </div>
-                <div>
-                    <h2 class="mb-3 text-sm font-medium text-gray-600 dark:text-gray-400">
-                        <?= $item['title'] ?? '' ?>
-                    </h2>
-                    <p>
-                        creator id: <?= $item['creator_id'] ?? '' ?>
-                    </p>
-
-                    <!-- File Information -->
-                    <?php if ($item['attachment_path']): ?>
-                        <a href="<?= base_url($item['attachment_path']) ?>" target="_blank" class="text-blue-500">Download File</a>
-                    <?php endif; ?>
+                    <form action="<?= base_url("/pengumuman/delete/{$item['id']}") ?>" method="post" onsubmit="return confirm('Anda yakin ingin menghapus?')">
+                        <input type="hidden" name="_method" value="DELETE">
+                        <button type="submit" class="text-sm">
+                            Hapus
+                        </button>
+                    </form>
                 </div>
             </div>
+        </div>
+    </div>
+<?php endforeach; ?>
 
-            <!-- Content Card -->
-            <div class="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800 mb-4">
-                <div>
-                    <h2 class="mb-3 text-sm font-medium text-gray-600 dark:text-gray-400">
-                        
-                    </h2>
-                    <p>
-                        <?= $item['content'] ?? '' ?>
-                    </p>
-                </div>
-            </div>
-          <?php endforeach; ?>
+
           </div>
         </main>
       </div>
