@@ -88,6 +88,11 @@ $activities = $kelolaJadwalModel->findAll(); // Mendapatkan semua data kegiatan 
             padding: 0;
             font-size: inherit;
         }
+        a {
+            color:  #f8f9fa;
+            text-align: center;
+            margin-top: 20px;
+        }
 
         .edit-form button:hover, .delete-form button:hover {
             text-decoration: underline;
@@ -133,6 +138,10 @@ $activities = $kelolaJadwalModel->findAll(); // Mendapatkan semua data kegiatan 
     <?php endforeach; ?>
     </tbody>
 </table>
+
+<div>
+    <a href="/beranda_admin">Kembali</a>
+</div>
 
 </body>
 </html>
