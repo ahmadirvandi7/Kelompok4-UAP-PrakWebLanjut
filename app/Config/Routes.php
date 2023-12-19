@@ -18,6 +18,9 @@ $routes->get('/profile', [Index::class, 'profile']);
 $routes->get('/kelompok', [Index::class, 'kelompok']);
 $routes->get('/admin', [Index::class, 'admin']);
 $routes->get('/beranda_admin', [Index::class, 'beranda_admin']);
+$routes->get('/data_mahasiswa', [Index::class, 'datamahasiswa_admin']);
+$routes->get('/data_dosen', [Index::class, 'datadosen_admin']);
+
 
 
 $routes->get('/mahasiswa', [Index::class, 'index']);
