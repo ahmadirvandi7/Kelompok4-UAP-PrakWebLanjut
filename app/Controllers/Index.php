@@ -127,7 +127,6 @@ class Index extends BaseController
 
 }
 
-}
 
 
 public function kelola_jadwal ()

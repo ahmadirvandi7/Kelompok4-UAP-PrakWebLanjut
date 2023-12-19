@@ -51,7 +51,7 @@ class LaporanPelaksanaanController extends BaseController
 
             $this->laporanPelaksanaanModel->insert($data);
 
-            return redirect()->to(base_url('/laporanpelaksanaan_admin'))->with('success', 'Data berhasil disimpan!');
+            return redirect()->to(base_url('/berandamahasiswa'))->with('success', 'Data berhasil disimpan!');
         } else {
             return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
         }
