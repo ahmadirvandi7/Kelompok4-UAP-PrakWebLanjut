@@ -194,7 +194,7 @@
                   viewBox="0 0 24 24"
                   stroke="currentColor"
                 >
-                  <path d="M4 6h16M4 10h16M4 14h16M4 18h16"></path><a href="<?=base_url('nilai_mhs')?>"> <span class="ml-4">Nilai Mahasiswa</span></svg>
+                  <path d="M4 6h16M4 10h16M4 14h16M4 18h16"></path><a href=""> <span class="ml-4">Nilai Mahasiswa</span></svg>
               </a>
             </li> -->
     
@@ -206,7 +206,7 @@
                 @click="togglePagesMenu"
                 aria-haspopup="true"
               >
-                <span class="inline-flex items-center">
+                <!-- <span class="inline-flex items-center">
                   <svg
                     class="w-5 h-5"
                     aria-hidden="true"
@@ -220,9 +220,9 @@
                     <path
                       d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"
                     ></path>
-                  </svg>
+                  </svg> -->
 
-                  <span class="ml-4">Admin</span>
+                  <!-- <span class="ml-4">Admin</span>
                 </span>
                 <svg
                   class="w-4 h-4"
@@ -238,32 +238,25 @@
                 </svg>
               </button>
               <template x-if="isPagesMenuOpen">
-                <ul
-                  x-transition:enter="transition-all ease-in-out duration-300"
-                  x-transition:enter-start="opacity-25 max-h-0"
-                  x-transition:enter-end="opacity-100 max-h-xl"
-                  x-transition:leave="transition-all ease-in-out duration-300"
-                  x-transition:leave-start="opacity-100 max-h-xl"
-                  x-transition:leave-end="opacity-0 max-h-0"
-                  class="p-2 mt-2 space-y-2 overflow-hidden text-sm font-medium text-gray-500 rounded-md shadow-inner bg-gray-50 dark:text-gray-400 dark:bg-gray-900"
-                  aria-label="submenu"
-                >
-                  <li
+                <ul -->
+
+                
+                  <!-- <li
                     class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
                   >
                     <a class="w-full" href="pages/login.html">Login</a>
                   </li>
                   <li
-                    class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                  >
-                    <a class="w-full" href="pages/create-account.html">
+                    class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200" -->
+                  
+                    <!-- <a class="w-full" href="pages/create-account.html">
                       Create account
                     </a>
                   </li>
                   <li
                     class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                  >
-                    <a class="w-full" href="pages/forgot-password.html">
+                  > -->
+                    <!-- <a class="w-full" href="pages/forgot-password.html">
                       Forgot password
                     </a>
                   </li>
@@ -277,17 +270,17 @@
                   >
                     <a class="w-full" href="pages/blank.html">Blank</a>
                   </li>
-                </ul>
+                </ul> -->
               </template>
             </li>
           </ul>
           <div class="px-6 my-6">
-            <button
+            <!-- <button
               class="flex items-center justify-between w-full px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple"
             >
               Create account
               <span class="ml-2" aria-hidden="true">+</span>
-            </button>
+            </button> -->
           </div>
         </div>
       </aside>
@@ -409,7 +402,7 @@
                   stroke-width="2"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
-                >
+                
                   <path
                     d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"
                   ></path>
@@ -422,7 +415,7 @@
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
                 href="buttons.html"
-              >
+              
                 <svg
                   class="w-5 h-5"
                   aria-hidden="true"
@@ -546,7 +539,7 @@
                   >
                     <a class="w-full" href="pages/forgot-password.html">
                       Forgot password
-                    </a>
+                    </a> 
                   </li>
                   <li
                     class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
@@ -558,7 +551,7 @@
                   >
                     <a class="w-full" href="pages/blank.html">Blank</a>
                   </li>
-                </ul>
+                </ul> 
               </template>
             </li>
           </ul>
@@ -608,11 +601,11 @@
                     fill="currentColor"
                     viewBox="0 0 20 20"
                   >
-                    <!-- <path
+                    <path
                       fill-rule="evenodd"
                       d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
                       clip-rule="evenodd"
-                    ></path> -->
+                    ></path>
                   </svg>
                 </div>
                 
@@ -780,7 +773,7 @@
                     <li class="flex">
                       <a
                         class="inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800 dark:hover:bg-gray-800 dark:hover:text-gray-200"
-                        href="#"
+                        href="#" 
                       >
                         <svg
                           class="w-4 h-4 mr-3"
@@ -797,13 +790,13 @@
                           ></path>
                           <path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
                         </svg>
-                        <span>Settings</span>
+                        <span>Settings</span> 
                       </a>
                     </li>
                     <li class="flex">
                       <a
                         class="inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800 dark:hover:bg-gray-800 dark:hover:text-gray-200"
-                        href="#"
+                        href="#" -->
                       >
                         <svg
                           class="w-4 h-4 mr-3"
@@ -813,16 +806,16 @@
                           stroke-linejoin="round"
                           stroke-width="2"
                           viewBox="0 0 24 24"
-                          stroke="currentColor"
+                          stroke="currentColor" -->
                         >
                           <path
                             d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"
                           ></path>
-                        </svg>
-                        <span>Log out</span>
+                        </svg> 
+                         <span>Log out</span>
                       </a>
                     </li>
-                  </ul>
+                  </ul> 
                 </template>
               </li>
             </ul>
@@ -854,7 +847,6 @@
   <div class="card-body">
     <h5 class="card-title">Lokasi Penempatan Desa</h5>
     <p class="card-text">Desa/Kelurahan Karang Anyar, Kecamatan Jati Agung, Kabupaten Lampung Selatan, Provinsi Lampung.</p>
-    <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
   </div>
 </div>
 </center>

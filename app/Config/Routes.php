@@ -39,10 +39,51 @@ $routes->get('/pengumuman/edit/(:num)', 'PengumumanController::edit/$1');
 $routes->post('/pengumuman/update/(:num)', 'PengumumanController::update/$1');
 $routes->delete('pengumuman/delete/(:num)', 'PengumumanController::deletePengumuman/$1');
 
+//admin:
+$routes->get('/datamahasiswa_admin', 'MahasiswaController::index');
+$routes->get('/datamahasiswa_admin/create', 'MahasiswaController::create');
+$routes->post('/datamahasiswa_admin/store', 'MahasiswaController::store');
+$routes->get('/datamahasiswa_admin/edit/(:num)', 'MahasiswaController::edit/$1');
+$routes->post('/datamahasiswa_admin/update/(:num)', 'MahasiswaController::update/$1');
+$routes->delete('/datamahasiswa_admin/delete/(:num)', 'MahasiswaController::delete/$1');
+
+
+$routes->get('/datadosen_admin', 'DosenController::index');
+$routes->get('/datadosen_admin/create', 'DosenController::create');
+$routes->post('/datadosen_admin/store', 'DosenController::store');
+$routes->get('/datadosen_admin/edit/(:num)', 'DosenController::edit/$1');
+$routes->post('/datadosen_admin/update/(:num)', 'DosenController::update/$1');
+$routes->delete('datadosen_admin/delete/(:num)', 'DosenController::delete/$1');
+//
+
+$routes->get('/datamhs_admin', [Index::class, 'datamhs_admin'], ['filter' => 'role:admin']);
+$routes->get('/pengumuman_admin', 'PengumumanController::index_admin');
+$routes->get('/kelompok_admin', [Index::class, 'kelompok_admin']);
+$routes->get('/datamahasiswa_admin', [Index::class, 'datamahasiswa_admin']);
+$routes->get('/datadosen_admin', [Index::class, 'datadosen_admin']);
+$routes->get('/laporankegiatan_admin', [Index::class, 'laporankegiatan_admin']);
+$routes->get('/laporanpelaksanaan_admin', [Index::class, 'laporanpelaksanaan_admin']);
+$routes->get('/datadosenpembimbing_admin', [Indexgit::class, 'datadosenpembimbing_admin']);
+$routes->get('/home_admin', [Index::class, 'home_admin'], ['filter' => 'role:admin']);
+$routes->get('/formlaporankegiatan', [Index::class, 'formlaporankegiatan'], ['filter' => 'role:admin']);
+$routes->get('/datamhs_admin', [Index::class, 'datamhs_admin']);
+$routes->get('/datadosenpembimbing_admin', [Index::class, 'datadosenpembimbing_admin']);
+$routes->get('/home_admin', [Index::class, 'home_admin']);
+
+$routes->get('/formlaporankegiatan', [Index::class, 'formlaporankegiatan']);
+$routes->get('/formlaporanpelaksanaan', [Index::class, 'formlaporanpelaksanaan']);
+
+$routes->get('/berandamahasiswa', [Index::class, 'berandamahasiswa']);
+$routes->get('/berandamhs', [Index::class, 'berandamhs']);
+$routes->get('/formlaporankegiatan', [Index::class, 'formlaporankegiatan']);
+$routes->get('/formlaporanpelaksanaan', [Index::class, 'formlaporanpelaksanaan']);
+$routes->get('/lokasi', [Index::class, 'lokasi']);
+
 
 $routes->get('/datamhs_admin', [Index::class, 'datamhs_admin']);
 $routes->get('/datadosenpembimbing_admin', [Index::class, 'datadosenpembimbing_admin']);
 $routes->get('/home_admin', [Index::class, 'home_admin']);
+
 
 
 $routes->get('/list_kegiatan', 'KelolaJadwalController::list_kegiatan');
@@ -65,3 +106,6 @@ $routes->post('/laporan_pelaksanaan/update/(:num)', 'LaporanPelaksanaanControlle
 $routes->delete('/laporan_pelaksanaan/delete/(:num)', 'LaporanPelaksanaanController::delete/$1');
 
 $routes->get('/berandamahasiswa', [Index::class, 'berandamahasiswa']);
+
+
+

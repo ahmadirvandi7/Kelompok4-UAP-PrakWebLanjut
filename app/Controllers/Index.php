@@ -56,14 +56,14 @@ class Index extends BaseController
         return view('datamhs_admin');
     }
     
-    // public function laporankegiatan_admin()
-    // {
-    //     return view('laporankegiatan_admin');
-    // }
-    // public function laporanpelaksanaan_admin()
-    // {
-    //     return view('laporanpelaksanaan_admin');
-    // }
+    public function laporankegiatan_admin()
+    {
+        return view('laporankegiatan_admin');
+    }
+    public function laporanpelaksanaan_admin()
+    {
+        return view('laporanpelaksanaan_admin');
+    }
     public function datadosenpembimbing_admin()
     {
         return view('datadosenpembimbing_admin');
@@ -132,6 +132,12 @@ class Index extends BaseController
     public function datadosen_admin()
     {
         return view('datadosen_admin');
+
+    }
+
+    public function kelompok_admin()
+    {
+        return view('kelompok_admin');
 
     }
 
