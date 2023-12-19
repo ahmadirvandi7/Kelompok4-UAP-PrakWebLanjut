@@ -1,3 +1,11 @@
+<?php
+
+$isAdmin = true;
+$laporanPelaksanaanModel = new \App\Models\LaporanPelaksanaanModel();
+$laporanMahasiswa = $laporanPelaksanaanModel->findAll(); // Mengambil semua data, sesuaikan dengan kebutuhan
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -84,33 +92,9 @@
 
         <div class="section-title">
           <h2>Laporan Pelaksanaan</h2>
-          <?php
-
-
-$isAdmin = true;
-
-
-$laporanMahasiswa = [
-    ['id' => 1, 'nama' => 'Sinta Nurhalifah', 'program_kerja' => 'Deskripsi Kegiatan 1', 'tingkat_keberhasilan' => 'isi tingkat_keberhasilan', 'catatan' => 'isi catatan', 'Keterangan' => 'isi keterangan'],
-    ['id' => 2, 'nama' => 'Sinta Nurhalifah', 'program_kerja' => 'Deskripsi Kegiatan 1', 'tingkat_keberhasilan' => 'isi tingkat_keberhasilan', 'catatan' => 'isi catatan', 'Keterangan' => 'isi keterangan'],
-    ['id' => 3, 'nama' => 'Sinta Nurhalifah', 'program_kerja' => 'Deskripsi Kegiatan 1', 'tingkat_keberhasilan' => 'isi tingkat_keberhasilan', 'catatan' => 'isi catatan', 'Keterangan' => 'isi keterangan'],
-    ['id' => 4, 'nama' => 'Sinta Nurhalifah', 'program_kerja' => 'Deskripsi Kegiatan 1', 'tingkat_keberhasilan' => 'isi tingkat_keberhasilan', 'catatan' => 'isi catatan', 'Keterangan' => 'isi keterangan'],
-    ['id' => 5, 'nama' => 'Sinta Nurhalifah', 'program_kerja' => 'Deskripsi Kegiatan 1', 'tingkat_keberhasilan' => 'isi tingkat_keberhasilan', 'catatan' => 'isi catatan', 'Keterangan' => 'isi keterangan'],
-    ['id' => 6, 'nama' => 'Sinta Nurhalifah', 'program_kerja' => 'Deskripsi Kegiatan 1', 'tingkat_keberhasilan' => 'isi tingkat_keberhasilan', 'catatan' => 'isi catatan', 'Keterangan' => 'isi keterangan'],
-    ['id' => 7, 'nama' => 'Sinta Nurhalifah', 'program_kerja' => 'Deskripsi Kegiatan 1', 'tingkat_keberhasilan' => 'isi tingkat_keberhasilan', 'catatan' => 'isi catatan', 'Keterangan' => 'isi keterangan'],
-    ['id' => 8, 'nama' => 'Sinta Nurhalifah', 'program_kerja' => 'Deskripsi Kegiatan 1', 'tingkat_keberhasilan' => 'isi tingkat_keberhasilan', 'catatan' => 'isi catatan', 'Keterangan' => 'isi keterangan'],
-    ['id' => 9, 'nama' => 'Sinta Nurhalifah', 'program_kerja' => 'Deskripsi Kegiatan 1', 'tingkat_keberhasilan' => 'isi tingkat_keberhasilan', 'catatan' => 'isi catatan', 'Keterangan' => 'isi keterangan'],
-    ['id' => 10, 'nama' => 'Sinta Nurhalifah', 'program_kerja' => 'Deskripsi Kegiatan 1', 'tingkat_keberhasilan' => 'isi tingkat_keberhasilan', 'catatan' => 'isi catatan', 'Keterangan' => 'isi keterangan'],
-    ['id' => 11, 'nama' => 'Sinta Nurhalifah', 'program_kerja' => 'Deskripsi Kegiatan 1', 'tingkat_keberhasilan' => 'isi tingkat_keberhasilan', 'catatan' => 'isi catatan', 'Keterangan' => 'isi keterangan'],
-    ['id' => 12, 'nama' => 'Sinta Nurhalifah', 'program_kerja' => 'Deskripsi Kegiatan 1', 'tingkat_keberhasilan' => 'isi tingkat_keberhasilan', 'catatan' => 'isi catatan', 'Keterangan' => 'isi keterangan'],
-    ['id' => 13, 'nama' => 'Sinta Nurhalifah', 'program_kerja' => 'Deskripsi Kegiatan 1', 'tingkat_keberhasilan' => 'isi tingkat_keberhasilan', 'catatan' => 'isi catatan', 'Keterangan' => 'isi keterangan'],
-    ['id' => 14, 'nama' => 'Sinta Nurhalifah', 'program_kerja' => 'Deskripsi Kegiatan 1', 'tingkat_keberhasilan' => 'isi tingkat_keberhasilan', 'catatan' => 'isi catatan', 'Keterangan' => 'isi keterangan'],
-
-];
-
-?>
-
-<table>
+          
+          <table>
+    <a href="<?= base_url('laporan_pelaksanaan/create') ?>" class="btn btn-primary">Tambah Data</a>
     <thead>
         <tr>
             <th>ID</th>
@@ -127,20 +111,28 @@ $laporanMahasiswa = [
         <?php foreach ($laporanMahasiswa as $laporan) : ?>
             <tr>
                 <td><?php echo $laporan['id']; ?></td>
-                <td><?php echo $laporan['nama']; ?></td>
+                <td><?php echo $laporan['nama_mahasiswa']; ?></td>
                 <td><?php echo $laporan['tingkat_keberhasilan']; ?></td>
                 <td><?php echo $laporan['catatan']; ?></td>
-                <td><?php echo $laporan['Keterangan']; ?></td>
+                <td><?php echo $laporan['keterangan']; ?></td>
                 <?php if ($isAdmin) : ?>
                     <td>
-                        <a href="edit.php?id=<?php echo $laporan['id']; ?>">Edit</a>
-                        <a href="hapus.php?id=<?php echo $laporan['id']; ?>" onclick="return confirm('Apakah Anda yakin ingin menghapus laporan ini?')">Hapus</a>
+                    <a href="<?= base_url('laporan_pelaksanaan/edit/' . $laporan['id']) ?>" class="text-sm" style="background: none; border: none; color: #007BFF; cursor: pointer; font-size: 14px;">
+                        Edit
+                    </a>
+                    <form action="<?= base_url("/laporan_pelaksanaan/delete/{$laporan['id']}") ?>" method="post" onsubmit="return confirm('Anda yakin ingin menghapus?')" style="display: inline; background: none; border: none; font-size: 14px;">
+                        <input type="hidden" name="_method" value="DELETE">
+                        <button type="submit" class="text-sm" style="background: none; border: none; color: #007BFF; cursor: pointer;">
+                            Hapus
+                        </button>
+                    </form>
                     </td>
                 <?php endif; ?>
             </tr>
         <?php endforeach; ?>
     </tbody>
 </table>
+
     </section><!-- End Portfolio Section -->
 
         

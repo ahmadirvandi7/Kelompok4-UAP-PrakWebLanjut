@@ -3,7 +3,6 @@
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
 
     <link href="https://fonts.googleapis.com/css?family=Oleo+Script:400,700" rel="stylesheet">
    	<link href="https://fonts.googleapis.com/css?family=Teko:400,700" rel="stylesheet">
@@ -19,38 +18,29 @@
 			</div>
 			<div class="contact-section">
 			<div class="container">
-				<form>
+			<form action="<?= site_url('laporan_kegiatan/store') ?>" method="post">
 					<div class="col-md-6 form-line">
-			  			<div class="form-group">
-			  				<label for="exampleInputUsername">Nama Mahasiswa</label>
-					    	<input type="text" class="form-control" id="" placeholder="Masukan Nama Anda">
-				  		</div>
-                          <div class="form-group">
-                        <label for="exampleFormControlSelect1">Tingkat Keberhasilan</label>
-                        <select class="form-control" id="exampleFormControlSelect1">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                        </select>
-                    </div>
-					  	<div class="form-group">
-					    	<label for="telephone">Catatan</label>
-					    	<input type="tel" class="form-control" id="telephone" placeholder="Masukan Catatan">
-			  			</div>
-			  		</div>
-			  		<div class="col-md-6">
-			  			<div class="form-group">
-			  				<label for ="description">Keterangan</label>
-			  			 	<textarea  class="form-control" id="description" placeholder="Masukan Keterangan"></textarea>
-			  			</div>
-			  			<div>
-
-                          <button type="submit" class="btn btn-default">Submit</button>
-
-			  			</div>
-			  			
+						<div class="form-group">
+							<label for="exampleInputUsername">Nama Mahasiswa</label>
+							<input type="text" class="form-control" name="nama_mahasiswa" placeholder="Masukan Nama Anda">
+						</div>
+						<div class="form-group">
+							<label for="exampleInputUsername">Program Kerja dan Kegiatan</label>
+							<input type="text" class="form-control" name="program_kegiatan" placeholder="Masukan Program Kerja dan Kegiatan">
+						</div>
+						<div class="form-group">
+							<label for="telephone">Target</label>
+							<input type="tel" class="form-control" name="target" placeholder="Masukan Target">
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<label for="description">Keterangan</label>
+							<textarea class="form-control" name="keterangan" placeholder="Masukan Keterangan"></textarea>
+						</div>
+						<div>
+							<button type="submit" class="btn btn-default">Submit</button>
+						</div>
 					</div>
 				</form>
 			</div>

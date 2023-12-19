@@ -138,7 +138,8 @@
                   stroke="currentColor"
                 >
                   <path
-                    d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path> <a href="<?=base_url('formlaporankegiatan')?>"> <span class="ml-4">Laporan Kegiatan</span></a>
+                    d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path> 
+                    <a href="<?=base_url('formlaporankegiatan')?>"> <span class="ml-4">Laporan Kegiatan</span></a>
                 </svg>
               </a>
 
@@ -157,9 +158,7 @@
                   viewBox="0 0 24 24"
                   stroke="currentColor"
                 >
-                  <path d="M4 6h16M4 10h16M4 14h16M4 18h16"></path>
-                </svg>
-                <span class="ml-4">Laporan Pelaksanaan</span>
+                  <path d="M4 6h16M4 10h16M4 14h16M4 18h16"></path><a href="<?=base_url('formlaporanpelaksanaan')?>"> <span class="ml-4">Laporan Pelaksanaan</span></svg>
               </a>
             </li>
             <li class="relative px-6 py-3">

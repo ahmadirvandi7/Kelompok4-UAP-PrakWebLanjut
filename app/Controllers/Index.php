@@ -38,10 +38,10 @@ class Index extends BaseController
         return view('admin');
     }
 
-    public function laporan_kegiatan()
-    {
-        return view('laporan_kegiatan');
-    }
+    // public function laporan_kegiatan()
+    // {
+    //     return view('laporan_kegiatan');
+    // }
     public function frommahasiswa()
     {
         return view('frommahasiswa');
@@ -50,20 +50,20 @@ class Index extends BaseController
     {
         return view('pengumuman');
     }
-  
+
     public function datamhs_admin()
     {
         return view('datamhs_admin');
     }
     
-    public function laporankegiatan_admin()
-    {
-        return view('laporankegiatan_admin');
-    }
-    public function laporanpelaksanaan_admin()
-    {
-        return view('laporanpelaksanaan_admin');
-    }
+    // public function laporankegiatan_admin()
+    // {
+    //     return view('laporankegiatan_admin');
+    // }
+    // public function laporanpelaksanaan_admin()
+    // {
+    //     return view('laporanpelaksanaan_admin');
+    // }
     public function datadosenpembimbing_admin()
     {
         return view('datadosenpembimbing_admin');
@@ -72,11 +72,15 @@ class Index extends BaseController
     {
         return view('home_admin');
     }
-    public function formlaporankegiatan()
-    {
-        return view('formlaporankegiatan');
+    // public function formlaporankegiatan()
+    // {
+    //     return view('formlaporankegiatan');
 
-    }
+    // }
+    // public function formlaporanpelaksanaan()
+    // {
+    //     return view('formlaporanpelaksanaan');
+    // }
     public function berandamahasiswa()
     {
         return view('berandamahasiswa');
@@ -87,6 +91,7 @@ class Index extends BaseController
         return view('beranda_admin');
 
     }
+
     public function kelolah_jadwal()
     {
         return view('kelolah_jadwal');
@@ -119,6 +124,7 @@ class Index extends BaseController
 
 }
 
+
 public function kelola_jadwal ()
 {
 
@@ -138,3 +144,4 @@ public function kelola_jadwal ()
 }
 
 }
+
