@@ -43,4 +43,7 @@ $routes->get('/formlaporankegiatan', [Index::class, 'formlaporankegiatan']);
 $routes->get('/formlaporanpelaksanaan', [Index::class, 'formlaporanpelaksanaan']);
 
 $routes->get('/berandamahasiswa', [Index::class, 'berandamahasiswa']);
-
+$routes->get('/berandamhs', [Index::class, 'berandamhs']);
+$routes->get('/formlaporankegiatan', [Index::class, 'formlaporankegiatan']);
+$routes->get('/formlaporanpelaksanaan', [Index::class, 'formlaporanpelaksanaan']);
+$routes->get('/lokasi', [Index::class, 'lokasi']);

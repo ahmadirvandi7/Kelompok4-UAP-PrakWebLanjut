@@ -9,6 +9,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./assets/css/tailwind.output.css" />
+    <link rel="stylesheet" href="<?=base_url('assets/css/style.css')?>" />
     <script
       src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
       defer
@@ -42,8 +43,8 @@
            AYO KKN
           </a>
           <div class="profile">
-        <center><img src="assets/img/profile-img.jpg" alt="" class="round-image"></center>
-        <center>
+        <center><img src="assets/img/profile-img.jpg" alt="" class="round-image">
+ 
         <h1><a href="index.html">sinta nurhalifah</a></h1>
         </center>
       </div>
@@ -178,7 +179,7 @@
                   <path d="M4 6h16M4 10h16M4 14h16M4 18h16"></path><a href="<?=base_url('lokasi')?>"> <span class="ml-4">Lokasi</span></svg>
               </a>
             </li>
-
+<!-- 
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
@@ -196,7 +197,7 @@
                 >
                   <path d="M4 6h16M4 10h16M4 14h16M4 18h16"></path><a href="<?=base_url('nilai_mhs')?>"> <span class="ml-4">Nilai Mahasiswa</span></svg>
               </a>
-            </li>
+            </li> -->
     
             <li class="relative px-6 py-3">
               <button

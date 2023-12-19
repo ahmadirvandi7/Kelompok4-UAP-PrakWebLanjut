@@ -76,31 +76,35 @@ class Index extends BaseController
     {
         return view('nilai_mhs');
     }
-    public function berandamhs()
+    // public function lokasi()
+    // {
+    //     return view('lokasi');
+    // }
+    public function home_admin()
     {
-        return view('berandamhs');
+        return view('home_admin');
+    }
+    public function formlaporankegiatan()
+    {
+        return view('formlaporankegiatan');
+
+    }
+    public function formlaporanpelaksanaan()
+    {
+        return view('formlaporanpelaksanaan');
     }
     public function lokasi()
     {
         return view('lokasi');
     }
-    public function home_admin()
-    {
-        return view('home_admin');
-    }
-    // public function formlaporankegiatan()
-    // {
-    //     return view('formlaporankegiatan');
-
-    // }
-    // public function formlaporanpelaksanaan()
-    // {
-    //     return view('formlaporanpelaksanaan');
-    // }
     public function berandamahasiswa()
     {
         return view('berandamahasiswa');
 
+    }
+    public function berandamhs()
+    {
+        return view('berandamhs');
     }
 
     public function beranda_admin()

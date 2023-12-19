@@ -179,7 +179,7 @@
                   <path d="M4 6h16M4 10h16M4 14h16M4 18h16"></path><a href="<?=base_url('lokasi')?>"> <span class="ml-4">Lokasi</span></svg>
               </a>
             </li>
-            <li class="relative px-6 py-3">
+            <!-- <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
                 href="/nilai_mhs"
@@ -196,7 +196,7 @@
                 >
                   <path d="M4 6h16M4 10h16M4 14h16M4 18h16"></path><a href="<?=base_url('nilai_mhs')?>"> <span class="ml-4">Nilai Mahasiswa</span></svg>
               </a>
-            </li>
+            </li> -->
     
          
             

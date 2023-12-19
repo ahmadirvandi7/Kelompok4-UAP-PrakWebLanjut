@@ -186,12 +186,12 @@
                   <!-- <span class="ml-4">Lokasi</span> -->
               </a>
             </li>
-            <li class="relative px-6 py-3">
+            <!-- <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
                 href="/nilai_mhs"
-              >
-                <svg
+              > -->
+                <!-- <svg
                   class="w-5 h-5"
                   aria-hidden="true"
                   fill="none"
@@ -202,7 +202,7 @@
                   stroke="currentColor"
                 >
                   <path d="M4 6h16M4 10h16M4 14h16M4 18h16"></path><a href="<?=base_url('nilai_mhs')?>"> <span class="ml-4">Nilai Mahasiswa</span></svg>
-              </a>
+              </a> -->
             </li>
         
        
@@ -852,7 +852,7 @@
 <center>
 <h1><strong>BERKAS KKN (Update 21 Januari 2023)</strong></h1>
 
-<div id="tablepress-27_wrapper" class="dataTables_wrapper no-footer"><div class="dataTables_length" id="tablepress-27_length"><label>Show <select name="tablepress-27_length" aria-controls="tablepress-27" class=""><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entries</label></div><div id="tablepress-27_filter" class="dataTables_filter"></div><table id="tablepress-27" class="tablepress tablepress-id-27 dataTable no-footer" role="grid" aria-describedby="tablepress-27_info">
+<div id="tablepress-27_wrapper" class="dataTables_wrapper no-footer"><div class="dataTables_length" id="tablepress-27_length"><label> <select name="tablepress-27_length" aria-controls="tablepress-27" class=""></select> </label></div><div id="tablepress-27_filter" class="dataTables_filter"></div><table id="tablepress-27" class="tablepress tablepress-id-27 dataTable no-footer" role="grid" aria-describedby="tablepress-27_info">
 <thead>
 <tr class="row-1 odd" role="row"><th class="column-1 sorting" tabindex="0" aria-controls="tablepress-27" rowspan="1" colspan="1" aria-label="No: activate to sort column ascending" style="width: 90px;">No</th><th class="column-2 sorting" tabindex="0" aria-controls="tablepress-27" rowspan="1" colspan="1" aria-label="Nama Berkas: activate to sort column ascending" style="width: 721px;">Nama Berkas</th><th class="column-3 sorting" tabindex="0" aria-controls="tablepress-27" rowspan="1" colspan="1" aria-label="Download: activate to sort column ascending" style="width: 215px;">Download</th></tr>
 </thead>
@@ -886,13 +886,13 @@
 </tr><tr class="row-10 even" role="row">
 <td class="column-1">9</td><td class="column-2">Buku Panduan KKN</td><td class="column-3"><a href="https://kkn.unila.ac.id/wp-content/uploads/2022/01/Buku-Panduan-KKN.pdf" rel="noopener" target="_blank">unduh</a></td>
 </tr></tbody>
-</table><div class="dataTables_info" id="tablepress-27_info" role="status" aria-live="polite">Showing 1 to 9 of 9 entries</div><div class="dataTables_paginate paging_simple" id="tablepress-27_paginate"><a class="paginate_button previous disabled" aria-controls="tablepress-27" data-dt-idx="0" tabindex="0" id="tablepress-27_previous">Previous</a><a class="paginate_button next disabled" aria-controls="tablepress-27" data-dt-idx="1" tabindex="0" id="tablepress-27_next">Next</a></div></div>
+<!-- </table><div class="dataTables_info" id="tablepress-27_info" role="status" aria-live="polite">Showing 1 to 9 of 9 entries</div><div class="dataTables_paginate paging_simple" id="tablepress-27_paginate"><a class="paginate_button previous disabled" aria-controls="tablepress-27" data-dt-idx="0" tabindex="0" id="tablepress-27_previous">Previous</a><a class="paginate_button next disabled" aria-controls="tablepress-27" data-dt-idx="1" tabindex="0" id="tablepress-27_next">Next</a></div></div> -->
 <!-- #tablepress-27 from cache -->
-<p>&nbsp;</p>
+<!-- <p>&nbsp;</p>
 <div class="post-views post-15 entry-meta">
-<span class="post-views-icon dashicons dashicons-chart-bar"></span>
-<span class="post-views-label">Post Views: </span>
-<span class="post-views-count">17,555</span>
+<span class="post-views-icon dashicons dashicons-chart-bar"></span> -->
+<!-- <span class="post-views-label">Post Views: </span>
+<span class="post-views-count">17,555</span> -->
 </div>
 
 </div>
