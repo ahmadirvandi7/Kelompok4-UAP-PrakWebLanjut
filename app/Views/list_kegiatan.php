@@ -27,7 +27,7 @@ $activities = $kelolaJadwalModel->findAll(); // Mendapatkan semua data kegiatan 
             margin-top: 20px;
         }
 
-        h2 {
+        h2{
             color:  #f8f9fa;
             text-align: center;
             margin-top: 20px;

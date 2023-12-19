@@ -103,7 +103,17 @@ class Index extends BaseController
         return view('kelolah');
 
     }
-    
+
+    public function datamahasiswa_admin()
+    {
+        return view('datamahasiswa_admin');
+
+    }
+    public function datadosen_admin()
+    {
+        return view('datadosen_admin');
+
+    }
 
     public function store ()
     {
