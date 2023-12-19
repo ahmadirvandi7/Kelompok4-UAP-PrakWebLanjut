@@ -135,6 +135,12 @@ class Index extends BaseController
 
     }
 
+    public function kelompok_admin()
+    {
+        return view('kelompok_admin');
+
+    }
+
     public function store ()
     {
 

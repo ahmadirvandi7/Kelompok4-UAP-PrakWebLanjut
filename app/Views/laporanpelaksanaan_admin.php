@@ -148,7 +148,7 @@ $laporanMahasiswa = $laporanPelaksanaanModel->findAll(); // Mengambil semua data
               ></span>
               <a
                 class="inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100"
-                href="index.html"
+                href="/beranda_admin"
               >
 
                 <svg
@@ -174,7 +174,7 @@ $laporanMahasiswa = $laporanPelaksanaanModel->findAll(); // Mengambil semua data
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                href="/pengumuman"
+                href="/pengumuman_admin"
               >
                 <svg
                   class="w-5 h-5"
@@ -196,7 +196,7 @@ $laporanMahasiswa = $laporanPelaksanaanModel->findAll(); // Mengambil semua data
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                href="/kelompok"
+                href="/kelompok_admin"
               >
                 <svg
                   class="w-5 h-5"
@@ -286,7 +286,7 @@ $laporanMahasiswa = $laporanPelaksanaanModel->findAll(); // Mengambil semua data
             </li>
             <li class="relative px-6 py-3">
               <a
-                href="/data_mahasiswa"
+                href="/datamahasiswa_admin"
                 class="inline-flex items-center justify-between w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
               >
                 <span class="inline-flex items-center">
@@ -312,7 +312,7 @@ $laporanMahasiswa = $laporanPelaksanaanModel->findAll(); // Mengambil semua data
 
             <li class="relative px-6 py-3">
               <a
-                href="/data_dosen"
+                href="/datadosen_admin"
                 class="inline-flex items-center justify-between w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
               >
                 <span class="inline-flex items-center">
@@ -1113,8 +1113,7 @@ $laporanMahasiswa = $laporanPelaksanaanModel->findAll(); // Mengambil semua data
         <?php endforeach; ?>
     </tbody>
 </table>
-
-    </section>
+</section>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
