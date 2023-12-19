@@ -47,3 +47,6 @@ $routes->get('/berandamhs', [Index::class, 'berandamhs']);
 $routes->get('/formlaporankegiatan', [Index::class, 'formlaporankegiatan']);
 $routes->get('/formlaporanpelaksanaan', [Index::class, 'formlaporanpelaksanaan']);
 $routes->get('/lokasi', [Index::class, 'lokasi']);
+$routes->get('/laporankegiatan_admin', [Index::class, 'laporankegiatan_admin']);
+$routes->get('/laporanpelaksanaan_admin', [Index::class, 'laporanpelaksanaan_admin']);
+
