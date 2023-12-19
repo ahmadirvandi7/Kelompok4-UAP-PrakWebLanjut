@@ -15,6 +15,8 @@ class Home extends BaseController
                 return redirect()->to(base_url('/datamhs_admin'));
             }else if(in_groups('dosen')){
                 return redirect()->to(base_url('/tampilan'));
+            }else if(in_groups('mahasiswa')){
+            return redirect()->to(base_url('/mahasiswa'));
             };
         }else{
             return view('login');
