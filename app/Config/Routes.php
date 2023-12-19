@@ -43,7 +43,20 @@ $routes->get('/laporanpelaksanaan_admin', [Index::class, 'laporanpelaksanaan_adm
 $routes->get('/datadosenpembimbing_admin', [Indexgit::class, 'datadosenpembimbing_admin']);
 $routes->get('/home_admin', [Index::class, 'home_admin'], ['filter' => 'role:admin']);
 $routes->get('/formlaporankegiatan', [Index::class, 'formlaporankegiatan'], ['filter' => 'role:admin']);
+$routes->get('/datamhs_admin', [Index::class, 'datamhs_admin']);
+$routes->get('/datadosenpembimbing_admin', [Index::class, 'datadosenpembimbing_admin']);
+$routes->get('/home_admin', [Index::class, 'home_admin']);
+
+$routes->get('/formlaporankegiatan', [Index::class, 'formlaporankegiatan']);
+$routes->get('/formlaporanpelaksanaan', [Index::class, 'formlaporanpelaksanaan']);
+
+$routes->get('/berandamahasiswa', [Index::class, 'berandamahasiswa']);
+$routes->get('/berandamhs', [Index::class, 'berandamhs']);
+$routes->get('/formlaporankegiatan', [Index::class, 'formlaporankegiatan']);
+$routes->get('/formlaporanpelaksanaan', [Index::class, 'formlaporanpelaksanaan']);
+$routes->get('/lokasi', [Index::class, 'lokasi']);
 
 $routes->get('/berandamahasiswa', [Index::class, 'berandamahasiswa'], ['filter' => 'role:mahasiswa']);
+
 
 

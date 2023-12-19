@@ -25,7 +25,8 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+  <!-- <link href="assets/css/style.css" rel="stylesheet"> -->
+  <link rel="stylesheet" href="<?=base_url('assets/css/style.css')?>" />
 
   <!-- =======================================================
   * Template Name: iPortfolio
@@ -79,7 +80,7 @@
   <main id="main">
 
     <!-- ======= Tentang Section ======= -->
-    <section id="Tentang" class="Tentang">
+    <section id="Resume" class="Resume">
       <div class="container">
 
         <div class="section-title">
