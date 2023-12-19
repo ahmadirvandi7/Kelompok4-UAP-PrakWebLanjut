@@ -32,6 +32,5 @@ $routes->get('/laporanpelaksanaan_admin', [Index::class, 'laporanpelaksanaan_adm
 $routes->get('/datadosenpembimbing_admin', [Indexgit::class, 'datadosenpembimbing_admin']);
 $routes->get('/home_admin', [Index::class, 'home_admin'], ['filter' => 'role:admin']);
 $routes->get('/formlaporankegiatan', [Index::class, 'formlaporankegiatan'], ['filter' => 'role:admin']);
-
 $routes->get('/berandamahasiswa', [Index::class, 'berandamahasiswa'], ['filter' => 'role:mahasiswa']);
 
