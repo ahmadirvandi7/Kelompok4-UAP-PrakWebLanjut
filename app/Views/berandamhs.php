@@ -179,27 +179,10 @@
                   <path d="M4 6h16M4 10h16M4 14h16M4 18h16"></path><a href="<?=base_url('lokasi')?>"> <span class="ml-4">Lokasi</span></svg>
               </a>
             </li>
-            <li class="relative px-6 py-3">
-              <a
-                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                href="/nilai_mhs"
-              >
-                <svg
-                  class="w-5 h-5"
-                  aria-hidden="true"
-                  fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path d="M4 6h16M4 10h16M4 14h16M4 18h16"></path><a href="<?=base_url('nilai_mhs')?>"> <span class="ml-4">Nilai Mahasiswa</span></svg>
-              </a>
-            </li>
+
     
              
-            <li class="relative px-6 py-3">
+            <!-- <li class="relative px-6 py-3">
               <button
                 class="inline-flex items-center justify-between w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
                 @click="togglePagesMenu"
@@ -214,9 +197,9 @@
                     stroke-linejoin="round"
                     stroke-width="2"
                     viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
+                    stroke="currentColor" -->
+                  
+                    <!-- <path
                       d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"
                     ></path>
                   </svg>
@@ -227,17 +210,17 @@
                   class="w-4 h-4"
                   aria-hidden="true"
                   fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path
+                  viewBox="0 0 20 20" -->
+                
+                  <!-- <path
                     fill-rule="evenodd"
                     d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
                     clip-rule="evenodd"
                   ></path>
                 </svg>
               </button>
-              <template x-if="isPagesMenuOpen">
-                <ul
+              <template x-if="isPagesMenuOpen"> -->
+                <!-- <ul
                   x-transition:enter="transition-all ease-in-out duration-300"
                   x-transition:enter-start="opacity-25 max-h-0"
                   x-transition:enter-end="opacity-100 max-h-xl"
@@ -245,9 +228,9 @@
                   x-transition:leave-start="opacity-100 max-h-xl"
                   x-transition:leave-end="opacity-0 max-h-0"
                   class="p-2 mt-2 space-y-2 overflow-hidden text-sm font-medium text-gray-500 rounded-md shadow-inner bg-gray-50 dark:text-gray-400 dark:bg-gray-900"
-                  aria-label="submenu"
-                >
-                  <li
+                  aria-label="submenu" -->
+                
+                  <!-- <li
                     class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
                   >
                     <a class="w-full" href="pages/login.html">Login</a>
@@ -256,8 +239,8 @@
                     class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
                   >
                     <a class="w-full" href="pages/create-account.html">
-                      Create account
-                    </a>
+                      Create account -->
+                    <!-- </a>
                   </li>
                   <li
                     class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
@@ -276,18 +259,18 @@
                   >
                     <a class="w-full" href="pages/blank.html">Blank</a>
                   </li>
-                </ul>
+                </ul> -->
               </template>
             </li>
           </ul>
           <div class="px-6 my-6">
-            <button
+            <!-- <button
               class="flex items-center justify-between w-full px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple"
             >
               Create account
               <span class="ml-2" aria-hidden="true">+</span>
             </button>
-          </div>
+          </div> -->
         </div>
       </aside>
       <!-- Mobile sidebar -->
@@ -845,8 +828,8 @@
 <center>
 <h1><strong>BERKAS KKN (Update 21 Januari 2023)</strong></h1>
 
-<div id="tablepress-27_wrapper" class="dataTables_wrapper no-footer"><div class="dataTables_length" id="tablepress-27_length"><label>Show <select name="tablepress-27_length" aria-controls="tablepress-27" class=""><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entries</label></div><div id="tablepress-27_filter" class="dataTables_filter"></div><table id="tablepress-27" class="tablepress tablepress-id-27 dataTable no-footer" role="grid" aria-describedby="tablepress-27_info">
-<thead>
+<div id="tablepress-27_wrapper" class="dataTables_wrapper no-footer"><div class="dataTables_length" id="tablepress-27_length"><label><select name="tablepress-27_length" aria-controls="tablepress-27" class=""><option value="25"></option><option value="100"></option></select> </label></div><div id="tablepress-27_filter" class="dataTables_filter"></div><table id="tablepress-27" class="tablepress tablepress-id-27 dataTable no-footer" role="grid" aria-describedby="tablepress-27_info">
+<thead
 <tr class="row-1 odd" role="row"><th class="column-1 sorting" tabindex="0" aria-controls="tablepress-27" rowspan="1" colspan="1" aria-label="No: activate to sort column ascending" style="width: 90px;">No</th><th class="column-2 sorting" tabindex="0" aria-controls="tablepress-27" rowspan="1" colspan="1" aria-label="Nama Berkas: activate to sort column ascending" style="width: 721px;">Nama Berkas</th><th class="column-3 sorting" tabindex="0" aria-controls="tablepress-27" rowspan="1" colspan="1" aria-label="Download: activate to sort column ascending" style="width: 215px;">Download</th></tr>
 </thead>
 <tbody class="row-hover">
@@ -879,14 +862,14 @@
 </tr><tr class="row-10 even" role="row">
 <td class="column-1">9</td><td class="column-2">Buku Panduan KKN</td><td class="column-3"><a href="https://kkn.unila.ac.id/wp-content/uploads/2022/01/Buku-Panduan-KKN.pdf" rel="noopener" target="_blank">unduh</a></td>
 </tr></tbody>
-</table><div class="dataTables_info" id="tablepress-27_info" role="status" aria-live="polite">Showing 1 to 9 of 9 entries</div><div class="dataTables_paginate paging_simple" id="tablepress-27_paginate"><a class="paginate_button previous disabled" aria-controls="tablepress-27" data-dt-idx="0" tabindex="0" id="tablepress-27_previous">Previous</a><a class="paginate_button next disabled" aria-controls="tablepress-27" data-dt-idx="1" tabindex="0" id="tablepress-27_next">Next</a></div></div>
+<!-- </table><div class="dataTables_info" id="tablepress-27_info" role="status" aria-live="polite">Showing 1 to 9 of 9 entries</div><div class="dataTables_paginate paging_simple" id="tablepress-27_paginate"><a class="paginate_button previous disabled" aria-controls="tablepress-27" data-dt-idx="0" tabindex="0" id="tablepress-27_previous">Previous</a><a class="paginate_button next disabled" aria-controls="tablepress-27" data-dt-idx="1" tabindex="0" id="tablepress-27_next">Next</a></div></div> -->
 <!-- #tablepress-27 from cache -->
-<p>&nbsp;</p>
+<!-- <p>&nbsp;</p>
 <div class="post-views post-15 entry-meta">
 <span class="post-views-icon dashicons dashicons-chart-bar"></span>
 <span class="post-views-label">Post Views: </span>
 <span class="post-views-count">17,555</span>
-</div>
+</div> -->
 
 </div>
 

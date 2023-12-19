@@ -52,7 +52,7 @@ class Index extends BaseController
     }
 
     public function datamhs_admin()
-    {
+    {   
         return view('datamhs_admin');
     }
     
