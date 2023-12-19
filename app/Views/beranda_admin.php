@@ -46,11 +46,13 @@
   <style>
    
 
-    img.round-image {
-      width: 30%; /* Lebar gambar */
-      display: block; /* Mengubah gambar menjadi elemen blok */
-      margin: 0 auto; /* Memberikan margin otomatis (auto) untuk centering */
-    }
+   img.round-image {
+    width: 30%; /* Lebar gambar */
+    height: auto; /* Tinggi gambar menyesuaikan agar rasio aspek tetap terjaga */
+    display: block; /* Mengubah gambar menjadi elemen blok */
+    margin: 0 auto; /* Memberikan margin otomatis (auto) untuk centering */
+  }
+
   </style>
 </head>
 <body>
@@ -203,6 +205,58 @@
                   <span class="ml-4">Lokasi</span>
               </a>
             </li>
+            <li class="relative px-6 py-3">
+              <a
+                href="/data_mahasiswa"
+                class="inline-flex items-center justify-between w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
+              >
+                <span class="inline-flex items-center">
+                  <svg
+                    class="w-5 h-5"
+                    aria-hidden="true"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"
+                    ></path>
+                  </svg>
+
+                  <span class="ml-4">Data Mahasiswa</span>
+                </span>
+              </a>
+            </li>
+
+            <li class="relative px-6 py-3">
+              <a
+                href="/data_dosen"
+                class="inline-flex items-center justify-between w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
+              >
+                <span class="inline-flex items-center">
+                  <svg
+                    class="w-5 h-5"
+                    aria-hidden="true"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"
+                    ></path>
+                  </svg>
+
+                  <span class="ml-4">Data Dosen</span>
+                </span>
+              </a>
+            </li>
+
             <li class="relative px-6 py-3">
               <button
                 class="inline-flex items-center justify-between w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
@@ -471,7 +525,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                href="modals.html"
+                href="/laporankegiatan_admin"
               >
                 <svg
                   class="w-5 h-5"
@@ -919,7 +973,7 @@
                         <span class="title">Kelola Jadwal Kegiatan</span>
                     </a>
                     <p class="desc">Mengelola dan memperbarui jadwal kegiatan.</p>
-                    <a class="action" href="#">Kelola</a>
+                    <a class="action" href="/list_kegiatan   ">Kelola</a>
                 </div>
             </div>
         </div>

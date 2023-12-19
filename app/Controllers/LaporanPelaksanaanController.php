@@ -51,7 +51,7 @@ class LaporanPelaksanaanController extends BaseController
 
             $this->laporanPelaksanaanModel->insert($data);
 
-            return redirect()->to(base_url('/laporanpelaksanaan_admin'))->with('success', 'Data berhasil disimpan!');
+            return redirect()->to(base_url('/berandamahasiswa'))->with('success', 'Data berhasil disimpan!');
         } else {
             return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
         }
@@ -62,7 +62,7 @@ class LaporanPelaksanaanController extends BaseController
         $laporan = $this->laporanPelaksanaanModel->find($id);
 
         if (empty($laporan)) {
-            return redirect()->to(base_url('/laporanpelaksanaan_admin'))->with('error', 'Data tidak ditemukan!');
+            return redirect()->to(base_url('/berandamahasiswa'))->with('error', 'Data tidak ditemukan!');
         }
 
         $data = [
@@ -82,19 +82,28 @@ class LaporanPelaksanaanController extends BaseController
         }
 
         $validationRules = [
-            // validasi kalo ada
+            'nama_mahasiswa' => 'required',
+            'tingkat_keberhasilan' => 'required',
+            'catatan' => 'required',
+            'keterangan' => 'required',
         ];
 
         if ($this->validate($validationRules)) {
+
             $data = [
-                //
+                'nama_mahasiswa' => $this->request->getPost('nama_mahasiswa'),
+                'tingkat_keberhasilan' => $this->request->getPost('tingkat_keberhasilan'),
+                'catatan' => $this->request->getPost('catatan'),
+                'keterangan' => $this->request->getPost('keterangan'),
             ];
 
             $this->laporanPelaksanaanModel->update($id, $data);
 
-            return redirect()->to(base_url('/laporanpelaksanaan_admin'))->with('success', 'Data berhasil diperbarui!');
+            $laporan = $this->laporanPelaksanaanModel->find($id);
+
+             return redirect()->to(base_url('/laporanpelaksanaan_admin'))->with('success', 'Data berhasil diperbarui!');
         } else {
-            return redirect()->to(base_url('/laporanpelaksanaan_admin/edit/' . $id))->with('error', $this->validator->getErrors());
+             return redirect()->to(base_url('/laporanpelaksanaan_admin/edit/' . $id))->with('error', $this->validator->getErrors());
         }
     }
 
