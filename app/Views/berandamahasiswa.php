@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Beranda Mahasiswa</title>
+    <title>mahasiswa</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
@@ -56,7 +56,7 @@
               ></span>
               <a
                 class="inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100"
-                href="index.html"
+                href="/berandamhs"
               >
 
                 <svg
@@ -71,9 +71,8 @@
                 >
                   <path
                     d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
-                  ></path>
+                  ></path><a href="<?=base_url('berandamhs')?>"><span class="ml-4">Beranda</span>
                 </svg>
-                <span class="ml-4">Beranda</span>
                 
               </a>
             </li>
@@ -96,9 +95,9 @@
                 >
                   <path
                     d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"
-                  ></path>
+                  ></path><a href="<?=base_url('pengumuman')?>"><span class="ml-4">Pengumuman</span>
                 </svg>
-                <span class="ml-4">Pengumuman</span>
+                
               </a>
             </li>
             <li class="relative px-6 py-3">
@@ -119,16 +118,16 @@
                   <path
                     d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"
                   ></path>
-                  <path d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"></path><a href="<?=base_url('kelompok')?>"> <span class="ml-4">Kelompok</span></a></li>
+                  <path d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"></path><a href="<?=base_url('kelompok')?>"> <span class="ml-4">Kelompok</span>
                 </svg>
-              <!-- <li><a href="<?=base_url('kelompok')?>"> <span class="ml-4">Kelompok</span></a></li>
-            </li> -->
             </a>
 
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                href="modals.html"
+
+                href="/formlaporankegiatan"
+                href="/laporan_kegiatan/create"
               >
                 <svg
                   class="w-5 h-5"
@@ -140,16 +139,21 @@
                   viewBox="0 0 24 24"
                   stroke="currentColor"
                 >
-                  <path
-                    d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"
-                  ></path><a href="<?=base_url('formlaporankegiatan')?>"> <span class="ml-4">Laporan Kegiatan</span></a></li>
+
+                <path
+                    d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path> 
+                    <a href="<?=base_url('/formlaporankegiatan')?>"> <span class="ml-4">Laporan Kegiatan</span></a>
                 </svg>
               </a>
 
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                href="tables.html"
+
+                href="/formlaporanpelaksanaan"
+
+                href="/laporan_pelaksanaan/create"
+
               >
                 <svg
                   class="w-5 h-5"
@@ -161,61 +165,53 @@
                   viewBox="0 0 24 24"
                   stroke="currentColor"
                 >
-                  <path d="M4 6h16M4 10h16M4 14h16M4 18h16"></path>
-                </svg>
-                <span class="ml-4">Laporan Pelaksanaan</span>
+                  <path d="M4 6h16M4 10h16M4 14h16M4 18h16"></path><a href="<?=base_url('/formlaporanpelaksanaan')?>"> <span class="ml-4">Laporan Pelaksanaan</span></svg>
               </a>
             </li>
-            <li class="relative px-6 py-3">
-              <button
-                class="inline-flex items-center justify-between w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                @click="togglePagesMenu"
-                aria-haspopup="true"
-              >
-                <span class="inline-flex items-center">
-                  <svg
-                    class="w-5 h-5"
-                    aria-hidden="true"
-                    fill="none"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"
-                    ></path>
-                  </svg>
 
-                  <span class="ml-4">Lokasi</span>
-              </a>
-            </li>
+            
             <li class="relative px-6 py-3">
-              <button
-                class="inline-flex items-center justify-between w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                @click="togglePagesMenu"
-                aria-haspopup="true"
+              <a
+                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
+                href="/lokasi"
               >
-                <span class="inline-flex items-center">
-                  <svg
-                    class="w-5 h-5"
-                    aria-hidden="true"
-                    fill="none"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"
-                    ></path>
-                  </svg>
-
-                  <span class="ml-4">Nilai Mahasiswa</span>
+                <svg
+                  class="w-5 h-5"
+                  aria-hidden="true"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path d="M4 6h16M4 10h16M4 14h16M4 18h16"></path><a href="<?=base_url('lokasi')?>"> <span class="ml-4">Lokasi</span></svg>
               </a>
             </li>
+
+                  <!-- <span class="ml-4">Lokasi</span> -->
+              </a>
+            </li>
+            <!-- <li class="relative px-6 py-3">
+              <a
+                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
+                href="/nilai_mhs"
+              > -->
+                <!-- <svg
+                  class="w-5 h-5"
+                  aria-hidden="true"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path d="M4 6h16M4 10h16M4 14h16M4 18h16"></path><a href="<?=base_url('nilai_mhs')?>"> <span class="ml-4">Nilai Mahasiswa</span></svg>
+              </a> -->
+            </li>
+        
+       
             <li class="relative px-6 py-3">
               <button
                 class="inline-flex items-center justify-between w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
@@ -845,99 +841,100 @@
           </div>
         </header>
 
-        <div class="card">
-        <div class="image"></div>
-        <div class="content">
-            <a href="#">
-            <span class="title">
-                BUKU PANDUAN KKN UNIVERSITAS LAMPUNG
-            </span>
-            </a>
+        <div id="content" role="main">
 
-            <p class="desc">
-            Buku Panduan KKN Universitas Lampung Dapat Dilihat Disini
-            </p>
 
-            <a class="action" href="#">
-            BUKU PANDUAN KKN
-            <span aria-hidden="true">
-                →
-            </span>
-            </a>
-        </div>
-        </div>
-
-        <br>
-
-        <div class="card">
-        <div class="image"></div>
-        <div class="content">
-            <a href="#">
-            <span class="title">
-                JADWAL KEGIATAN
-            </span>
-            </a>
-
-            <p class="desc">
-            Jadwal Kegiatan Dapat Dilihat Disini
-            </p>
-
-            <a class="action" href="#">
-            JADWAL KEGIATAN
-            <span aria-hidden="true">
-                →
-            </span>
-            </a>
-        </div>
-        </div>
-
-        <br>
-
-        <div class="card">
-        <div class="image"></div>
-        <div class="content">
-            <a href="#">
-            <span class="title">
-                RENCANA KEGIATAN
-            </span>
-            </a>
-
-            <p class="desc">
-            Rencana Kegiatan Dapat Dilihat Disini
-            </p>
-
-            <a class="action" href="#">
-            RENCANA KEGIATAN
-            <span aria-hidden="true">
-                →
-            </span>
-            </a>
-        </div>
-        </div>
-
-        <br>
         
-        <div class="card">
-        <div class="image"></div>
-        <div class="content">
-            <a href="#">
-            <span class="title">
-                BUKU MATERI PEMBEKALAN KKN
-            </span>
-            </a>
 
-            <p class="desc">
-            Buku Materi Pembekalan KKN Dapat Dilihat Disini.
-            </p>
+        
 
-            <a class="action" href="#">
-            Buku Materi Pembekalan KKN
-            <span aria-hidden="true">
-                →
-            </span>
-            </a>
-        </div>
-        </div>
+
+
+
+<article class="post-15 page type-page status-publish hentry">
+
+<div class="page-content">
+
+<center>
+<h1><strong>BERKAS KKN (Update 21 Januari 2023)</strong></h1>
+
+<div id="tablepress-27_wrapper" class="dataTables_wrapper no-footer"><div class="dataTables_length" id="tablepress-27_length"><label> <select name="tablepress-27_length" aria-controls="tablepress-27" class=""></select> </label></div><div id="tablepress-27_filter" class="dataTables_filter"></div><table id="tablepress-27" class="tablepress tablepress-id-27 dataTable no-footer" role="grid" aria-describedby="tablepress-27_info">
+<thead>
+<tr class="row-1 odd" role="row"><th class="column-1 sorting" tabindex="0" aria-controls="tablepress-27" rowspan="1" colspan="1" aria-label="No: activate to sort column ascending" style="width: 90px;">No</th><th class="column-2 sorting" tabindex="0" aria-controls="tablepress-27" rowspan="1" colspan="1" aria-label="Nama Berkas: activate to sort column ascending" style="width: 721px;">Nama Berkas</th><th class="column-3 sorting" tabindex="0" aria-controls="tablepress-27" rowspan="1" colspan="1" aria-label="Download: activate to sort column ascending" style="width: 215px;">Download</th></tr>
+</thead>
+<tbody class="row-hover">
+</center>
+
+
+
+
+
+
+
+
+
+<tr class="row-2 even" role="row">
+<td class="column-1">1</td><td class="column-2">Daftar Mahasiswa KKN Per-Kelompok</td><td class="column-3"><a href="http://kkn.unila.ac.id/wp-content/uploads/2018/02/1.-Daftar-mahasiswa-KKN-per_kelompok.docx" target="_blank">unduh</a></td>
+</tr><tr class="row-3 odd" role="row">
+<td class="column-1">2</td><td class="column-2">Jurnal Kegiatan Harian</td><td class="column-3"><a href="http://kkn.unila.ac.id/wp-content/uploads/2018/02/2.-Jurnal-Kegiatan-harian.docx" target="_blank">unduh</a></td>
+</tr><tr class="row-4 even" role="row">
+<td class="column-1">3</td><td class="column-2">Jadwal Kegiatan</td><td class="column-3"><a href="http://kkn.unila.ac.id/wp-content/uploads/2018/02/3.-Jadwal-kegiatan.xlsx" target="_blank">unduh</a></td>
+</tr><tr class="row-5 odd" role="row">
+<td class="column-1">4</td><td class="column-2">Buku Tamu</td><td class="column-3"><a href="http://kkn.unila.ac.id/wp-content/uploads/2018/02/4.-Buku-Tamu.docx" target="_blank">unduh</a></td>
+</tr><tr class="row-6 even" role="row">
+<td class="column-1">5</td><td class="column-2">Matrik Program Kerja dan Rencana Kegiatan</td><td class="column-3"><a href="http://kkn.unila.ac.id/wp-content/uploads/2018/02/5.-Matrik-program-kerja-dan-rencana-kegiatan.docx" target="_blank">unduh</a></td>
+</tr><tr class="row-7 odd" role="row">
+<td class="column-1">6</td><td class="column-2">Materi Pembekalan KKN (2023)</td><td class="column-3"><a href="https://drive.google.com/drive/folders/1sGAhzuAHawrkwKWnc4zHxMrFNJa0tVuT?usp=sharing" target="_blank">unduh</a></td>
+</tr><tr class="row-8 even" role="row">
+<td class="column-1">7</td><td class="column-2">Profile Desa</td><td class="column-3"><a href="http://kkn.unila.ac.id/wp-content/uploads/2018/02/Profile-Desa.xlsx" target="_blank">unduh</a></td>
+</tr><tr class="row-9 odd" role="row">
+<td class="column-1">8</td><td class="column-2">indeks desa membangun (NEW)</td><td class="column-3"><a href="http://kkn.unila.ac.id/wp-content/uploads/2018/02/indeks-desa-membangun.xlsx" target="_blank">unduh</a></td>
+</tr><tr class="row-10 even" role="row">
+<td class="column-1">9</td><td class="column-2">Buku Panduan KKN</td><td class="column-3"><a href="https://kkn.unila.ac.id/wp-content/uploads/2022/01/Buku-Panduan-KKN.pdf" rel="noopener" target="_blank">unduh</a></td>
+</tr></tbody>
+<!-- </table><div class="dataTables_info" id="tablepress-27_info" role="status" aria-live="polite">Showing 1 to 9 of 9 entries</div><div class="dataTables_paginate paging_simple" id="tablepress-27_paginate"><a class="paginate_button previous disabled" aria-controls="tablepress-27" data-dt-idx="0" tabindex="0" id="tablepress-27_previous">Previous</a><a class="paginate_button next disabled" aria-controls="tablepress-27" data-dt-idx="1" tabindex="0" id="tablepress-27_next">Next</a></div></div> -->
+<!-- #tablepress-27 from cache -->
+<!-- <p>&nbsp;</p>
+<div class="post-views post-15 entry-meta">
+<span class="post-views-icon dashicons dashicons-chart-bar"></span> -->
+<!-- <span class="post-views-label">Post Views: </span>
+<span class="post-views-count">17,555</span> -->
+</div>
+
+</div>
+</center>
+
+
+</article>
+
+
+
+
+
+<div class="">
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
 
         <main class="h-full overflow-y-auto">
           <div class="container px-6 mx-auto grid">

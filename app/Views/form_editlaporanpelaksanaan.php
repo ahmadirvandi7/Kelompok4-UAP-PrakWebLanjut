@@ -1,4 +1,8 @@
-/**
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+		/**
 * Template Name: iPortfolio
 * Updated: Sep 18 2023 with Bootstrap v5.3.2
 * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
@@ -1253,95 +1257,77 @@ textarea.form-control {
 }
 
 
-#contatti{
-  background-color: #70c3be;
-  letter-spacing: 2px;
-  }
-#contatti a{
-  color: #fff;
-  text-decoration: none;
-}
+	</style>
 
+<head>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 
-@media (max-width: 575.98px) {
+    <link href="https://fonts.googleapis.com/css?family=Oleo+Script:400,700" rel="stylesheet">
+   	<link href="https://fonts.googleapis.com/css?family=Teko:400,700" rel="stylesheet">
+   	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- <link href="assets/css/style.css" rel="stylesheet"> -->
+    </head>
+<body>
 
-  #contatti{padding-bottom: 800px;}
-  #contatti .maps iframe{
-    width: 100%;
-    height: 450px;
-  }
- }
+    <section id="contact">
+        <div class="section-content">
+            <img src="<?= base_url('assets/img/logo unila.png') ?>" alt="" width="70" height="70">
+            <h1 class="section-header">AYO <span class="content-header wow fadeIn " data-wow-delay="0.2s" data-wow-duration="2s"> KKN</span></h1>
+            <h5>Silahkan edit laporan pelaksanaan kkn</h5>
+        </div>
+        <div class="contact-section">
+            <div class="container">
+                <form method="post" action="<?= base_url('laporan_pelaksanaan/update/'. $laporan['id']) ?>">
+                    <input type="hidden" name="id" value="<?= $laporan['id']; ?>">
+                    <div class="col-md-6 form-line">
+                        <div class="form-group">
+                            <label for="exampleInputUsername">Nama Mahasiswa</label>
+                            <input type="text" class="form-control" name="nama_mahasiswa" value="<?= $laporan['nama_mahasiswa']; ?>" placeholder="Masukan Nama Anda">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlSelect1">Tingkat Keberhasilan</label>
+                            <select class="form-control" name="tingkat_keberhasilan">
+                                <option value="1" <?= ($laporan['tingkat_keberhasilan'] == 1) ? 'selected' : ''; ?>>1</option>
+                                <option value="2" <?= ($laporan['tingkat_keberhasilan'] == 2) ? 'selected' : ''; ?>>2</option>
+                                <option value="3" <?= ($laporan['tingkat_keberhasilan'] == 3) ? 'selected' : ''; ?>>3</option>
+                                <option value="4" <?= ($laporan['tingkat_keberhasilan'] == 4) ? 'selected' : ''; ?>>4</option>
+                                <option value="5" <?= ($laporan['tingkat_keberhasilan'] == 5) ? 'selected' : ''; ?>>5</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="telephone">Catatan</label>
+                            <input type="tel" class="form-control" name="catatan" value="<?= $laporan['catatan']; ?>" placeholder="Masukan Catatan">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="description">Keterangan</label>
+                            <textarea class="form-control" name="keterangan" placeholder="Masukan Keterangan"><?= $laporan['keterangan']; ?></textarea>
+                        </div>
+                        <div>
+                            <button type="submit" class="btn btn-default">Update</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
 
+    <!-- Vendor JS Files -->
+    <script src="<?= base_url('assets/vendor/purecounter/purecounter_vanilla.js') ?>"></script>
+    <script src="<?= base_url('assets/vendor/aos/aos.js') ?>"></script>
+    <script src="<?= base_url('assets/vendor/bootstrap/js/bootstrap.bundle.min.js') ?>"></script>
+    <script src="<?= base_url('assets/vendor/glightbox/js/glightbox.min.js') ?>"></script>
+    <script src="<?= base_url('assets/vendor/isotope-layout/isotope.pkgd.min.js') ?>"></script>
+    <script src="<?= base_url('assets/vendor/swiper/swiper-bundle.min.js') ?>"></script>
+    <script src="<?= base_url('assets/vendor/typed.js/typed.umd.js') ?>"></script>
+    <script src="<?= base_url('assets/vendor/waypoints/noframework.waypoints.js') ?>"></script>
+    <script src="<?= base_url('assets/vendor/php-email-form/validate.js') ?>"></script>
 
-@media (min-width: 576px) {
+    <!-- Template Main JS File -->
+    <script src="<?= base_url('assets/js/main.js') ?>"></script>
+</body>
 
-   #contatti{padding-bottom: 800px;}
-
-   #contatti .maps iframe{
-     width: 100%;
-     height: 450px;
-   }
- }
-
-@media (min-width: 768px) {
-
-  #contatti{padding-bottom: 350px;}
-
-  #contatti .maps iframe{
-    width: 100%;
-    height: 850px;
-  }
-}
-
-@media (min-width: 992px) {
-  #contatti{padding-bottom: 200px;}
-
-   #contatti .maps iframe{
-     width: 100%;
-     height: 700px;
-   }
-}
-
-
-#author a{
-  color: #fff;
-  text-decoration: none;
-    
-}
-
-
-
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  margin: 20px;
-}
-
-table {
-  width: 80%;
-  border-collapse: collapse;
-  margin: 20px auto;
-  background-color: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-th, td {
-  padding: 15px;
-  text-align: left;
-  border-bottom: 1px solid #ddd;
-}
-
-th {
-  background-color: #3498db;
-  color: #fff;
-}
-
-tr:nth-child(even) {
-  background-color: #f2f2f2;
-}
-
-
-
-
+</html>
