@@ -9,9 +9,17 @@ use CodeIgniter\Router\RouteCollection;
  */
 $routes->get('/', 'Home::login');
 $routes->get('/register', 'Home::register');
-$routes->get('/Tampilan', [Index::class, 'index']);
+$routes->get('/Tampilan', [Index::class, 'berandamahasiswa'], ['filter' => 'role:mahasiswa']);;
 
 $routes->get('/register','Home::register');
+
+
+#routes mahasiswa
+$routes->get('/frommahasiswa', [Index::class, 'frommahasiswa'], ['filter' => 'role:mahasiswa']);
+$routes->post('/frommahasiswa/store', [Index::class, 'store'], ['filter' => 'role:mahasiswa']);
+$routes->get('/berandamahasiswa', [Index::class, 'berandamahasiswa'], ['filter' => 'role:mahasiswa']);
+$routes->get('/formlaporankegiatan', [Index::class, 'formlaporankegiatan'], ['filter' => 'role:mahasiswa']);
+$routes->get('/formlaporanpelaksanaan', [Index::class, 'formlaporanpelaksanaan'], ['filter' => 'role:mahasiswa']);
 
 $routes->get('/tampilan', [Index::class, 'index']);
 $routes->get('/profile', [Index::class, 'profile']);
@@ -24,10 +32,10 @@ $routes->get('/mahasiswa', [Index::class, 'index']);
 $routes->get('/frommahasiswa', [Index::class, 'frommahasiswa']);
 $routes->post('/frommahasiswa/store', [Index::class, 'store']);
 $routes->get('/list_user', [Index::class, 'list_user']);
+
 $routes->get('/laporan_kegiatan', [Index::class, 'laporan_kegiatan']);
-
 $routes->get('/pengumuman', [PengumumanController::class, 'index']);
-
+$routes->get('/list_user', [Index::class, 'list_user']);
 $routes->get('/kelola_jadwal', 'KelolaJadwalController::index');
 $routes->post('/kelola_jadwal/store', 'KelolaJadwalController::store');
 
@@ -65,6 +73,9 @@ $routes->get('/laporankegiatan_admin', [Index::class, 'laporankegiatan_admin']);
 $routes->get('/laporanpelaksanaan_admin', [Index::class, 'laporanpelaksanaan_admin']);
 $routes->get('/datadosenpembimbing_admin', [Indexgit::class, 'datadosenpembimbing_admin']);
 $routes->get('/home_admin', [Index::class, 'home_admin'], ['filter' => 'role:admin']);
+
+$routes->get('/beranda_admin', [Index::class, 'beranda_admin'], ['filter' => 'role:admin']);
+
 $routes->get('/formlaporankegiatan', [Index::class, 'formlaporankegiatan'], ['filter' => 'role:admin']);
 $routes->get('/datamhs_admin', [Index::class, 'datamhs_admin']);
 $routes->get('/datadosenpembimbing_admin', [Index::class, 'datadosenpembimbing_admin']);
@@ -106,5 +117,3 @@ $routes->post('/laporan_pelaksanaan/update/(:num)', 'LaporanPelaksanaanControlle
 $routes->delete('/laporan_pelaksanaan/delete/(:num)', 'LaporanPelaksanaanController::delete/$1');
 
 $routes->get('/berandamahasiswa', [Index::class, 'berandamahasiswa']);
-
-
