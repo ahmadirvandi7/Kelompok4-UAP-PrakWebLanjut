@@ -1,3 +1,9 @@
+<?php
+$laporanModel = new \App\Models\LaporanKegiatanModel();
+$laporanMahasiswa = $laporanModel->findAll();
+$isAdmin = true;
+?>
+
 <!DOCTYPE html>
 <html :class="{ 'theme-dark': dark }" x-data="data()" lang="en">
   <head>
@@ -69,7 +75,7 @@
               ></span>
               <a
                 class="inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100"
-                href="index.html"
+                href="/beranda_admin"
               >
 
                 <svg
@@ -95,7 +101,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                href="/pengumuman"
+                href="/pengumuman_admin"
               >
                 <svg
                   class="w-5 h-5"
@@ -117,7 +123,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                href="/kelompok"
+                href="/kelompok_admin"
               >
                 <svg
                   class="w-5 h-5"
@@ -207,7 +213,7 @@
             </li>
             <li class="relative px-6 py-3">
               <a
-                href="/data_mahasiswa"
+                href="/datamahasiswa_admin"
                 class="inline-flex items-center justify-between w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
               >
                 <span class="inline-flex items-center">
@@ -233,7 +239,7 @@
 
             <li class="relative px-6 py-3">
               <a
-                href="/data_dosen"
+                href="/datadosen_admin"
                 class="inline-flex items-center justify-between w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
               >
                 <span class="inline-flex items-center">
@@ -547,7 +553,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                href="tables.html"
+                href="laporanpelaksanaan_admin"
               >
                 <svg
                   class="w-5 h-5"
@@ -909,68 +915,123 @@
             </ul>
           </div>
         </header>
+        <style>
+            body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                background-color: #f4f4f4;
+                color: #333;
+            }
+
+            .card {
+                margin: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                border: none; /* Menghilangkan garis batas */
+                transition: transform 0.3s ease-in-out;
+            }
+
+            .card:hover {
+                transform: scale(1.05);
+            }
+
+            .content {
+                padding: 15px;
+            }
+
+            .title {
+                font-size: 18px;
+                font-weight: bold;
+                color: #333;
+            }
+
+            .desc {
+                color: #666;
+            }
+
+            .action {
+                padding: 8px 12px;
+                background-color: #007BFF;
+                color: #fff;
+                text-decoration: none;
+                border-radius: 5px;
+                margin-top: 10px;
+            }
+
+            .action:hover {
+                background-color: #0056b3;
+            }
+
+            tbody tr:nth-child(odd) {
+                background-color: #007BFF;
+            }
+
+            tbody tr:nth-child(even) {
+                background-color: #007BFF;
+            }
+
+      table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: 20px;
+            }
+
+            th, td {
+                border: 1px solid #007BFF;
+                text-align: left;
+                padding: 12px;
+                background-color: #f8f9fa;
+                color: #333;
+            }
+            th {
+                background-color: #0056b3;
+                color: #fff;
+            }
+    </style>
         
         <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet">
     <title>Admin Dashboard</title>
-
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-
-        .card {
-            margin: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border: none; /* Menghilangkan garis batas */
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .card:hover {
-            transform: scale(1.05);
-        }
-
-        .content {
-            padding: 15px;
-        }
-
-        .title {
-            font-size: 18px;
-            font-weight: bold;
-            color: #333;
-        }
-
-        .desc {
-            color: #666;
-        }
-
-        .action {
-            padding: 8px 12px;
-            background-color: #007BFF;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 10px;
-        }
-
-        .action:hover {
-            background-color: #0056b3;
-        }
-    </style>
-</head>
+</head> 
+<br>
 <body>
+<div class="container">
+    <div class="section-title">
+        <h2>Data Dosen</h2>
+        <a href="<?= base_url("/datadosen_admin/create") ?>" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            Tambah Data
+        </a>
+        <br>
 
-<table>
-    <ul>
-        <li>
-            data dosen
-        </li>
-    </ul>
-</table>
+        <table>
+            <tr>
+                <th>No</th>
+                <th>Nama Dosen</th>
+                <th>NIP</th>
+                <th>Jenis Kelamin</th>
+                <th>Bidang Keahlian</th>
+                <th>Aksi</th>
+            </tr>
+            <?php $no = 1; ?>
+            <?php foreach ($dosen as $row): ?>
+                <tr>
+                    <td><?= $no++; ?></td>
+                    <td><?= $row['nama_dosen']; ?></td>
+                    <td><?= $row['nip']; ?></td>
+                    <td><?= $row['jenis_kelamin']; ?></td>
+                    <td><?= $row['bidang_keahlian']; ?></td>
+                    <td>
+                        <a href="/datadosen_admin/edit/<?= $row['id']; ?>">Edit</a>
+                        <form action="/datadosen_admin/delete/<?= $row['id']; ?>" method="post" onsubmit="return confirm('Anda yakin ingin menghapus?')" style="display: inline; background: none; border: none; font-size: 14px;">
+                            <input type="hidden" name="_method" value="DELETE">
+                            <button type="submit" class="text-sm" style="background: none; border: none; color: #007BFF; cursor: pointer;">Hapus</button>
+                        </form>
+                    </td>
+                </tr>
+            <?php endforeach; ?>
+        </table>
+    </div>
+</div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"></script>
 </body>

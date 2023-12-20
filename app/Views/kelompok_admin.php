@@ -1,9 +1,14 @@
+<?php
+$laporanModel = new \App\Models\LaporanKegiatanModel();
+$laporanMahasiswa = $laporanModel->findAll();
+$isAdmin = true;
+?>
+
 <!DOCTYPE html>
 <html :class="{ 'theme-dark': dark }" x-data="data()" lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>lokasi kkn</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
@@ -35,25 +40,42 @@
       <aside
         class="z-20 hidden w-64 overflow-y-auto bg-white dark:bg-gray-800 md:block flex-shrink-0"
       >
-      <div class="py-4 text-gray-500 dark:text-gray-400">
+        <div class="py-4 text-gray-500 dark:text-gray-400">
           <a
             class="ml-6 text-lg font-bold text-gray-800 dark:text-gray-200"
             href="#"
           >
            AYO KKN
-          </a>
-          <div class="profile">
-        <center><img src="assets/img/profile-img.jpg" alt="" class="round-image"></center>
-        <center>
-        <h1><a href="index.html">sinta nurhalifah</a></h1>
-        </center>
-      </div>
+           <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+   
+
+   img.round-image {
+    width: 30%; /* Lebar gambar */
+    height: auto; /* Tinggi gambar menyesuaikan agar rasio aspek tetap terjaga */
+    display: block; /* Mengubah gambar menjadi elemen blok */
+    margin: 0 auto; /* Memberikan margin otomatis (auto) untuk centering */
+  }
+
+  </style>
+</head>
+<body>
+  <div class="higlite">
+    <img src="assets/img/logo unila.png" alt="" class="round-image">
+  </div>
+</body>
+</html>
           <ul class="mt-6">
             <li class="relative px-6 py-3">
-              
-            <a
+              <span
+                class="absolute inset-y-0 left-0 w-1 bg-purple-600 rounded-tr-lg rounded-br-lg"
+                aria-hidden="true"
+              ></span>
+              <a
                 class="inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100"
-                href="/berandamhs"
+                href="/beranda_admin"
               >
 
                 <svg
@@ -68,20 +90,18 @@
                 >
                   <path
                     d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
-                  ></path><a href="<?=base_url('berandamhs')?>"><span class="ml-4">Beranda</span>
+                  ></path>
                 </svg>
+                <span class="ml-4">Beranda</span>
+                
               </a>
             </li>
           </ul>
           <ul>
             <li class="relative px-6 py-3">
-            <span
-                class="absolute inset-y-0 left-0 w-1 bg-purple-600 rounded-tr-lg rounded-br-lg"
-                aria-hidden="true"
-              ></span>
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                href="#"
+                href="/pengumuman_admin"
               >
                 <svg
                   class="w-5 h-5"
@@ -101,10 +121,9 @@
               </a>
             </li>
             <li class="relative px-6 py-3">
-            
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                href="/kelompok"
+                href="/kelompok_admin"
               >
                 <svg
                   class="w-5 h-5"
@@ -126,31 +145,9 @@
             </li>
 
             <li class="relative px-6 py-3">
-            <a
-                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                href="formlaporankegiatan"
-              >
-                <svg
-                  class="w-5 h-5"
-                  aria-hidden="true"
-                  fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-
-                <path
-                    d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path> 
-                    <a href="<?=base_url('formlaporankegiatan')?>"> <span class="ml-4">Laporan Kegiatan</span></a>
-                </svg>
-              </a>
-
-              <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                href="formlaporanpelaksanaan"
+                href="laporankegiatan_admin"
               >
                 <svg
                   class="w-5 h-5"
@@ -162,12 +159,17 @@
                   viewBox="0 0 24 24"
                   stroke="currentColor"
                 >
-                  <path d="M4 6h16M4 10h16M4 14h16M4 18h16"></path><a href="<?=base_url('formlaporanpelaksanaan')?>"> <span class="ml-4">Laporan Pelaksanaan</span></svg>
+                  <path
+                    d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"
+                  ></path>
+                </svg>
+                <span class="ml-4">Laporan Kegiatan</span>
               </a>
+            </li>
             <li class="relative px-6 py-3">
-            <a
+              <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                href="/lokasi"
+                href="laporanpelaksanaan_admin"
               >
                 <svg
                   class="w-5 h-5"
@@ -179,7 +181,9 @@
                   viewBox="0 0 24 24"
                   stroke="currentColor"
                 >
-                  <path d="M4 6h16M4 10h16M4 14h16M4 18h16"></path><a href="<?=base_url('lokasi')?>"> <span class="ml-4">Lokasi</span></svg>
+                  <path d="M4 6h16M4 10h16M4 14h16M4 18h16"></path>
+                </svg>
+                <span class="ml-4">Laporan Pelaksanaan</span>
               </a>
             </li>
             <li class="relative px-6 py-3">
@@ -188,7 +192,7 @@
                 @click="togglePagesMenu"
                 aria-haspopup="true"
               >
-                <!-- <span class="inline-flex items-center">
+                <span class="inline-flex items-center">
                   <svg
                     class="w-5 h-5"
                     aria-hidden="true"
@@ -203,8 +207,111 @@
                       d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"
                     ></path>
                   </svg>
+
+                  <span class="ml-4">Lokasi</span>
+              </a>
+            </li>
+            <li class="relative px-6 py-3">
+              <a
+                href="/datamahasiswa_admin"
+                class="inline-flex items-center justify-between w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
+              >
+                <span class="inline-flex items-center">
+                  <svg
+                    class="w-5 h-5"
+                    aria-hidden="true"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"
+                    ></path>
+                  </svg>
+
+                  <span class="ml-4">Data Mahasiswa</span>
+                </span>
+              </a>
+            </li>
+
+            <li class="relative px-6 py-3">
+              <a
+                href="/datadosen_admin"
+                class="inline-flex items-center justify-between w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
+              >
+                <span class="inline-flex items-center">
+                  <svg
+                    class="w-5 h-5"
+                    aria-hidden="true"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"
+                    ></path>
+                  </svg>
+
+                  <span class="ml-4">Data Dosen</span>
+                </span>
+              </a>
+            </li>
+
+            <li class="relative px-6 py-3">
+              <button
+                class="inline-flex items-center justify-between w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
+                @click="togglePagesMenu"
+                aria-haspopup="true"
+              >
+                <span class="inline-flex items-center">
+                  <svg
+                    class="w-5 h-5"
+                    aria-hidden="true"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"
+                    ></path>
+                  </svg>
+
+                  <span class="ml-4">Nilai Mahasiswa</span>
+              </a>
+            </li>
+            <li class="relative px-6 py-3">
+              <button
+                class="inline-flex items-center justify-between w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
+                @click="togglePagesMenu"
+                aria-haspopup="true"
+              >
+                <span class="inline-flex items-center">
+                  <svg
+                    class="w-5 h-5"
+                    aria-hidden="true"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"
+                    ></path>
+                  </svg>
+
                   <span class="ml-4">Admin</span>
-                </span> -->
+                </span>
                 <svg
                   class="w-4 h-4"
                   aria-hidden="true"
@@ -219,12 +326,20 @@
                 </svg>
               </button>
               <template x-if="isPagesMenuOpen">
-
-                
-                  <!-- <li
+                <ul
+                  x-transition:enter="transition-all ease-in-out duration-300"
+                  x-transition:enter-start="opacity-25 max-h-0"
+                  x-transition:enter-end="opacity-100 max-h-xl"
+                  x-transition:leave="transition-all ease-in-out duration-300"
+                  x-transition:leave-start="opacity-100 max-h-xl"
+                  x-transition:leave-end="opacity-0 max-h-0"
+                  class="p-2 mt-2 space-y-2 overflow-hidden text-sm font-medium text-gray-500 rounded-md shadow-inner bg-gray-50 dark:text-gray-400 dark:bg-gray-900"
+                  aria-label="submenu"
+                >
+                  <li
                     class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                  > -->
-                    <!-- <a class="w-full" href="pages/login.html">Login</a>
+                  >
+                    <a class="w-full" href="pages/login.html">Login</a>
                   </li>
                   <li
                     class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
@@ -239,8 +354,8 @@
                     <a class="w-full" href="pages/forgot-password.html">
                       Forgot password
                     </a>
-                  </li> -->
-                  <!-- <li
+                  </li>
+                  <li
                     class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
                   >
                     <a class="w-full" href="pages/404.html">404</a>
@@ -250,17 +365,17 @@
                   >
                     <a class="w-full" href="pages/blank.html">Blank</a>
                   </li>
-                </ul> -->
+                </ul>
               </template>
             </li>
           </ul>
           <div class="px-6 my-6">
-            <!-- <button
+            <button
               class="flex items-center justify-between w-full px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple"
             >
               Create account
               <span class="ml-2" aria-hidden="true">+</span>
-            </button> -->
+            </button>
           </div>
         </div>
       </aside>
@@ -298,11 +413,12 @@
           <ul class="mt-6">
             <li class="relative px-6 py-3">
               <span
-                
+                class="absolute inset-y-0 left-0 w-1 bg-purple-600 rounded-tr-lg rounded-br-lg"
+                aria-hidden="true"
               ></span>
               <a
                 class="inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100"
-                href="index.html"
+                href="/beranda_admin"
               >
                 <svg
                   class="w-5 h-5"
@@ -437,7 +553,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                href="tables.html"
+                href="laporanpelaksanaan_admin"
               >
                 <svg
                   class="w-5 h-5"
@@ -580,18 +696,16 @@
                     fill="currentColor"
                     viewBox="0 0 20 20"
                   >
-                    <path
+                    <!-- <path
                       fill-rule="evenodd"
                       d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
                       clip-rule="evenodd"
-                    ></path>
+                    ></path> -->
                   </svg>
                 </div>
                 <input
                   class="w-full pl-8 pr-2 text-sm text-gray-700 placeholder-gray-600 bg-gray-100 border-0 rounded-md dark:placeholder-gray-500 dark:focus:shadow-outline-gray dark:focus:placeholder-gray-600 dark:bg-gray-700 dark:text-gray-200 focus:placeholder-gray-500 focus:bg-white focus:border-purple-300 focus:outline-none focus:shadow-outline-purple form-input"
                   type="text"
-                  placeholder="Cari data pengumuman"
-                  aria-label="Search"
                 />
               </div>
             </div>
@@ -801,54 +915,94 @@
             </ul>
           </div>
         </header>
-        <main class="h-full overflow-y-auto">
-          <div class="container px-6 mx-auto grid">
-            <br>
-          <!-- Tombol Tambah Data -->
+        
+        <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Admin Dashboard</title>
 
-          <br>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
 
-          <?php foreach ($pengumuman as $item): ?>
-              <!-- Card -->
-              <div class="flex flex-col p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800 mb-4">
-                  <!-- Content Section -->
-                  <div class="flex items-start">
-                      <!-- Circle Icon -->
-                      <div class="p-3 mr-4 text-orange-500 bg-orange-100 rounded-full dark:text-orange-100 dark:bg-orange-500">
-                          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d=""></path></svg>
-                      </div>
-                      <!-- Title and Circle Divider -->
-                      <div class="flex items-center">
-                          <h2 class="text-lg font-medium text-gray-600 dark:text-gray-400">
-                              <?= $item['title'] ?? '' ?>
-                          </h2>
-                          <div class="mx-4 h-5 border-l border-gray-300 dark:border-gray-600"></div> <!-- Garis Vertikal -->
-                      </div>
-                  </div>
-                  <!-- File Information -->
-                  <?php if ($item['attachment_path']): ?>
-                      <a href="<?= base_url($item['attachment_path']) ?>" target="_blank" class="text-blue-500">Download File</a>
-                  <?php endif; ?>
-                  <!-- Content Section -->
-                  <div class="mt-3">
-                      <p class="text-sm text-gray-600 dark:text-gray-400">
-                          <?= $item['content'] ?? '' ?>
-                      </p>
-                  </div><br>
-                  <!-- Divider -->
-                  <hr class="my-4 border-t border-gray-300 dark:border-gray-600">
-                  <!-- Buttons Section -->
-                  <div class="flex items-center justify-between">
-                      <!-- Tombol Edit dan Hapus -->
-                      <div class="flex items-center">
-                          
-                      </div>
-                  </div>
-                </div>
-            <?php endforeach; ?>
-          </div>
-        </main>
-      </div>
-    </div>
+        .card {
+            margin: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border: none; /* Menghilangkan garis batas */
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .content {
+            padding: 15px;
+        }
+
+        .title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .desc {
+            color: #666;
+        }
+
+        .action {
+            padding: 8px 12px;
+            background-color: #007BFF;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .action:hover {
+            background-color: #0056b3;
+        }
+
+        tbody tr:nth-child(odd) {
+            background-color: #007BFF;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #007BFF;
+        }
+
+  table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #007BFF;
+            text-align: left;
+            padding: 12px;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        th {
+            background-color: #0056b3;
+            color: #fff;
+        }
+    </style>
+</head> 
+<br>
+<body>
+
+<div class="container">
+    isi kelompok
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
   </body>
 </html>

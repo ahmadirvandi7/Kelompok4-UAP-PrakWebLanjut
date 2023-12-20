@@ -24,6 +24,15 @@ class PengumumanController extends BaseController
         return view('pengumuman', $data);
     }
 
+    public function index_admin()
+    {
+        $data = [
+            'title' => 'Pengumuman',
+            'pengumuman' => $this->pengumumanModel->getPengumuman(),
+        ];
+        return view('pengumuman_admin', $data);
+    }
+
     // public function store()
     // {
     //     $validation = \Config\Services::validation();
@@ -67,7 +76,7 @@ class PengumumanController extends BaseController
         $this->pengumumanModel->savePengumuman($input);
     
         // Redirect dengan pesan sukses
-        return redirect()->to(base_url('/pengumuman'))->with('success', 'Pengumuman berhasil disimpan.');
+        return redirect()->to(base_url('/pengumuman_admin'))->with('success', 'Pengumuman berhasil disimpan.');
     }
     
 
@@ -84,7 +93,7 @@ class PengumumanController extends BaseController
 
         $this->pengumumanModel->updatePengumuman($input, $id);
 
-        return redirect()->to(base_url('/pengumuman'))->with('success', 'Pengumuman berhasil diperbarui.');
+        return redirect()->to(base_url('/pengumuman_admin'))->with('success', 'Pengumuman berhasil diperbarui.');
     }
 
 
@@ -117,7 +126,7 @@ class PengumumanController extends BaseController
         // Hapus pengumuman berdasarkan ID
         $this->pengumumanModel->deletePengumuman($id);
 
-        return redirect()->to(base_url('/pengumuman'))->with('success', 'Pengumuman berhasil dihapus.');
+        return redirect()->to(base_url('/pengumuman_admin'))->with('success', 'Pengumuman berhasil dihapus.');
     }
 
 }

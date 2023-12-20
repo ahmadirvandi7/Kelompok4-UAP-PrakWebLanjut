@@ -4,16 +4,15 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-
-class MahasiswaModel extends Model
+class DosenModel extends Model
 {
-    protected $table            = 'mahasiswa';
+    protected $table            = 'dosen';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['nama_mahasiswa','npm','jenis_kelamin'];
+    protected $allowedFields    = ['nama_dosen','nip','jenis_kelamin','bidang_keahlian'];
 
     // Dates
     protected $useTimestamps = false;
@@ -39,10 +38,28 @@ class MahasiswaModel extends Model
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
 
-    public function saveMahasiswa($data){
+    public function getDosen()
+    {
+        return $this->findAll();
+    }
+
+    public function saveDosen($data)
+    {
         $this->insert($data);
     }
-    public function getMahasiswa (){
-        return $this->findAll ();
+
+    public function findDosen($id)
+    {
+        return $this->find($id);
+    }
+
+    public function updateDosen($id, $data)
+    {
+        $this->update($id, $data);
+    }
+
+    public function deleteDosen($id)
+    {
+        $this->delete($id);
     }
 }
