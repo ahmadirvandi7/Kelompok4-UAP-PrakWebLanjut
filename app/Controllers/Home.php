@@ -12,11 +12,11 @@ class Home extends BaseController
     {
         if (logged_in()) {
             if (in_groups('admin')) {
-                return redirect()->to(base_url('/datamhs_admin'));
+                return redirect()->to(base_url('/beranda_admin'));
             }else if(in_groups('dosen')){
                 return redirect()->to(base_url('/tampilan'));
             }else if(in_groups('mahasiswa')){
-            return redirect()->to(base_url('/mahasiswa'));
+            return redirect()->to(base_url('/berandamahasiswa'));
             };
         }else{
             return view('login');
