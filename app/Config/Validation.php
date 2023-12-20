@@ -46,6 +46,19 @@ class Validation extends BaseConfig
         'single' => 'CodeIgniter\Validation\Views\single',
     ];
 
+    public $kelompok = [
+        'nip_dosen_pembimbing' => 'required',
+        'nama_kelompok' => 'required',
+        'ketua_kelompok' => 'required',
+        'npm_anggota_1' => 'required',
+        'npm_anggota_2' => 'required',
+        'npm_anggota_3' => 'required',
+        'npm_anggota_4' => 'required',
+        'npm_anggota_5' => 'required',
+        'tgl_pembentukan' => 'required|valid_date',
+    ];
+    
+
     // --------------------------------------------------------------------
     // Rules
     // --------------------------------------------------------------------

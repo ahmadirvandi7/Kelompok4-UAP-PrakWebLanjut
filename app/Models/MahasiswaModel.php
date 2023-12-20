@@ -45,4 +45,9 @@ class MahasiswaModel extends Model
     public function getMahasiswa (){
         return $this->findAll ();
     }
+
+    public function getAllMahasiswa()
+    {
+        return $this->db->table('mahasiswa')->get()->getResultArray();
+    }
 }

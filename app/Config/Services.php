@@ -19,6 +19,20 @@ use CodeIgniter\Config\BaseService;
  */
 class Services extends BaseService
 {
+
+    public $aliases = [
+        // ...
+        'KelompokModel' => \App\Models\KelompokModel::class,
+        'DosenModel'    => \App\Models\DosenModel::class,
+    ];
+
+    public $autoload = [
+        'model' => ['KelompokModel', 'DosenModel'],
+        // ...
+    ];
+    
+    
+    
     /*
      * public static function example($getShared = true)
      * {
