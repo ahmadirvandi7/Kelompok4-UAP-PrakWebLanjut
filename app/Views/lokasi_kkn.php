@@ -1,16 +1,9 @@
-<?php
-
-$isAdmin = true;
-$laporanPelaksanaanModel = new \App\Models\LaporanPelaksanaanModel();
-$laporanMahasiswa = $laporanPelaksanaanModel->findAll(); // Mengambil semua data, sesuaikan dengan kebutuhan
-
-?>
-
 <!DOCTYPE html>
 <html :class="{ 'theme-dark': dark }" x-data="data()" lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>lokasi kkn</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
@@ -48,98 +41,13 @@ $laporanMahasiswa = $laporanPelaksanaanModel->findAll(); // Mengambil semua data
             href="#"
           >
            AYO KKN
-           <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-   
-
-   img.round-image {
-    width: 30%; /* Lebar gambar */
-    height: auto; /* Tinggi gambar menyesuaikan agar rasio aspek tetap terjaga */
-    display: block; /* Mengubah gambar menjadi elemen blok */
-    margin: 0 auto; /* Memberikan margin otomatis (auto) untuk centering */
-  }
-
-  body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-
-        .card {
-            margin: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border: none; /* Menghilangkan garis batas */
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .card:hover {
-            transform: scale(1.05);
-        }
-
-        .content {
-            padding: 15px;
-        }
-
-        .title {
-            font-size: 18px;
-            font-weight: bold;
-            color: #333;
-        }
-
-        .desc {
-            color: #666;
-        }
-
-        .action {
-            padding: 8px 12px;
-            background-color: #007BFF;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 10px;
-        }
-
-        .action:hover {
-            background-color: #0056b3;
-        }
-
-        tbody tr:nth-child(odd) {
-            background-color: #007BFF;
-        }
-
-        tbody tr:nth-child(even) {
-            background-color: #007BFF;
-        }
-
-  table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-
-        th, td {
-            border: 1px solid #007BFF;
-            text-align: left;
-            padding: 12px;
-            background-color: #f8f9fa;
-            color: #333;
-        }
-        th {
-            background-color: #0056b3;
-            color: #fff;
-        }
-
-
-  </style>
-</head>
-<body>
-  <div class="higlite">
-    <img src="assets/img/logo unila.png" alt="" class="round-image">
-  </div>
-</body>
-</html>
+          </a>
+          <div class="profile">
+        <center><img src="assets/img/profile-img.jpg" alt="" class="round-image"></center>
+        <center>
+        <h1><a href="index.html">sinta nurhalifah</a></h1>
+        </center>
+      </div>
           <ul class="mt-6">
             <li class="relative px-6 py-3">
               <span
@@ -148,7 +56,7 @@ $laporanMahasiswa = $laporanPelaksanaanModel->findAll(); // Mengambil semua data
               ></span>
               <a
                 class="inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100"
-                href="index.html"
+                href="/berandamhs"
               >
 
                 <svg
@@ -163,9 +71,8 @@ $laporanMahasiswa = $laporanPelaksanaanModel->findAll(); // Mengambil semua data
                 >
                   <path
                     d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
-                  ></path>
+                  ></path><a href="<?=base_url('berandamhs')?>"><span class="ml-4">Beranda</span>
                 </svg>
-                <span class="ml-4">Beranda</span>
                 
               </a>
             </li>
@@ -188,9 +95,9 @@ $laporanMahasiswa = $laporanPelaksanaanModel->findAll(); // Mengambil semua data
                 >
                   <path
                     d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"
-                  ></path>
+                  ></path><a href="<?=base_url('pengumuman')?>"><span class="ml-4">Pengumuman</span>
                 </svg>
-                <span class="ml-4">Pengumuman</span>
+                
               </a>
             </li>
             <li class="relative px-6 py-3">
@@ -211,16 +118,14 @@ $laporanMahasiswa = $laporanPelaksanaanModel->findAll(); // Mengambil semua data
                   <path
                     d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"
                   ></path>
-                  <path d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"></path>
+                  <path d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"></path><a href="<?=base_url('kelompok')?>"> <span class="ml-4">Kelompok</span>
                 </svg>
-                <span class="ml-4">Kelompok</span>
-              </a>
-            </li>
+            </a>
 
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                href="laporankegiatan_admin"
+                href="/formlaporankegiatan"
               >
                 <svg
                   class="w-5 h-5"
@@ -232,17 +137,17 @@ $laporanMahasiswa = $laporanPelaksanaanModel->findAll(); // Mengambil semua data
                   viewBox="0 0 24 24"
                   stroke="currentColor"
                 >
-                  <path
-                    d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"
-                  ></path>
+
+                <path
+                    d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path> 
+                    <a href="<?=base_url('formlaporankegiatan')?>"> <span class="ml-4">Laporan Kegiatan</span></a>
                 </svg>
-                <span class="ml-4">Laporan Kegiatan</span>
               </a>
-            </li>
+
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                href="laporanpelaksanaan_admin"
+                href="/formlaporanpelaksanaan"
               >
                 <svg
                   class="w-5 h-5"
@@ -254,88 +159,33 @@ $laporanMahasiswa = $laporanPelaksanaanModel->findAll(); // Mengambil semua data
                   viewBox="0 0 24 24"
                   stroke="currentColor"
                 >
-                  <path d="M4 6h16M4 10h16M4 14h16M4 18h16"></path>
-                </svg>
-                <span class="ml-4">Laporan Pelaksanaan</span>
+                  <path d="M4 6h16M4 10h16M4 14h16M4 18h16"></path><a href="<?=base_url('formlaporanpelaksanaan')?>"> <span class="ml-4">Laporan Pelaksanaan</span></svg>
               </a>
             </li>
-            <li class="relative px-6 py-3">
-              <button
-                class="inline-flex items-center justify-between w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                @click="togglePagesMenu"
-                aria-haspopup="true"
-              >
-                <span class="inline-flex items-center">
-                  <svg
-                    class="w-5 h-5"
-                    aria-hidden="true"
-                    fill="none"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"
-                    ></path>
-                  </svg>
 
-                  <span class="ml-4">Lokasi</span>
-              </a>
-            </li>
+            
             <li class="relative px-6 py-3">
               <a
-                href="/data_mahasiswa"
-                class="inline-flex items-center justify-between w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
+                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
+                href="/lokasi"
               >
-                <span class="inline-flex items-center">
-                  <svg
-                    class="w-5 h-5"
-                    aria-hidden="true"
-                    fill="none"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"
-                    ></path>
-                  </svg>
-
-                  <span class="ml-4">Data Mahasiswa</span>
-                </span>
+                <svg
+                  class="w-5 h-5"
+                  aria-hidden="true"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path d="M4 6h16M4 10h16M4 14h16M4 18h16"></path><a href="<?=base_url('lokasi')?>"> <span class="ml-4">Lokasi</span></svg>
               </a>
             </li>
 
-            <li class="relative px-6 py-3">
-              <a
-                href="/data_dosen"
-                class="inline-flex items-center justify-between w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-              >
-                <span class="inline-flex items-center">
-                  <svg
-                    class="w-5 h-5"
-                    aria-hidden="true"
-                    fill="none"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"
-                    ></path>
-                  </svg>
-
-                  <span class="ml-4">Data Dosen</span>
-                </span>
+                  <!-- <span class="ml-4">Lokasi</span> -->
               </a>
             </li>
-
             <li class="relative px-6 py-3">
               <button
                 class="inline-flex items-center justify-between w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
@@ -626,7 +476,7 @@ $laporanMahasiswa = $laporanPelaksanaanModel->findAll(); // Mengambil semua data
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                href="laporanpelaksanaan_admin"
+                href="tables.html"
               >
                 <svg
                   class="w-5 h-5"
@@ -776,6 +626,7 @@ $laporanMahasiswa = $laporanPelaksanaanModel->findAll(); // Mengambil semua data
                     ></path> -->
                   </svg>
                 </div>
+                
                 <input
                   class="w-full pl-8 pr-2 text-sm text-gray-700 placeholder-gray-600 bg-gray-100 border-0 rounded-md dark:placeholder-gray-500 dark:focus:shadow-outline-gray dark:focus:placeholder-gray-600 dark:bg-gray-700 dark:text-gray-200 focus:placeholder-gray-500 focus:bg-white focus:border-purple-300 focus:outline-none focus:shadow-outline-purple form-input"
                   type="text"
@@ -988,136 +839,73 @@ $laporanMahasiswa = $laporanPelaksanaanModel->findAll(); // Mengambil semua data
             </ul>
           </div>
         </header>
+
+        <div id="content" role="main">
+
+
         
-        <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <title>Admin Dashboard</title>
 
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-        }
+        
 
-        .card {
-            margin: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border: none; /* Menghilangkan garis batas */
-            transition: transform 0.3s ease-in-out;
-        }
 
-        .card:hover {
-            transform: scale(1.05);
-        }
 
-        .content {
-            padding: 15px;
-        }
 
-        .title {
-            font-size: 18px;
-            font-weight: bold;
-            color: #333;
-        }
+<article class="post-15 page type-page status-publish hentry">
 
-        .desc {
-            color: #666;
-        }
-
-        .action {
-            padding: 8px 12px;
-            background-color: #007BFF;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 10px;
-        }
-
-        .action:hover {
-            background-color: #0056b3;
-        }
-
-        tbody tr:nth-child(odd) {
-            background-color: #007BFF;
-        }
-
-        tbody tr:nth-child(even) {
-            background-color: #007BFF;
-        }
-
-  table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-
-        th, td {
-            border: 1px solid #007BFF;
-            text-align: left;
-            padding: 12px;
-            background-color: #f8f9fa;
-            color: #333;
-        }
-        th {
-            background-color: #0056b3;
-            color: #fff;
-        }
-    </style>
-</head> 
 <br>
-<body>
-      
+<br>
+<center><h1>Lokasi KKN</h1>
+<br>
 
-<div class="container">
-  <div class="section-title">
-    <h2>Laporan Pelaksanaan</h2>
-          
-    <table>
-    <thead>
-        <tr>
-            <th>ID</th>
-            <th>Nama Mahasiswa</th>
-            <th>Tingkat Keberhasilan</th>
-            <th>Catatan</th>
-            <th>Keterangan</th>
-            <?php if ($isAdmin) : ?>
-                <th>Aksi</th>
-            <?php endif; ?>
-        </tr>
-    </thead>
-    <tbody>
-        <?php foreach ($laporanMahasiswa as $laporan) : ?>
-            <tr>
-                <td><?php echo $laporan['id']; ?></td>
-                <td><?php echo $laporan['nama_mahasiswa']; ?></td>
-                <td><?php echo $laporan['tingkat_keberhasilan']; ?></td>
-                <td><?php echo $laporan['catatan']; ?></td>
-                <td><?php echo $laporan['keterangan']; ?></td>
-                <?php if ($isAdmin) : ?>
-                    <td>
-                    <a href="<?= base_url('laporan_pelaksanaan/edit/' . $laporan['id']) ?>" class="text-sm" style="background: none; border: none; color: #007BFF; cursor: pointer; font-size: 14px;">
-                        Edit
-                    </a>
-                    <form action="<?= base_url("/laporan_pelaksanaan/delete/{$laporan['id']}") ?>" method="post" onsubmit="return confirm('Anda yakin ingin menghapus?')" style="display: inline; background: none; border: none; font-size: 14px;">
-                        <input type="hidden" name="_method" value="DELETE">
-                        <button type="submit" class="text-sm" style="background: none; border: none; color: #007BFF; cursor: pointer;">
-                            Hapus
-                        </button>
-                    </form>
-                    </td>
-                <?php endif; ?>
-            </tr>
-        <?php endforeach; ?>
-    </tbody>
-</table>
+<div class="card mb-3" style="width: 50rem;">
+   <div class="row" style="height:300px;">
+      <div class="col-md-6 maps" >
+         <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11880.492291371422!2d12.4922309!3d41.8902102!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x28f1c82e908503c4!2sColosseo!5e0!3m2!1sit!2sit!4v1524815927977" frameborder="0" style="border:0" allowfullscreen></iframe>
+      </div> <div class="card-img-top" 
+  <div class="card-body">
+    <h5 class="card-title">Lokasi Penempatan Desa</h5>
+    <p class="card-text">Desa/Kelurahan Karang Anyar, Kecamatan Jati Agung, Kabupaten Lampung Selatan, Provinsi Lampung.</p>
+    <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+  </div>
+</div>
+</center>
 
-    </section>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+</article>
+
+
+
+
+
+<div class="">
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+        <main class="h-full overflow-y-auto">
+          <div class="container px-6 mx-auto grid">
+        </main>
+      </div>
+    </div>
   </body>
 </html>

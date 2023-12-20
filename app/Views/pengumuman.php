@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html :class="{ 'theme-dark': dark }" x-data="data()" lang="en">
-    <head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kelompok</title>
+    <title>lokasi kkn</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./assets/css/tailwind.output.css" />
+    <link rel="stylesheet" href="<?=base_url('assets/css/tailwind.output.css')?>" />
+    <link rel="stylesheet" href="<?=base_url('assets/css/style.css')?>" />
     <script
       src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
       defer
     ></script>
-    <script src="./assets/js/init-alpine.js"></script>
+    <script src="<?=base_url('assets/js/init-alpine.js')?>"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css"
@@ -22,8 +23,8 @@
       src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"
       defer
     ></script>
-    <script src="./assets/js/charts-lines.js" defer></script>
-    <script src="./assets/js/charts-pie.js" defer></script>
+    <script src="<?=base_url('assets/js/charts-lines.js')?>" defer></script>
+    <script src="<?=base_url('assets/js/charts-pie.js')?>" defer></script>
   </head>
   <body>
     <div
@@ -34,20 +35,27 @@
       <aside
         class="z-20 hidden w-64 overflow-y-auto bg-white dark:bg-gray-800 md:block flex-shrink-0"
       >
-        <div class="py-4 text-gray-500 dark:text-gray-400">
+      <div class="py-4 text-gray-500 dark:text-gray-400">
           <a
             class="ml-6 text-lg font-bold text-gray-800 dark:text-gray-200"
             href="#"
           >
            AYO KKN
           </a>
+          <div class="profile">
+        <center><img src="assets/img/profile-img.jpg" alt="" class="round-image"></center>
+        <center>
+        <h1><a href="index.html">sinta nurhalifah</a></h1>
+        </center>
+      </div>
           <ul class="mt-6">
             <li class="relative px-6 py-3">
               
-              <a
+            <a
                 class="inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100"
-                href="/Tampilan"
+                href="/berandamhs"
               >
+
                 <svg
                   class="w-5 h-5"
                   aria-hidden="true"
@@ -60,9 +68,8 @@
                 >
                   <path
                     d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
-                  ></path>
+                  ></path><a href="<?=base_url('berandamhs')?>"><span class="ml-4">Beranda</span>
                 </svg>
-                <span class="ml-4">Beranda</span>
               </a>
             </li>
           </ul>
@@ -119,9 +126,9 @@
             </li>
 
             <li class="relative px-6 py-3">
-              <a
+            <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                href="modals.html"
+                href="formlaporankegiatan"
               >
                 <svg
                   class="w-5 h-5"
@@ -133,17 +140,17 @@
                   viewBox="0 0 24 24"
                   stroke="currentColor"
                 >
-                  <path
-                    d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"
-                  ></path>
+
+                <path
+                    d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path> 
+                    <a href="<?=base_url('formlaporankegiatan')?>"> <span class="ml-4">Laporan Kegiatan</span></a>
                 </svg>
-                <span class="ml-4">Modals</span>
               </a>
-            </li>
-            <li class="relative px-6 py-3">
+
+              <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                href="tables.html"
+                href="formlaporanpelaksanaan"
               >
                 <svg
                   class="w-5 h-5"
@@ -155,9 +162,24 @@
                   viewBox="0 0 24 24"
                   stroke="currentColor"
                 >
-                  <path d="M4 6h16M4 10h16M4 14h16M4 18h16"></path>
-                </svg>
-                <span class="ml-4">Lokasi</span>
+                  <path d="M4 6h16M4 10h16M4 14h16M4 18h16"></path><a href="<?=base_url('formlaporanpelaksanaan')?>"> <span class="ml-4">Laporan Pelaksanaan</span></svg>
+              </a>
+            <li class="relative px-6 py-3">
+            <a
+                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
+                href="/lokasi"
+              >
+                <svg
+                  class="w-5 h-5"
+                  aria-hidden="true"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path d="M4 6h16M4 10h16M4 14h16M4 18h16"></path><a href="<?=base_url('lokasi')?>"> <span class="ml-4">Lokasi</span></svg>
               </a>
             </li>
             <li class="relative px-6 py-3">
@@ -166,7 +188,7 @@
                 @click="togglePagesMenu"
                 aria-haspopup="true"
               >
-                <span class="inline-flex items-center">
+                <!-- <span class="inline-flex items-center">
                   <svg
                     class="w-5 h-5"
                     aria-hidden="true"
@@ -182,7 +204,7 @@
                     ></path>
                   </svg>
                   <span class="ml-4">Admin</span>
-                </span>
+                </span> -->
                 <svg
                   class="w-4 h-4"
                   aria-hidden="true"
@@ -197,20 +219,12 @@
                 </svg>
               </button>
               <template x-if="isPagesMenuOpen">
-                <ul
-                  x-transition:enter="transition-all ease-in-out duration-300"
-                  x-transition:enter-start="opacity-25 max-h-0"
-                  x-transition:enter-end="opacity-100 max-h-xl"
-                  x-transition:leave="transition-all ease-in-out duration-300"
-                  x-transition:leave-start="opacity-100 max-h-xl"
-                  x-transition:leave-end="opacity-0 max-h-0"
-                  class="p-2 mt-2 space-y-2 overflow-hidden text-sm font-medium text-gray-500 rounded-md shadow-inner bg-gray-50 dark:text-gray-400 dark:bg-gray-900"
-                  aria-label="submenu"
-                >
-                  <li
+
+                
+                  <!-- <li
                     class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                  >
-                    <a class="w-full" href="pages/login.html">Login</a>
+                  > -->
+                    <!-- <a class="w-full" href="pages/login.html">Login</a>
                   </li>
                   <li
                     class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
@@ -225,8 +239,8 @@
                     <a class="w-full" href="pages/forgot-password.html">
                       Forgot password
                     </a>
-                  </li>
-                  <li
+                  </li> -->
+                  <!-- <li
                     class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
                   >
                     <a class="w-full" href="pages/404.html">404</a>
@@ -236,17 +250,17 @@
                   >
                     <a class="w-full" href="pages/blank.html">Blank</a>
                   </li>
-                </ul>
+                </ul> -->
               </template>
             </li>
           </ul>
           <div class="px-6 my-6">
-            <button
+            <!-- <button
               class="flex items-center justify-between w-full px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple"
             >
               Create account
               <span class="ml-2" aria-hidden="true">+</span>
-            </button>
+            </button> -->
           </div>
         </div>
       </aside>
@@ -789,89 +803,71 @@
         </header>
         <main class="h-full overflow-y-auto">
           <div class="container px-6 mx-auto grid">
-            <!-- <h2
-              class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200"
-            >
-              Pengumuman
-            </h2>
-            
-            <div class="grid gap-3 mb-8 md:grid-cols-2 xl:grid-cols-5">
-              Card
-              <div
-                class="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800"
-              >
-                <div
-                  class="p-3 mr-4 text-orange-500 bg-orange-100 rounded-full dark:text-orange-100 dark:bg-orange-500"
-                >
-                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                    <path
-                      d=""
-                    ></path>
-                  </svg>
-                </div>
-                <div>
-                  <h2
-                    class="mb-3 text-sm font-medium text-gray-600 dark:text-gray-400"
-                  >
-                    judul pengumuman
-                  </p>
-                  user
+            <br>
+         
+<!-- Tombol Tambah Data -->
+<div>
+<a href="<?= base_url("/pengumuman/create") ?>" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+    Tambah Data
+</a>
+</div>
+<br>
+
+<?php foreach ($pengumuman as $item): ?>
+    <!-- Card -->
+    <div class="flex flex-col p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800 mb-4">
+        <!-- Content Section -->
+        <div class="flex items-start">
+            <!-- Circle Icon -->
+            <div class="p-3 mr-4 text-orange-500 bg-orange-100 rounded-full dark:text-orange-100 dark:bg-orange-500">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d=""></path></svg>
+            </div>
+            <!-- Title and Circle Divider -->
+            <div class="flex items-center">
+                <h2 class="text-lg font-medium text-gray-600 dark:text-gray-400">
+                    <?= $item['title'] ?? '' ?>
                 </h2>
+                <div class="mx-4 h-5 border-l border-gray-300 dark:border-gray-600"></div> <!-- Garis Vertikal -->
+            </div>
+        </div>
+        <!-- File Information -->
+        <?php if ($item['attachment_path']): ?>
+            <a href="<?= base_url($item['attachment_path']) ?>" target="_blank" class="text-blue-500">Download File</a>
+        <?php endif; ?>
+        <!-- Content Section -->
+        <div class="mt-3">
+            <p class="text-sm text-gray-600 dark:text-gray-400">
+                <?= $item['content'] ?? '' ?>
+            </p>
+        </div><br>
+        <!-- Divider -->
+        <hr class="my-4 border-t border-gray-300 dark:border-gray-600">
+        <!-- Buttons Section -->
+        <div class="flex items-center justify-between">
+            <!-- Tombol Edit dan Hapus -->
+            <div class="flex items-center">
+                <div class="mr-2"> <!-- Tambahkan margin di sini -->
+                    <a href="<?= base_url("/pengumuman/edit/{$item['id']}") ?>" class="text-indigo-500 mb-1 text-sm">
+                        <button type="button" class="text-sm">
+                            Edit
+                        </button>
+                    </a>
                 </div>
-              </div><br>
-              <br>
-
-
-              <div
-                class="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800"
-              >
+                <div class="mx-2 h-5 border-l border-gray-300 dark:border-gray-600"></div> <!-- Garis Vertikal -->
                 <div>
-                  <h2
-                    class="mb-3 text-sm font-medium text-gray-600 dark:text-gray-400"
-                  >
-                    content
-                  </p>
-                </h2>
-                </div>
-              </div>
-
-              </div>
-              </div>
-            </div> -->
-
-            <?php foreach ($pengumuman as $item): ?>
-            <!-- Card -->
-            <div class="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800 mb-4">
-                <div class="p-3 mr-4 text-orange-500 bg-orange-100 rounded-full dark:text-orange-100 dark:bg-orange-500">
-                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d=""></path></svg>
-                </div>
-                <div>
-                    <h2 class="mb-3 text-sm font-medium text-gray-600 dark:text-gray-400">
-                        <?= $item['title'] ?? '' ?>
-                    </h2>
-                    <p>
-                        creator id: <?= $item['creator_id'] ?? '' ?>
-                    </p>
-
-                    <!-- File Information -->
-                    <?php if ($item['attachment_path']): ?>
-                        <a href="<?= base_url($item['attachment_path']) ?>" target="_blank" class="text-blue-500">Download File</a>
-                    <?php endif; ?>
+                    <form action="<?= base_url("/pengumuman/delete/{$item['id']}") ?>" method="post" onsubmit="return confirm('Anda yakin ingin menghapus?')">
+                        <input type="hidden" name="_method" value="DELETE">
+                        <button type="submit" class="text-sm">
+                            Hapus
+                        </button>
+                    </form>
                 </div>
             </div>
+        </div>
+    </div>
+<?php endforeach; ?>
 
-            <!-- Content Card -->
-            <div class="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800 mb-4">
-                <div>
-                    <h2 class="mb-3 text-sm font-medium text-gray-600 dark:text-gray-400">
-                        
-                    </h2>
-                    <p>
-                        <?= $item['content'] ?? '' ?>
-                    </p>
-                </div>
-            </div>
-          <?php endforeach; ?>
+
           </div>
         </main>
       </div>

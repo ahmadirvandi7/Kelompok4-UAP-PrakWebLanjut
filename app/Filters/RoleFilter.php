@@ -18,10 +18,8 @@ class RoleFilter extends BaseFilter implements FilterInterface
     public function before(RequestInterface $request, $arguments = null)
     {
         // If no user is logged in then send them to the login form.
-        if (! $this->authenticate->check()) {
-            session()->set('redirect_url', current_url());
-
-            return redirect($this->reservedRoutes['login']);
+        if (! $this->authenticate->check()) { 
+            return redirect()->to(route_to('login'));
         }
 
         if (empty($arguments)) {
@@ -42,7 +40,8 @@ class RoleFilter extends BaseFilter implements FilterInterface
             return redirect()->to($redirectURL)->with('error', lang('Auth.notEnoughPrivilege'));
         }
 
-        throw new PermissionException(lang('Auth.notEnoughPrivilege'));
+
+        return redirect()->to($redirectURL)->with('error', lang('Auth.notEnoughPrivilege'));
     }
 
     /**

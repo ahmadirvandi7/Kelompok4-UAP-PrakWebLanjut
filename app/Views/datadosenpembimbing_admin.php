@@ -25,7 +25,8 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+  <!-- <link href="assets/css/style.css" rel="stylesheet"> -->
+  <link rel="stylesheet" href="<?=base_url('assets/css/style.css')?>" />
 
   <!-- =======================================================
   * Template Name: iPortfolio
@@ -80,7 +81,7 @@
 
 
     <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
+    <section id="resume" class="resume">
       <div class="container">
 
         <div class="section-title">
